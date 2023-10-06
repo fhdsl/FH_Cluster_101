@@ -21,7 +21,7 @@ The part of the cluster where **jobs are run** is called `gizmo`.
 We can use the `wget` command to download a script from GitHub. This means we don't have to write the script from scratch. Copy and paste the following into the terminal, and hit return:
 
 ```
-wget https://raw.githubusercontent.com/FredHutch/slurm-examples/master/introduction/1-hello-world/01.sh
+wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/01.sh
 ```
 
 <img src="resources/images/05-first-job_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_0.png" title="Screenshot of wget command output, showing successful file download." alt="Screenshot of wget command output, showing successful file download." width="100%" />

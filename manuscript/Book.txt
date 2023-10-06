@@ -1,7 +1,5 @@
-About-this-Course.md
 1-What-is-a-Cluster.md
 2-Account-Setup.md
-Skip-to-Certification.md
 3-Terminal-Setup.md
 4-Logging-In.md
 5-Submit-Your-First-Job.md
@@ -9,8 +7,10 @@ Skip-to-Certification.md
 7-Interactive-Session.md
 8-Getting-Help.md
 9-Summary.md
-self_test.md
 10-Provide-Feedback.md
 11-FAQ-and-Troubleshooting.md
+About-this-Course.md
+Skip-to-Certification.md
 Get-Your-Certificate.md
 About-the-Authors.md
+self_test.md

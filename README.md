@@ -1,16 +1,16 @@
 # Fred Hutch Cluster 101 Course
 [![Render Bookdown and Coursera](https://github.com/jhudsl/OTTR_Template/actions/workflows/render-all.yml/badge.svg)](https://github.com/jhudsl/OTTR_Template/actions/workflows/render-all.yml)
 
-![Fred Hutch Cluster 101 journey](https://raw.githubusercontent.com/fhdsl/FH_Cluster_Guide/main/assets/title_image.jpg)
+![Fred Hutch Cluster 101 journey](https://raw.githubusercontent.com/fhdsl/FH_Cluster_101/main/assets/title_image.jpg)
 
 This course was created from [this GitHub template](https://github.com/jhudsl/OTTR_Template).
 
 You can see the rendered course material here: 
 
-- As a Bookdown course: https://hutchdatascience.org/FH_Cluster_Guide/
+- As a Bookdown course: https://hutchdatascience.org/FH_Cluster_101/
 - As a Leanpub course: https://leanpub.com/courses/fredhutch/fredhutchcluster101
 
-If you would like to contribute to this course material, please [submit an issue on this repo](https://github.com/fhdsl/FH_Cluster_Guide/issues/new) or visit the [OTTR Project website](https://www.ottrproject.org/index.html).
+If you would like to contribute to this course material, please [submit an issue on this repo](https://github.com/fhdsl/FH_Cluster_101/issues/new) or visit the [OTTR Project website](https://www.ottrproject.org/index.html).
 
 ## About this course
 

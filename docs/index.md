@@ -1,6 +1,6 @@
 ---
 title: "Fred Hutch Cluster 101"
-date: "October 06, 2023"
+date: "October 16, 2023"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: book.bib

@@ -1,7 +1,7 @@
 # 11 FAQ and Troubleshooting
  
 {type: iframe, title:11 FAQ and Troubleshooting, width:800, height:600, poster:resources/chapt_screen_images/faq-and-troubleshooting.png}
-![](https://hutchdatascience.org/FH_Cluster_Guide/no_toc/faq-and-troubleshooting.html)
+![](https://hutchdatascience.org/FH_Cluster_101/no_toc/faq-and-troubleshooting.html)
  
 
  

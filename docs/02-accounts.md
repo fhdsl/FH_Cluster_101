@@ -27,7 +27,7 @@ Your HutchNet ID must be associated with a PI cluster "account". The Scientific 
 
 1. Go to the [SciComp Self-Service Portal](https://scicomp-self-service.fredhutch.org/){target="_blank"}
 1. Click on "Check Access"
-1. Log in using your HutchNet ID (no `@fredhutch.org`) and password
+1. Log in by entering your HutchNet ID (don't use `@fredhutch.org`, just the ID) and password
 
 
 \includegraphics[width=1\linewidth]{resources/images/02-accounts_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g166d4f31b2e_0_0} 

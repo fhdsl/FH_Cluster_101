@@ -37,7 +37,7 @@ _Please note that this course is under developmnent and these credits are subjec
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2023-10-16                  
+##  date     2024-03-04                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version date       lib source                            
@@ -89,7 +89,7 @@ _Please note that this course is under developmnent and these credits are subjec
 ##  utf8          1.1.4   2018-05-24 [1] RSPM (R 4.0.3)                    
 ##  vctrs         0.6.1   2023-03-22 [1] CRAN (R 4.0.2)                    
 ##  withr         2.3.0   2020-09-22 [1] RSPM (R 4.0.2)                    
-##  xfun          0.26    2023-03-28 [1] Github (yihui/xfun@74c2a66)       
+##  xfun          0.32    2022-08-10 [1] CRAN (R 4.0.2)                    
 ##  yaml          2.2.1   2020-02-01 [1] RSPM (R 4.0.3)                    
 ## 
 ## [1] /usr/local/lib/R/site-library

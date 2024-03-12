@@ -6,7 +6,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 &nbsp;
 &nbsp;
 
-_Please note that this course is under developmnent and these credits are subject to change!_
+_Please note that this course is under development and these credits are subject to change!_
 
 |Credits|Names|
 |-------|-----|

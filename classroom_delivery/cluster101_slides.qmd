@@ -1,0 +1,200 @@
+---
+title: "Cluster 101"
+format: 
+  revealjs:
+    smaller: true
+    scrollable: true
+---
+
+## Introductions
+
+. . .
+
+-   Who am I?
+
+. . .
+
+-   What is DaSL?
+
+. . .
+
+-   Who are you?
+
+    -   Name, pronouns, group you work in
+
+    -   What you want to get out of the workshop
+
+
+## Goals of the workshop
+
+. . .
+
+-   Use the command line to log in to the FH cluster
+
+. . .
+
+-   Understand the types of nodes and filesystems on FH's cluster
+
+. . .
+
+-   Submit a simple job to the cluster
+
+. . .
+
+-   Understand different ways of requesting resources for a cluster job
+
+. . .
+
+-   Monitor and quit job on the cluster
+
+. . .
+
+-   How to access software from modules
+
+## What is a cluster?
+
+. . .
+
+A networked system of computers, called **nodes**, that work together to perform tasks for various users.
+
+. . .
+
+A **node** consists of **CPUs (Cores)**, **working memory (RAM)**,and **disk space.**
+
+. . .
+
+![](https://hutchdatascience.org/FH_Cluster_101/resources/images/01-cluster_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_18.png)
+
+. . .
+
+For example:
+
+K nodes -  36 CPUs (cores), 700GB memory
+
+J nodes - 24 CPUs (cores), 350GB memory
+
+## Setup and Log in
+
+Walk through https://hutchdatascience.org/FH_Cluster_101/terminal.html
+
+Walk through https://hutchdatascience.org/FH_Cluster_101/logging-in.html
+
+## Types of Nodes
+
+. . .
+
+You are current in the **Head Node** (aka: *Login Node, Submit Node*)*.* At FH, the head node is called **Rhino.**
+
+. . .
+
+The head node is a starting point to submit jobs on **Compute Nodes** (*aka: Worker Nodes*). At FH, the compute nodes are called **Gizmo**.
+
+. . .
+
+![](https://docs.ycrc.yale.edu/img/cluster.png)
+
+Image Source: https://docs.ycrc.yale.edu/clusters-at-yale/
+
+
+. . .
+
+All interactions with the compute nodes goes through the **SLURM scheduler.**
+
+
+## Types of Filesystems
+
+Fast, Scratch, Secure.
+
+Walk through https://sciwiki.fredhutch.org/scicomputing/store_posix/
+
+. . .
+
+Unix groups
+
+# Submit Your First Job
+
+Walk through: https://hutchdatascience.org/FH_Cluster_101/submit-your-first-job.html
+
+Touch on: https://sciwiki.fredhutch.org/scicomputing/compute_jobs/
+
+. . .
+
+Options for `sbatch`
+
+-   `-c` request a number of processors per task (default 1)
+
+-   `-p` change the partition
+
+-   `-t` request a certain amount of time for the job.
+
+-   `-J` name a job
+
+-   `--output` name output file
+
+. . .
+
+Why isn't memory `--mem` specified?
+
+> If you think your job will need more than 4GB of memory, request one CPU for every 4GB required."
+
+. . .
+
+Partitions: https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/
+
+. . .
+
+You can set these options in the script itself so that you only have to run `sbatch 01.sh`, see below for an example
+
+. . .
+
+Example: `wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/03.sh`
+
+
+## Other tricks
+
+You can access your `sbatch` command in the script via environmental variables, ie `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`
+
+. . .
+
+```         
+#SBATCH --mail-user=fred@fredhutch.org
+#SBATCH --mail-type=END
+```
+
+
+## Job monitoring, cancelling
+
+Edit `01.sh` to incorporate `sleep 30` so that we can monitor and quit jobs
+
+. . .
+
+`squeue -u [username]`
+
+```         
+clo2@rhino01:~$ squeue -u clo2
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)
+```
+
+https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running
+
+
+. . .
+
+`scancel [job id]`
+
+
+
+## Interactive sessions and loading in software
+
+Walk through: https://hutchdatascience.org/FH_Cluster_101/interactive-session.html
+
+Walk through: https://sciwiki.fredhutch.org/scicomputing/compute_environments/
+
+Example of loading software on a launch script
+`wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/2-environment-modules/01.sh`
+
+## File upload and download
+
+Walk through: https://hutchdatascience.org/FH_Cluster_101/file-upload-and-download.html
+

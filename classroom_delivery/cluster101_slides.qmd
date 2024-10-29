@@ -6,6 +6,10 @@ format:
     scrollable: true
 ---
 
+## Welcome!
+
+![](Cluster_101_V2.jpg){width="300"}
+
 ## Introductions
 
 . . .
@@ -23,7 +27,6 @@ format:
     -   Name, pronouns, group you work in
 
     -   What you want to get out of the workshop
-
 
 ## Goals of the workshop
 
@@ -69,7 +72,7 @@ A **node** consists of **CPUs (Cores)**, **working memory (RAM)**,and **disk spa
 
 For example:
 
-K nodes -  36 CPUs (cores), 700GB memory
+K nodes - 36 CPUs (cores), 700GB memory
 
 J nodes - 24 CPUs (cores), 350GB memory
 
@@ -95,11 +98,9 @@ The head node is a starting point to submit jobs on **Compute Nodes** (*aka: Wor
 
 Image Source: https://docs.ycrc.yale.edu/clusters-at-yale/
 
-
 . . .
 
 All interactions with the compute nodes goes through the **SLURM scheduler.**
-
 
 ## Types of Filesystems
 
@@ -149,7 +150,6 @@ You can set these options in the script itself so that you only have to run `sba
 
 Example: `wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/03.sh`
 
-
 ## Other tricks
 
 You can access your `sbatch` command in the script via environmental variables, ie `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`
@@ -160,7 +160,6 @@ You can access your `sbatch` command in the script via environmental variables, 
 #SBATCH --mail-user=fred@fredhutch.org
 #SBATCH --mail-type=END
 ```
-
 
 ## Job monitoring, cancelling
 
@@ -178,12 +177,9 @@ clo2@rhino01:~$ squeue -u clo2
 
 https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running
 
-
 . . .
 
 `scancel [job id]`
-
-
 
 ## Interactive sessions and loading in software
 
@@ -191,10 +187,8 @@ Walk through: https://hutchdatascience.org/FH_Cluster_101/interactive-session.ht
 
 Walk through: https://sciwiki.fredhutch.org/scicomputing/compute_environments/
 
-Example of loading software on a launch script
-`wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/2-environment-modules/01.sh`
+Example of loading software on a launch script `wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/2-environment-modules/01.sh`
 
 ## File upload and download
 
 Walk through: https://hutchdatascience.org/FH_Cluster_101/file-upload-and-download.html
-

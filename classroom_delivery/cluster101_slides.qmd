@@ -62,7 +62,7 @@ A networked system of computers, called **nodes**, that work together to perform
 
 . . .
 
-A **node** consists of **CPUs (Cores)**, **working memory (RAM)**,and **disk space.**
+A **node** consists of **CPUs (Cores)**, and **working memory (RAM)**.
 
 . . .
 

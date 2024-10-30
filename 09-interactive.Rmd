@@ -106,6 +106,18 @@ exit
 ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_82")
 ```
 
+
+### Loading Modules in non-interactive mode
+
+You have just seen how to load in software modules in the interactive mode. When you launch a job via `sbatch` to start computing on the compute nodes, you may also need to load in software modules. You can add the `ml` command within your shell script, such as the following:
+
+```
+#!/bin/bash
+
+ml fhR/4.2.0-foss-2021b
+Rscript my_r_script.R
+```
+
 <div class = "dictionary">
 `grabnode` 
 

@@ -397,7 +397,7 @@
 <p>A networked system of computers, called <strong>nodes</strong>, that work together to perform tasks for various users.</p>
 </div>
 <div class="fragment">
-<p>A <strong>node</strong> consists of <strong>CPUs (Cores)</strong>, <strong>working memory (RAM)</strong>,and <strong>disk space.</strong></p>
+<p>A <strong>node</strong> consists of <strong>CPUs (Cores)</strong>, and <strong>working memory (RAM)</strong>.</p>
 </div>
 <div class="fragment">
 <p><img data-src="https://hutchdatascience.org/FH_Cluster_101/resources/images/01-cluster_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_18.png"></p>
@@ -431,18 +431,20 @@
 </section>
 <section id="types-of-filesystems" class="slide level2">
 <h2>Types of Filesystems</h2>
-<p>Fast, Scratch, Secure.</p>
-<p>Walk through https://sciwiki.fredhutch.org/scicomputing/store_posix/</p>
-<div class="fragment">
-<p>Unix groups</p>
-</div>
+<p>The storage resources available to researchers include:</p>
+<ul>
+<li><p><strong>Fast</strong> for shared data, including the majority of large scale research data. You can find it at <code>/fh/fast</code>.</p></li>
+<li><p><strong>Temp</strong> for temporary storage of files when using the cluster. You can find it at <code>/hpc/temp</code>.</p></li>
+<li><p><strong>Secure</strong> for data with higher-level security needs (PHI/encryption/auditing). You can find it at <code>/fh/secure</code>.</p></li>
+</ul>
+<p>https://sciwiki.fredhutch.org/scicomputing/store_posix/</p>
 </section>
-<section>
-<section id="submit-your-first-job" class="title-slide slide level1 center">
-<h1>Submit Your First Job</h1>
+<section id="submit-your-first-job" class="slide level2">
+<h2>Submit Your First Job</h2>
 <p>Walk through: https://hutchdatascience.org/FH_Cluster_101/submit-your-first-job.html</p>
-<p>Touch on: https://sciwiki.fredhutch.org/scicomputing/compute_jobs/</p>
-<div class="fragment">
+</section>
+<section id="requesting-specific-computing-resources" class="slide level2">
+<h2>Requesting Specific Computing Resources</h2>
 <p>Options for <code>sbatch</code></p>
 <ul>
 <li><p><code>-c</code> request a number of processors per task (default 1)</p></li>
@@ -451,7 +453,7 @@
 <li><p><code>-J</code> name a job</p></li>
 <li><p><code>--output</code> name output file</p></li>
 </ul>
-</div>
+<p>https://sciwiki.fredhutch.org/scicomputing/compute_jobs/</p>
 <div class="fragment">
 <p>Why isn’t memory <code>--mem</code> specified?</p>
 <blockquote>
@@ -461,24 +463,33 @@
 <div class="fragment">
 <p>Partitions: https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/</p>
 </div>
+</section>
+<section id="saving-your-sbatch-options" class="slide level2">
+<h2>Saving your <code>sbatch</code> options</h2>
+<p>You can set <code>sbatch</code> options in the bash script itself so that you only have to run <code>sbatch 01.sh</code>:</p>
+<pre><code>#!/bin/bash
+
+#SBATCH -c 4
+
+echo "Hello, World!"</code></pre>
 <div class="fragment">
-<p>You can set these options in the script itself so that you only have to run <code>sbatch 01.sh</code>, see below for an example</p>
-</div>
-<div class="fragment">
-<p>Example: <code>wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/03.sh</code></p>
+<p>Another example:</p>
+<p><code>wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/03.sh</code></p>
 </div>
 </section>
 <section id="other-tricks" class="slide level2">
 <h2>Other tricks</h2>
 <p>You can access your <code>sbatch</code> command in the script via environmental variables, ie <code>bowtie -p ${SLURM_JOB_CPUS_PER_NODE}</code></p>
+<p>Common SLURM environmental variables: https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#environment-variables</p>
 <div class="fragment">
+<p>Send yourself an email when the task is done:</p>
 <pre><code>#SBATCH --mail-user=fred@fredhutch.org
 #SBATCH --mail-type=END</code></pre>
 </div>
 </section>
 <section id="job-monitoring-cancelling" class="slide level2">
 <h2>Job monitoring, cancelling</h2>
-<p>Edit <code>01.sh</code> to incorporate <code>sleep 30</code> so that we can monitor and quit jobs</p>
+<p>Edit <code>01.sh</code> to incorporate <code>sleep 30</code> so that we can monitor and quit jobs.</p>
 <div class="fragment">
 <p><code>squeue -u [username]</code></p>
 <pre><code>clo2@rhino01:~$ squeue -u clo2
@@ -499,12 +510,16 @@
 <section id="file-upload-and-download" class="slide level2">
 <h2>File upload and download</h2>
 <p>Walk through: https://hutchdatascience.org/FH_Cluster_101/file-upload-and-download.html</p>
+</section>
+<section id="how-was-the-workshop-for-you-today" class="slide level2">
+<h2>How was the workshop for you today?</h2>
+<p>https://forms.gle/vfgWL4gC9KvbPLQT7</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 

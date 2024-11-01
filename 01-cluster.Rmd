@@ -21,16 +21,35 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-
 
 How is the cluster different from a laptop or desktop? First, on your laptop you most likely interact with it using an operating system like Windows or MacOS. The Fred Hutch cluster uses a Linux operating system. Second, because many people use the cluster for many tasks, there isn't a central screen and keyboard. You access the cluster remotely from your computer! We will talk more about how to connect to the cluster in a [following chapter](#terminal). Third, because the cluster is a set of many computers networked together, you will usually access only a few of the many computers for your work. 
 
-Each of the networked computers within a cluster is called a **Node**. Each node has two main components: the number of **Central Processing Units (CPUs)** (also known as **Cores**), and the **Working Memory (RAM)**. CPUs gives you computing power, and the more you have, the better you are able to parallelize tasks on your computer. RAM gives you working memory to access data for analysis. On your own personal computer, you may have 2-4 CPUs, and 8-16 Gigabytes of working memory. On the Fred Hutch cluster, there are around 600 nodes, and each node has a huge amount of CPUs and RAM compared to your personal computer: for instance, each "K Node" have 36 CPUs and 700GB of RAM, and each "J Node" have 24 CPUs and 350 of RAM! Therefore, when you access any of these K or J nodes, you will be sharing its computing power with other users also.
+Each of the networked computers within a cluster is called a **Node**. Each node has two main components:
+
+
+The **CPU**, or Central Processing Unit, is the brain of the computer that performs and orchestrates computational tasks. Modern computers often have multiple CPUs (or also known as "cores") to perform multiple tasks at once, ranging from 4 tasks on a typical laptop to 48 tasks or more on higher end servers. 
+
+The **RAM**, or Random Access Memory, is often simply referred to as memory. This short term memory holds the information that the CPU needs to perform calculations. One distinctive feature of memory is that it is short term. In other words, when the electricity is shut off, the data stored in memory disappears. To save the CPU's work, you usually save files to your computer. Running highly complicated analyses or algorithms can often require additional memory resources.
+
+```{r, echo=FALSE, fig.alt='CPU is the brain of the computer, whereas memory stores information in the short term.', out.width = '80%', fig.align = 'center'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_26")
+```
+
+On your own personal computer, you may have 2-4 CPUs, and 8-16 Gigabytes of working memory. On the Fred Hutch cluster, there are around 600 nodes, and each node has a huge amount of CPUs and RAM compared to your personal computer: for instance, each "K Node" have 36 CPUs and 700GB of RAM, and each "J Node" have 24 CPUs and 350 of RAM! Therefore, when you access any of these K or J nodes, you will be sharing its computing power with other users also.
+
 
 <div class = "dictionary">
 **Computing cluster**  
   
 A set of computers networked together to perform large tasks.
+
+
+**Node** 
+
+One of the networked computers in the cluster. 
+
+**CPU** 
+
+A computer component that performs and orchestrates computational tasks.
+
+**Memory** 
+
+A computer component that stores calculations and information in the short term.
 </div>
-
-<div class = "dictionary">
-**Node**  
-  
-An individual computer connected to the computing cluster. </div>
-

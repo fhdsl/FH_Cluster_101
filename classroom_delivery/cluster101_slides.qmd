@@ -104,21 +104,21 @@ All interactions with the compute nodes goes through the **SLURM scheduler.**
 
 ## Types of Filesystems
 
-Fast, Scratch, Secure.
+The storage resources available to researchers include:
 
-Walk through https://sciwiki.fredhutch.org/scicomputing/store_posix/
+-   **Fast** for shared data, including the majority of large scale research data. You can find it at `/fh/fast`.
 
-. . .
+-   **Temp** for temporary storage of files when using the cluster. You can find it at `/hpc/temp`.
 
-Unix groups
+-   **Secure** for data with higher-level security needs (PHI/encryption/auditing). You can find it at `/fh/secure`.
 
-# Submit Your First Job
+https://sciwiki.fredhutch.org/scicomputing/store_posix/
+
+## Submit Your First Job
 
 Walk through: https://hutchdatascience.org/FH_Cluster_101/submit-your-first-job.html
 
-Touch on: https://sciwiki.fredhutch.org/scicomputing/compute_jobs/
-
-. . .
+## Requesting Specific Computing Resources
 
 Options for `sbatch`
 
@@ -132,6 +132,8 @@ Options for `sbatch`
 
 -   `--output` name output file
 
+https://sciwiki.fredhutch.org/scicomputing/compute_jobs/
+
 . . .
 
 Why isn't memory `--mem` specified?
@@ -142,19 +144,33 @@ Why isn't memory `--mem` specified?
 
 Partitions: https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/
 
+## Saving your `sbatch` options
+
+You can set `sbatch` options in the bash script itself so that you only have to run `sbatch 01.sh`:
+
+```         
+#!/bin/bash
+
+#SBATCH -c 4
+
+echo "Hello, World!"
+```
+
 . . .
 
-You can set these options in the script itself so that you only have to run `sbatch 01.sh`, see below for an example
+Another example:
 
-. . .
-
-Example: `wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/03.sh`
+`wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/03.sh`
 
 ## Other tricks
 
 You can access your `sbatch` command in the script via environmental variables, ie `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`
 
+Common SLURM environmental variables: https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#environment-variables
+
 . . .
+
+Send yourself an email when the task is done:
 
 ```         
 #SBATCH --mail-user=fred@fredhutch.org
@@ -163,7 +179,7 @@ You can access your `sbatch` command in the script via environmental variables, 
 
 ## Job monitoring, cancelling
 
-Edit `01.sh` to incorporate `sleep 30` so that we can monitor and quit jobs
+Edit `01.sh` to incorporate `sleep 30` so that we can monitor and quit jobs.
 
 . . .
 
@@ -192,3 +208,7 @@ Example of loading software on a launch script `wget https://raw.githubuserconte
 ## File upload and download
 
 Walk through: https://hutchdatascience.org/FH_Cluster_101/file-upload-and-download.html
+
+## How was the workshop for you today?
+
+https://forms.gle/vfgWL4gC9KvbPLQT7

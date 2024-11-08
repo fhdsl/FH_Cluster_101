@@ -67,8 +67,10 @@ jobs:
         if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
         run: |
           rm -rf docs/*
-          Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all');
-          file.copy(from = 'assets', to = 'docs/assets', overwrite = TRUE)"
+          Rscript -e "remove.packages('xfun'); install.packages('https://cran.r-project.org/src/contrib/Archive/xfun/xfun_0.32.tar.gz', type = 'source'); install.packages('tinytex')"
+          Rscript -e "tinytex::install_tinytex(); update.packages(ask = FALSE, checkBuilt = TRUE); tinytex::tlmgr_update()"
+          Rscript -e "tinytex::reinstall_tinytex()"
+          Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all'); file.copy(from = 'assets', to = 'docs/assets', overwrite = TRUE)"
 
       - name: Render quarto version
         id: quarto

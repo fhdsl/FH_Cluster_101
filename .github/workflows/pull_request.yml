@@ -144,8 +144,12 @@ jobs:
       - name: Run bookdown render
         id: bookdown
         if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
-        run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all')"
-
+        run: |
+          Rscript -e "remove.packages('xfun'); install.packages('https://cran.r-project.org/src/contrib/Archive/xfun/xfun_0.32.tar.gz', type = 'source'); install.packages('tinytex')"
+          Rscript -e "tinytex::install_tinytex(); update.packages(ask = FALSE, checkBuilt = TRUE); tinytex::tlmgr_update()"
+          Rscript -e "tinytex::reinstall_tinytex()"
+          Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all')"
+          
       # Run quarto rendering
       - name: Render quarto version
         id: quarto

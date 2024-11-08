@@ -14,4 +14,4 @@ An experienced user:
 - Has used Slurm to submit a computing job
 - Is familiar with the Cyberduck application for transferring files
 
-<img src="resources/images/skip-to-certification_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_0.png" title="An arrow depicts jumping from the course to a Leanpub certificate." alt="An arrow depicts jumping from the course to a Leanpub certificate." width="70%" style="display: block; margin: auto;" />
+<img src="resources/images/skip-to-certification_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_0.png" alt="An arrow depicts jumping from the course to a Leanpub certificate." width="70%" style="display: block; margin: auto;" />

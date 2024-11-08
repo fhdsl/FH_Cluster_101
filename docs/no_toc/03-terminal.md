@@ -5,7 +5,7 @@
 
 # Terminal Setup {#terminal}
 
-<img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_183.png" title="We are on the third step of the pathway." alt="We are on the third step of the pathway." width="80%" style="display: block; margin: auto;" />
+<img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_183.png" alt="We are on the third step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 The next step is getting familiar with your Terminal. This is your portal to the cluster.
 
@@ -25,9 +25,9 @@ You will need to install a Terminal application called PuTTY to connect to the F
 
 1. You should then see PuTTY available in the Software Center. Click "Install" and go through the Setup Wizard.
 
-    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_15.png" title="The Software Center application lists available apps, including PuTTY." alt="The Software Center application lists available apps, including PuTTY." width="100%" />
+    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_15.png" alt="The Software Center application lists available apps, including PuTTY." width="100%" />
 
-    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_20.png" title="The PuTTY page inside Software Center. The Install button is highlighted." alt="The PuTTY page inside Software Center. The Install button is highlighted." width="100%" />
+    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_20.png" alt="The PuTTY page inside Software Center. The Install button is highlighted." width="100%" />
 
     <div class = "notice">
     You can also [install PuTTY manually](faq.html#manual-putty){target="_blank"} if you don't see it in the Software Center.
@@ -35,11 +35,11 @@ You will need to install a Terminal application called PuTTY to connect to the F
 
 1. PuTTY should now be available in your applications. Click on PuTTY to open.
 
-    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_28.png" title="The PuTTY application now appears in the Windows app menu." alt="The PuTTY application now appears in the Windows app menu." width="100%" />
+    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_28.png" alt="The PuTTY application now appears in the Windows app menu." width="100%" />
 
 1. You should now see the PuTTY Configuration menu.
 
-    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_35.png" title="The PuTTY configuration menu is open." alt="The PuTTY configuration menu is open." width="100%" />
+    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_35.png" alt="The PuTTY configuration menu is open." width="100%" />
 
 </p></details>
 
@@ -51,11 +51,11 @@ Mac machines come with a Terminal installed.
 
 1. Go to Finder > Applications > Utilities > Terminal and double-click. 
 
-    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_9.png" title="Screenshot of the Utilities directory. The Terminal app is highlighted." alt="Screenshot of the Utilities directory. The Terminal app is highlighted." width="100%" />
+    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_9.png" alt="Screenshot of the Utilities directory. The Terminal app is highlighted." width="100%" />
 
 1. Your Terminal should look like this:
     
-    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_2.png" title="Screenshot of the Mac Terminal." alt="Screenshot of the Mac Terminal." width="100%" />
+    <img src="resources/images/03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_2.png" alt="Screenshot of the Mac Terminal." width="100%" />
 
 </p></details>
     

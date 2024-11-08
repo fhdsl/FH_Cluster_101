@@ -3,7 +3,7 @@
 
 # Interactive Session
 
-<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_275.png" title="We are on the seventh and final step of the pathway." alt="We are on the seventh and final step of the pathway." width="80%" style="display: block; margin: auto;" />
+<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_275.png" alt="We are on the seventh and final step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 While using the cluster, you might need to build and test scripts interactively before running them. Luckily, you can work directly on the cluster by creating an interactive session. When you launch an interactive session, the cluster assigns you a portion of the networked computers called a "node". This node (or part of one) is dedicated to you for a period of time rather than using the Slurm job submission system. 
 
@@ -33,11 +33,11 @@ RAM, or Random Access Memory, is often simply referred to as memory. This short 
 
 The [GPU](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html){target="_blank"}, or Graphics Processing Unit, is similar to the CPU. The GPU was originally designed to quickly render graphics (such as for video games), but today can be used to run complex artificial intelligence applications or computationally intensive jobs.
 
-<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26.png" title="CPU is the brain of the computer, whereas memory stores information in the short term." alt="CPU is the brain of the computer, whereas memory stores information in the short term." width="80%" style="display: block; margin: auto;" />
+<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26.png" alt="CPU is the brain of the computer, whereas memory stores information in the short term." width="80%" style="display: block; margin: auto;" />
 
 You will see that you are now logged on to "gizmo" instead of "rhino". Remember that the part of the cluster where you log in is called `rhino`. The part of the cluster where jobs are run is called `gizmo`. 
 
-<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_50.png" title="Configuration prompts for interactive node log the user in to gizmo." alt="Configuration prompts for interactive node log the user in to gizmo." width="100%" />
+<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_50.png" alt="Configuration prompts for interactive node log the user in to gizmo." width="100%" />
 
 ## Running Interactive Commands
 
@@ -47,7 +47,7 @@ You can start working on the node by running a similar command as we used in the
 echo "Hello, again!"
 ```
 
-<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_58.png" title="An echo message is printed on an interactive node." alt="An echo message is printed on an interactive node." width="100%" />
+<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_58.png" alt="An echo message is printed on an interactive node." width="100%" />
 
 
 ## Using Pre-installed Software Modules
@@ -64,7 +64,7 @@ Next, launch R:
 R
 ```
 
-<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_65.png" title="The R module and R session have been launched on the interactive node." alt="The R module and R session have been launched on the interactive node." width="100%" />
+<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_65.png" alt="The R module and R session have been launched on the interactive node." width="100%" />
 
 You can play around with R here. For example, you might run:
 
@@ -72,7 +72,7 @@ You can play around with R here. For example, you might run:
 head(mtcars)
 ```
 
-<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_72.png" title="R commands on an interactive node." alt="R commands on an interactive node." width="100%" />
+<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_72.png" alt="R commands on an interactive node." width="100%" />
 
 Close the R session by typing:
 
@@ -88,7 +88,7 @@ Close the interactive node by typing:
 exit
 ```
 
-<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_82.png" title="The R session and interactive node have been exited." alt="The R session and interactive node have been exited." width="100%" />
+<img src="resources/images/07-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_82.png" alt="The R session and interactive node have been exited." width="100%" />
 
 <div class = "dictionary">
 `grabnode` 

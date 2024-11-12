@@ -13,4 +13,3 @@ About-this-Course.md
 Skip-to-Certification.md
 Get-Your-Certificate.md
 About-the-Authors.md
-self_test.md

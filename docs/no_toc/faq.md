@@ -18,7 +18,7 @@ Here are some questions you might have.
 
 1. Click [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to install the latest version of PuTTY. You will choose the 64-bit x86 installation with few exceptions.
 
-    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_6.png" title="The PuTTY latest version installation website." alt="The PuTTY latest version installation website." width="100%" />
+    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_6.png" alt="The PuTTY latest version installation website." width="100%" />
 
 1. Click through to install via the Setup Wizard.
 
@@ -54,7 +54,7 @@ This likely indicates a disruption to your internet connection and/or VPN. Ensur
 
 This likely indicates a disruption to your internet connection and/or VPN. Ensure you are connected to the internet and connected to the Fred Hutch network on campus or the VPN.
 
-<img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_16.png" title="Screenshot of the Cyberduck Connection failed popup windpw." alt="Screenshot of the Cyberduck Connection failed popup windpw." width="100%" />
+<img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_16.png" alt="Screenshot of the Cyberduck Connection failed popup windpw." width="100%" />
 
 ### `Invalid account or account/partition` when logging in {-}
 
@@ -70,11 +70,11 @@ You must complete the quiz - [Self-Test: Cluster 101](https://leanpub.com/course
  1. Go to the course [homepage](https://leanpub.com/courses/fredhutch/fredhutchcluster101/home)  
  1. Click on "Complete Course"  
  
-    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_28.png" title="The Complete Course button on the course homepage is highlighted." alt="The Complete Course button on the course homepage is highlighted." width="100%" />
+    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_28.png" alt="The Complete Course button on the course homepage is highlighted." width="100%" />
     
  1. Click on "Generate Certificate"  
  
-    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_32.png" title="The Generate Certificate button on the course summary page is highlighted." alt="The Generate Certificate button on the course summary page is highlighted." width="100%" />
+    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_32.png" alt="The Generate Certificate button on the course summary page is highlighted." width="100%" />
     
 [Contact the DaSL Team](mailto:data@fredhutch.org) to submit your Cluster 101 certificate for an awesome Hex Sticker!
 

@@ -38,5 +38,7 @@ Don't be afraid to ask for [help](#help)! Check out the SciWiki, join the Slack 
 | `exit`     | terminates an interactive session            | `exit`                   |
 | `grabnode` | launches an interactive session              | `grabnode`               |
 | `ls`       | lists files in the current folder            | `ls`                     |
-| `sbatch`   | submits a script containing job instructions | `sbatch [scriptname.sh]` |
+| `sbatch`   | submits a script containing job instructions requesting custom cores | `sbatch -c [cores] [scriptname.sh]` |
+| `squeue`   | lists job submission status for the current user    | `squeue --me`     |
+| `scancel`  | cancel job submission by job ID              | `scancel [job ID]`       |
 | `wget`     | downloads a file from the internet           | `wget [url]`             |

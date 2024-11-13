@@ -46,7 +46,7 @@ The options you pick for the `sbatch` command, especially around CPU and RAM req
 sbatch -c 4 01.sh
 ```
 
-To save the `-c 4` option in your shell script, you can add the following header `#SBATCH -c 4` to your script:
+To save the `-c 4` option in your script `01.sh`, you can add the following header `#SBATCH -c 4` to your script:
 
 ```         
 #!/bin/bash

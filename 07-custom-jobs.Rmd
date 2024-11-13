@@ -72,6 +72,15 @@ squeue -u clo2
           36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)
 ```
 
+Alternatively, you can also use `--me` to specify the user as yourself:
+
+```
+squeue --me
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)
+```
+
+
 Here, the status ("ST") shows `PD`, which means that the job hasn't started to run yet. When it is running the status will be `R`.
 
 Some common reasons for `PD` include: there are no available resources left for the requested resources for your job, or that your account has already maxed out its allocated resources. The decision of which user's jobs are running is based on the Slurm scheduler system. You can learn more about `squeue`'s outputs at the Biomedical Data Science wiki's [page here](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running).
@@ -83,3 +92,21 @@ scancel [job id]
 ```
 
 where `[job id]` is a numerical ID attached to your unique job. It can be found under `JOBID` when you run `squeue`.
+
+
+<div class = "dictionary">
+
+`sbatch -c 4 filename.sh`
+
+This command submits a job to the cluster with instructions specified in a `.sh` file with request of 4 cores.
+
+`squeue --me` 
+
+This command prints the job submission status for your username.
+
+`scancel 1234`
+
+This command cancels job ID 1234. The job ID can be found in the `squeue` command.
+
+</div>
+

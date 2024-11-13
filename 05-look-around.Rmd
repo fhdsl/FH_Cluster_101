@@ -33,3 +33,16 @@ The other storage resources available to researchers include:
 -   **Secure** for data with higher-level security needs (PHI/encryption/auditing). You can find it at `/fh/secure`.
 
 The Fred Hutch Biomedical Data Science Wiki [keeps up to date information](https://sciwiki.fredhutch.org/scicomputing/store_posix/) about the file storage system.
+
+
+<div class = "dictionary">
+**Head Node**  
+  
+A node that is the default computer you log into when you connect to the Cluster. It has limited CPU and memory, and is used to explore the needed data and software to be used on the Compute Node. Also known as **Login Node** or **Rhino** at Fred Hutch.
+
+**Compute Node** 
+
+A node with extensive CPU and memory used for high performance computing. Also known as the **Worker Node** or **Gizmo** at Fred Hutch. 
+
+</div>
+

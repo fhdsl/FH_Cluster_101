@@ -21,6 +21,8 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-
 
 How is the cluster different from a laptop or desktop? First, on your laptop you most likely interact with it using an operating system like Windows or MacOS. The Fred Hutch cluster uses a Linux operating system. Second, because many people use the cluster for many tasks, there isn't a central screen and keyboard. You access the cluster remotely from your computer! We will talk more about how to connect to the cluster in a [following chapter](#terminal). Third, because the cluster is a set of many computers networked together, you will usually access only a few of the many computers for your work. 
 
+## Parts of the Cluster
+
 Each of the networked computers within a cluster is called a **Node**. Each node has two main components:
 
 

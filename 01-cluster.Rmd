@@ -26,7 +26,7 @@ How is the cluster different from a laptop or desktop? First, on your laptop you
 Each of the networked computers within a cluster is called a **Node**. Each node has two main components:
 
 
-The **CPU**, or Central Processing Unit, is the brain of the computer that performs and orchestrates computational tasks. Modern computers often have multiple CPUs (or also known as "cores") to perform multiple tasks at once, ranging from 4 tasks on a typical laptop to 48 tasks or more on higher end servers. 
+The **CPU**, or Central Processing Unit, is the brain of the computer that performs and orchestrates computational tasks. Modern computers often have multiple CPUs (or also known as "cores") to perform multiple tasks at once, ranging from 4 tasks on a typical laptop to 48 tasks or more on higher end servers. Examples of tasks can be running a simulation many times, in which each CPU performs a simulation in parallel. 
 
 The **RAM**, or Random Access Memory, is often simply referred to as memory. This short term memory holds the information that the CPU needs to perform calculations. One distinctive feature of memory is that it is short term. In other words, when the electricity is shut off, the data stored in memory disappears. To save the CPU's work, you usually save files to your computer. Running highly complicated analyses or algorithms can often require additional memory resources.
 

@@ -16,9 +16,9 @@ After logging in, you are connected to the **Head Node** (alternative names incl
 
 The diagram below illustrates the relationship between the head node, compute nodes, and the shared file storage systems: you start at the login (head) node, and you can look at the files on the shared file storage system. When you know what data and software you want to use for compute, you let the compute nodes do the job. The compute nodes are also connected to the shared file storage system.
 
-![](https://docs.ycrc.yale.edu/img/cluster.png)
-
-Image Source: <https://docs.ycrc.yale.edu/clusters-at-yale/>
+```{r, echo=FALSE, fig.alt='Compute node diagram.', out.width = '80%', fig.align = 'center'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g3149434dbb4_1_3")
+```
 
 ## File Storage Systems
 

@@ -113,3 +113,13 @@ You have just seen how to load in software modules in the interactive mode. When
 ml fhR/4.2.0-foss-2021b
 Rscript my_r_script.R
 ```
+
+
+<div class = "dictionary">
+
+`grabnode`
+
+This command starts an interactive session on the cluster.
+
+</div>
+

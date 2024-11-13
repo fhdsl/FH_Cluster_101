@@ -12,10 +12,16 @@ Once you are comfortable submitting simple jobs, we point out ways customize you
 
 ## Requesting Specific Computing Resources
 
-By default, when you ran `sbatch 01.sh` in the previous chapter, `sbatch` requested for one CPU on a computing node for your task. Let's change the number of CPUs requested. You can change the number of requested CPUs based on the `-c` option: if you want to request 4 CPUs for your job, you would enter the following:
+By default, when you ran `sbatch 01.sh` in the previous chapter, `sbatch` requested for one CPU on a computing node for your task. Let's change the number of CPUs requested. You can change the number of requested CPUs based on the `-c` or `--cpus-per-task` option: if you want to request 4 CPUs for your job, you would enter the following:
 
 ```         
 sbatch -c 4 01.sh
+```
+
+or
+
+```         
+sbatch -cpus-per-task 4 01.sh
 ```
 
 How about changing the amount of RAM (memory) requested? Currently, the Fred Hutch Slurm does not have a memory option built in to guarantee the amount of memory that will be allocated to your job. Instead, the current recommendation is to request CPUs as a proxy for RAM allocation, based on this rule-of-thumb:

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Custom jobs | Fred Hutch Cluster 101</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Custom jobs | Fred Hutch Cluster 101" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Custom jobs | Fred Hutch Cluster 101" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2024-11-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="submit-your-first-job.html"/>
+<link rel="next" href="file-upload-and-download.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://hutchdatascience.org/" target="_blank"><img src="assets/big-dasl-stacked.png" style="width: 80%; padding-left: 34px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="part"><span><b>Introduction</b></span></li>
+<li class="chapter" data-level="1" data-path="what-is-a-cluster.html"><a href="what-is-a-cluster.html"><i class="fa fa-check"></i><b>1</b> What is a Cluster</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="what-is-a-cluster.html"><a href="what-is-a-cluster.html#parts-of-the-cluster"><i class="fa fa-check"></i><b>1.1</b> Parts of the Cluster</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="account-setup.html"><a href="account-setup.html"><i class="fa fa-check"></i><b>2</b> Account Setup</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="account-setup.html"><a href="account-setup.html#check-your-hutchnet-id"><i class="fa fa-check"></i><b>2.1</b> Check your HutchNet ID</a></li>
+<li class="chapter" data-level="2.2" data-path="account-setup.html"><a href="account-setup.html#pi-account"><i class="fa fa-check"></i><b>2.2</b> Connect to a PI Account</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="skip-to-certification.html"><a href="skip-to-certification.html"><i class="fa fa-check"></i>Skip to Certification</a></li>
+<li class="part"><span><b>Cluster 101</b></span></li>
+<li class="chapter" data-level="3" data-path="terminal.html"><a href="terminal.html"><i class="fa fa-check"></i><b>3</b> Terminal Setup</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="terminal.html"><a href="terminal.html#what-is-a-terminal"><i class="fa fa-check"></i><b>3.1</b> What is a terminal?</a></li>
+<li class="chapter" data-level="3.2" data-path="terminal.html"><a href="terminal.html#windows"><i class="fa fa-check"></i><b>3.2</b> Windows Setup</a></li>
+<li class="chapter" data-level="3.3" data-path="terminal.html"><a href="terminal.html#mac"><i class="fa fa-check"></i><b>3.3</b> Mac Setup</a></li>
+<li class="chapter" data-level="3.4" data-path="terminal.html"><a href="terminal.html#linux"><i class="fa fa-check"></i><b>3.4</b> Linux Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="logging-in.html"><a href="logging-in.html"><i class="fa fa-check"></i><b>4</b> Logging In</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="logging-in.html"><a href="logging-in.html#what-is-ssh"><i class="fa fa-check"></i><b>4.1</b> What is <code>SSH</code>?</a></li>
+<li class="chapter" data-level="4.2" data-path="logging-in.html"><a href="logging-in.html#connect-securely"><i class="fa fa-check"></i><b>4.2</b> Connect Securely</a></li>
+<li class="chapter" data-level="4.3" data-path="logging-in.html"><a href="logging-in.html#windows-login"><i class="fa fa-check"></i><b>4.3</b> Windows Login</a></li>
+<li class="chapter" data-level="4.4" data-path="logging-in.html"><a href="logging-in.html#mac-login"><i class="fa fa-check"></i><b>4.4</b> Mac Login</a></li>
+<li class="chapter" data-level="4.5" data-path="logging-in.html"><a href="logging-in.html#linux-login"><i class="fa fa-check"></i><b>4.5</b> Linux Login</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="look-around.html"><a href="look-around.html"><i class="fa fa-check"></i><b>5</b> Look around</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="look-around.html"><a href="look-around.html#head-and-compute-nodes"><i class="fa fa-check"></i><b>5.1</b> Head and Compute Nodes</a></li>
+<li class="chapter" data-level="5.2" data-path="look-around.html"><a href="look-around.html#file-storage-systems"><i class="fa fa-check"></i><b>5.2</b> File Storage Systems</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html"><i class="fa fa-check"></i><b>6</b> Submit Your First Job</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#download-the-script"><i class="fa fa-check"></i><b>6.1</b> Download the Script</a></li>
+<li class="chapter" data-level="6.2" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#confirm-the-download"><i class="fa fa-check"></i><b>6.2</b> Confirm the Download</a></li>
+<li class="chapter" data-level="6.3" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#inspect-the-script"><i class="fa fa-check"></i><b>6.3</b> Inspect the Script</a></li>
+<li class="chapter" data-level="6.4" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#submit-the-script"><i class="fa fa-check"></i><b>6.4</b> Submit the Script</a></li>
+<li class="chapter" data-level="6.5" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#check-the-output"><i class="fa fa-check"></i><b>6.5</b> Check the Output</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="custom-jobs.html"><a href="custom-jobs.html"><i class="fa fa-check"></i><b>7</b> Custom jobs</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="custom-jobs.html"><a href="custom-jobs.html#requesting-specific-computing-resources"><i class="fa fa-check"></i><b>7.1</b> Requesting Specific Computing Resources</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="custom-jobs.html"><a href="custom-jobs.html#saving-your-sbatch-options"><i class="fa fa-check"></i><b>7.1.1</b> Saving your <code>sbatch</code> options</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="custom-jobs.html"><a href="custom-jobs.html#monitoring-and-ending-jobs"><i class="fa fa-check"></i><b>7.2</b> Monitoring and Ending Jobs</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html"><i class="fa fa-check"></i><b>8</b> File Upload and Download</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#download-cyberduck"><i class="fa fa-check"></i><b>8.1</b> Download Cyberduck</a></li>
+<li class="chapter" data-level="8.2" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#create-connection"><i class="fa fa-check"></i><b>8.2</b> Create Connection</a></li>
+<li class="chapter" data-level="8.3" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#download-and-edit-the-script"><i class="fa fa-check"></i><b>8.3</b> Download and Edit the Script</a></li>
+<li class="chapter" data-level="8.4" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#upload-the-new-script"><i class="fa fa-check"></i><b>8.4</b> Upload the New Script</a></li>
+<li class="chapter" data-level="8.5" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#run-the-new-script"><i class="fa fa-check"></i><b>8.5</b> Run the New Script</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="interactive-session.html"><a href="interactive-session.html"><i class="fa fa-check"></i><b>9</b> Interactive Session</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="interactive-session.html"><a href="interactive-session.html#starting-the-session"><i class="fa fa-check"></i><b>9.1</b> Starting the session</a></li>
+<li class="chapter" data-level="9.2" data-path="interactive-session.html"><a href="interactive-session.html#running-interactive-commands"><i class="fa fa-check"></i><b>9.2</b> Running Interactive Commands</a></li>
+<li class="chapter" data-level="9.3" data-path="interactive-session.html"><a href="interactive-session.html#using-pre-installed-software-modules"><i class="fa fa-check"></i><b>9.3</b> Using Pre-installed Software Modules</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="interactive-session.html"><a href="interactive-session.html#loading-modules-in-non-interactive-mode"><i class="fa fa-check"></i><b>9.3.1</b> Loading Modules in non-interactive mode</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>10</b> Getting Help</a>
+<ul>
+<li class="chapter" data-level="" data-path="help.html"><a href="help.html#check-out-the-faq-page"><i class="fa fa-check"></i>Check out the FAQ page</a></li>
+<li class="chapter" data-level="" data-path="help.html"><a href="help.html#find-community-support-on-slack"><i class="fa fa-check"></i>Find Community Support on Slack</a></li>
+<li class="chapter" data-level="" data-path="help.html"><a href="help.html#visit-the-sciwiki"><i class="fa fa-check"></i>Visit the SciWiki</a></li>
+<li class="chapter" data-level="" data-path="help.html"><a href="help.html#send-an-email"><i class="fa fa-check"></i>Send an Email</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>11</b> Summary</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="summary.html"><a href="summary.html#overview"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="summary.html"><a href="summary.html#glossary"><i class="fa fa-check"></i><b>11.2</b> Glossary</a></li>
+<li class="chapter" data-level="11.3" data-path="summary.html"><a href="summary.html#commands-command-line-interface"><i class="fa fa-check"></i><b>11.3</b> Commands (command line interface)</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="12" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i><b>12</b> Provide Feedback</a></li>
+<li class="chapter" data-level="13" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html"><i class="fa fa-check"></i><b>13</b> FAQ and Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#faq"><i class="fa fa-check"></i><b>13.1</b> FAQ</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#manual-putty"><i class="fa fa-check"></i><b>13.1.1</b> How can I manually install PuTTY?</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#troubleshooting"><i class="fa fa-check"></i><b>13.2</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-could-not-resolve-hostname-rhino-nodename-nor-servname-provided-or-not-known"><i class="fa fa-check"></i><code>ssh: Could not resolve hostname rhino: nodename nor servname provided, or not known</code></a></li>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-connect-to-host-rhino-port-22-undefined-error-0"><i class="fa fa-check"></i><code>ssh: connect to host rhino port 22: Undefined error: 0</code></a></li>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#connection-failed-message-in-cyberduck"><i class="fa fa-check"></i><code>Connection failed</code> message in Cyberduck</a></li>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#invalid-account-or-accountpartition-when-logging-in"><i class="fa fa-check"></i><code>Invalid account or account/partition</code> when logging in</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="get-your-certificate.html"><a href="get-your-certificate.html"><i class="fa fa-check"></i>Get Your Certificate</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/W6Mg4rzuMK6Yk3Am8"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fred Hutch Cluster 101</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-01G9Y69VQ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-01G9Y69VQ7');
+  </script>
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/dasl_thin_main_image.png">
+</div>
+<div id="custom-jobs" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Custom jobs<a href="custom-jobs.html#custom-jobs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/07-custom-jobs_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229.png" alt="We are on the fifth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
+<p>Once you are comfortable submitting simple jobs, we point out ways customize your jobs to make best use of the computing infrastructure: perhaps you want to change the number of CPUs or RAM to request, or you want to monitor the status of a job running. This section highlights some common requests people use on the Fred Hutch Slurm system.</p>
+<div id="requesting-specific-computing-resources" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Requesting Specific Computing Resources<a href="custom-jobs.html#requesting-specific-computing-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By default, when you ran <code>sbatch 01.sh</code> in the previous chapter, <code>sbatch</code> requested for one CPU on a computing node for your task. Let’s change the number of CPUs requested. You can change the number of requested CPUs based on the <code>-c</code> or <code>--cpus-per-task</code> option: if you want to request 4 CPUs for your job, you would enter the following:</p>
+<pre><code>sbatch -c 4 01.sh</code></pre>
+<p>or</p>
+<pre><code>sbatch --cpus-per-task 4 01.sh</code></pre>
+<p>How about changing the amount of RAM (memory) requested? Currently, the Fred Hutch Slurm does not have a memory option built in to guarantee the amount of memory that will be allocated to your job. Instead, the current recommendation is to request CPUs as a proxy for RAM allocation, based on this rule-of-thumb:</p>
+<blockquote>
+<p>“If you think your job will need more than 4GB of memory, request one CPU for every 4GB required.”</p>
+</blockquote>
+<details>
+<summary>
+The technical reasoning behind the rule-of-thumb can be expanded here.
+</summary>
+<p>
+<a href="https://sciwiki.fredhutch.org/scicomputing/compute_platforms/#gizmo">FH Gizmo</a> has class J nodes which each have 24 cores and 384GB of memory, and class K nodes which each have 36 cores and 768GB of memory. So, if you think you will need 100GB of memory for your job, by this rule of thumb you would request 25 cores. You would be assigned to a class K node, and you would occupy 25/36 cores on that node. On this node, other users can use the remaining 11 cores. You would share the 768GB of memory all together and hope that the other users don’t take up more memory than you need: the more cores you occupy on a node, less users will compete for memory. It’s an imprecise system and SciComp has interest to make memory allocation more precise in the future.
+</p>
+</details>
+<p>You can learn more about other use cases of <code>sbatch</code> at the Biomedical Data Science Wiki’s page on <a href="https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#submitting-jobs">computing jobs</a>.</p>
+<div id="saving-your-sbatch-options" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Saving your <code>sbatch</code> options<a href="custom-jobs.html#saving-your-sbatch-options" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The options you pick for the <code>sbatch</code> command, especially around CPU and RAM requests, can have enormous impact on your computing speed and quality. Therefore, it is often a good idea to save the options you have picked into the shell script itself. Suppose that you launched your job like this:</p>
+<pre><code>sbatch -c 4 01.sh</code></pre>
+<p>To save the <code>-c 4</code> option in your script <code>01.sh</code>, you can add the following header <code>#SBATCH -c 4</code> to your script:</p>
+<pre><code>#!/bin/bash
+
+#SBATCH -c 4
+
+echo &quot;Hello, World!&quot;</code></pre>
+<p>Now, you will automatically request 4 CPUs when you run:</p>
+<pre><code>sbatch 01.sh</code></pre>
+</div>
+</div>
+<div id="monitoring-and-ending-jobs" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Monitoring and Ending Jobs<a href="custom-jobs.html#monitoring-and-ending-jobs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Often, our jobs take time to run, and we want to see the status of our jobs. You can examine the status of your job via the <code>squeue</code> command. The default option will show <em>all</em> jobs running on the cluster, including other users, so it’s common to use the <code>-u</code> option to specify the user. The example user here is <code>clo2</code>:</p>
+<pre><code>squeue -u clo2
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)</code></pre>
+<p>Alternatively, you can also use <code>--me</code> to specify the user as yourself:</p>
+<pre><code>squeue --me
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)</code></pre>
+<p>Here, the status (“ST”) shows <code>PD</code>, which means that the job hasn’t started to run yet. When it is running the status will be <code>R</code>.</p>
+<p>Some common reasons for <code>PD</code> include: there are no available resources left for the requested resources for your job, or that your account has already maxed out its allocated resources. The decision of which user’s jobs are running is based on the Slurm scheduler system. You can learn more about <code>squeue</code>’s outputs at the Biomedical Data Science wiki’s <a href="https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running">page here</a>.</p>
+<p>If you want to end a job that is either waiting (<code>PD</code> status) or running, you can enter:</p>
+<pre><code>scancel [job id]</code></pre>
+<p>where <code>[job id]</code> is a numerical ID attached to your unique job. It can be found under <code>JOBID</code> when you run <code>squeue</code>.</p>
+<div class="dictionary">
+<p><code>sbatch -c 4 filename.sh</code></p>
+<p>This command submits a job to the cluster with instructions specified in a <code>.sh</code> file with request of 4 cores.</p>
+<p><code>squeue --me</code></p>
+<p>This command prints the job submission status for your username.</p>
+<p><code>scancel 1234</code></p>
+<p>This command cancels job ID 1234. The job ID can be found in the <code>squeue</code> command.</p>
+</div>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+      <a href="https://hutchdatascience.org/" target="_blank"><img src="https://hutchdatascience.org/images/crazy-idea-wide.png" style="width: 80%; padding-left: 15px; padding-top: 8px;"</a>
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="submit-your-first-job.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="file-upload-and-download.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/07-custom-jobs.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Cluster_Guide.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

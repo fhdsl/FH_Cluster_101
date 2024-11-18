@@ -76,7 +76,7 @@
 
 \title{Fred Hutch Cluster 101}
 \author{}
-\date{\vspace{-2.5em}November 08, 2024}
+\date{\vspace{-2.5em}November 18, 2024}
 
 \begin{document}
 \maketitle
@@ -114,11 +114,36 @@ Now that we have a team of workers, the next challenge is task management. A hom
 
 \begin{center}\includegraphics[width=0.8\linewidth]{resources/images/01-cluster_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_18} \end{center}
 
-How is the cluster different from a laptop or desktop? First, on your laptop you most likely interact with it using an operating system like Windows or MacOS. The Fred Hutch cluster uses a Linux operating system. Second, because many people use the cluster for many tasks, there isn't a central screen and keyboard. You access the cluster remotely from your computer! We will talk more about how to connect to the cluster in a \protect\hyperlink{terminal}{following chapter}.
+How is the cluster different from a laptop or desktop? First, on your laptop you most likely interact with it using an operating system like Windows or MacOS. The Fred Hutch cluster uses a Linux operating system. Second, because many people use the cluster for many tasks, there isn't a central screen and keyboard. You access the cluster remotely from your computer! We will talk more about how to connect to the cluster in a \protect\hyperlink{terminal}{following chapter}. Third, because the cluster is a set of many computers networked together, you will usually access only a few of the many computers for your work.
+
+\hypertarget{parts-of-the-cluster}{%
+\section{Parts of the Cluster}\label{parts-of-the-cluster}}
+
+Each of the networked computers within a cluster is called a \textbf{Node}. Each node has two main components:
+
+The \textbf{CPU}, or Central Processing Unit, is the brain of the computer that performs and orchestrates computational tasks. Modern computers often have multiple CPUs (or also known as ``cores'') to perform multiple tasks at once, ranging from 4 tasks on a typical laptop to 48 tasks or more on higher end servers. Examples of tasks can be running a simulation many times, in which each CPU performs a simulation in parallel.
+
+The \textbf{RAM}, or Random Access Memory, is often simply referred to as memory. This short term memory holds the information that the CPU needs to perform calculations. One distinctive feature of memory is that it is short term. In other words, when the electricity is shut off, the data stored in memory disappears. To save the CPU's work, you usually save files to your computer. Running highly complicated analyses or algorithms can often require additional memory resources.
+
+\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/01-cluster_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26} \end{center}
+
+On your own personal computer, you may have 2-4 CPUs, and 8-16 Gigabytes of working memory. On the Fred Hutch cluster, there are around 600 nodes, and each node has a huge amount of CPUs and RAM compared to your personal computer: for instance, each ``K Node'' have 36 CPUs and 700GB of RAM, and each ``J Node'' have 24 CPUs and 350 of RAM! Therefore, when you access any of these K or J nodes, you will be sharing its computing power with other users also.
 
 \textbf{Computing cluster}
 
 A set of computers networked together to perform large tasks.
+
+\textbf{Node}
+
+One of the networked computers in the cluster.
+
+\textbf{CPU}
+
+A computer component that performs and orchestrates computational tasks.
+
+\textbf{Memory}
+
+A computer component that stores calculations and information in the short term.
 
 \hypertarget{account-setup}{%
 \chapter{Account Setup}\label{account-setup}}
@@ -377,10 +402,52 @@ ssh [HutchID]@rhino
 
 Congratulations! You are now logged in to the Fred Hutch cluster!
 
+\hypertarget{look-around}{%
+\chapter{Look around}\label{look-around}}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/05-look-around_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206} \end{center}
+
+Now that you have successfully logged in to the Fred Hutch cluster, it's time to look around to see what compute node you have connected to, and what file storage systems are available.
+
+\hypertarget{head-and-compute-nodes}{%
+\section{Head and Compute Nodes}\label{head-and-compute-nodes}}
+
+After logging in, you are connected to the \textbf{Head Node} (alternative names include the Login Node, or the Submit Node). At Fred Hutch, head node is also called \textbf{Rhino}. The purpose of the head node is to serve as a launching pad for the user: you are encouraged to look for files you want to use for your analysis, and once you know what data and software you want to use, you perform the computation on the \textbf{Compute Nodes} (alternative names include the Worker Node). At Fred Hutch, the compute nodes are called \textbf{Gizmo}. The compute notes have high CPU and RAM capacity for running demanding jobs, whereas the head node has very limited CPUs and RAM.
+
+The diagram below illustrates the relationship between the head node, compute nodes, and the shared file storage systems: you start at the login (head) node, and you can look at the files on the shared file storage system. When you know what data and software you want to use for compute, you let the compute nodes do the job. The compute nodes are also connected to the shared file storage system.
+
+\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/05-look-around_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g3149434dbb4_1_3} \end{center}
+
+\hypertarget{file-storage-systems}{%
+\section{File Storage Systems}\label{file-storage-systems}}
+
+Your current working directory (which can be printed by the \texttt{pwd} command) is the Home filesystem. You are given \textasciitilde100GB of personal space, and this is usually for personal configuration of the cluster as a user.
+
+The other storage resources available to researchers include:
+
+\begin{itemize}
+\item
+  \textbf{Fast} for shared data, including the majority of large scale research data. You can find it at \texttt{/fh/fast}.
+\item
+  \textbf{Temp} for temporary storage of files when using the cluster. You can find it at \texttt{/hpc/temp}.
+\item
+  \textbf{Secure} for data with higher-level security needs (PHI/encryption/auditing). You can find it at \texttt{/fh/secure}.
+\end{itemize}
+
+The Fred Hutch Biomedical Data Science Wiki \href{https://sciwiki.fredhutch.org/scicomputing/store_posix/}{keeps up to date information} about the file storage system.
+
+\textbf{Head Node}
+
+A node that is the default computer you log into when you connect to the Cluster. It has limited CPU and memory, and is used to explore the needed data and software to be used on the Compute Node. Also known as \textbf{Login Node} or \textbf{Rhino} at Fred Hutch.
+
+\textbf{Compute Node}
+
+A node with extensive CPU and memory used for high performance computing. Also known as the \textbf{Worker Node} or \textbf{Gizmo} at Fred Hutch.
+
 \hypertarget{submit-your-first-job}{%
 \chapter{Submit Your First Job}\label{submit-your-first-job}}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/05-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229} \end{center}
+\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229} \end{center}
 
 The strength of a computing cluster is the ability to do many jobs in parallel or on computers with more computing power than you have on your local computer. The best way to use the cluster is to create short snippets of instructions (a script) that a computer can perform without human input. Your script tells the computers to execute the instructions as individual jobs.
 
@@ -400,7 +467,7 @@ We can use the \texttt{wget} command to download a script from GitHub. This mean
 wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/01.sh
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/05-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_0}
+\includegraphics[width=1\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_0}
 
 \hypertarget{confirm-the-download}{%
 \section{Confirm the Download}\label{confirm-the-download}}
@@ -411,7 +478,7 @@ Let's confirm that we can see the file we just downloaded. We can use the \textt
 ls
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/05-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_6}
+\includegraphics[width=1\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_6}
 
 \hypertarget{inspect-the-script}{%
 \section{Inspect the Script}\label{inspect-the-script}}
@@ -422,7 +489,7 @@ Let's next inspect the script. The \texttt{cat} command, followed by a file name
 cat 01.sh
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/05-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_2}
+\includegraphics[width=1\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_2}
 
 \begin{itemize}
 \tightlist
@@ -450,7 +517,7 @@ Type \texttt{ls} again. You should now see a log file like \texttt{slurm-1234567
 cat slurm-[your-number-here].out
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/05-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_22}
+\includegraphics[width=1\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_22}
 
 \texttt{ls}
 
@@ -464,10 +531,112 @@ This command prints the contents of a specific file (\emph{filename}).
 
 This command submits a job to the cluster with instructions specified in a \texttt{.sh} file.
 
+\hypertarget{custom-jobs}{%
+\chapter{Custom jobs}\label{custom-jobs}}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/07-custom-jobs_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229} \end{center}
+
+Once you are comfortable submitting simple jobs, we point out ways customize your jobs to make best use of the computing infrastructure: perhaps you want to change the number of CPUs or RAM to request, or you want to monitor the status of a job running. This section highlights some common requests people use on the Fred Hutch Slurm system.
+
+\hypertarget{requesting-specific-computing-resources}{%
+\section{Requesting Specific Computing Resources}\label{requesting-specific-computing-resources}}
+
+By default, when you ran \texttt{sbatch\ 01.sh} in the previous chapter, \texttt{sbatch} requested for one CPU on a computing node for your task. Let's change the number of CPUs requested. You can change the number of requested CPUs based on the \texttt{-c} or \texttt{-\/-cpus-per-task} option: if you want to request 4 CPUs for your job, you would enter the following:
+
+\begin{verbatim}
+sbatch -c 4 01.sh
+\end{verbatim}
+
+or
+
+\begin{verbatim}
+sbatch --cpus-per-task 4 01.sh
+\end{verbatim}
+
+How about changing the amount of RAM (memory) requested? Currently, the Fred Hutch Slurm does not have a memory option built in to guarantee the amount of memory that will be allocated to your job. Instead, the current recommendation is to request CPUs as a proxy for RAM allocation, based on this rule-of-thumb:
+
+\begin{quote}
+``If you think your job will need more than 4GB of memory, request one CPU for every 4GB required.''
+\end{quote}
+
+The technical reasoning behind the rule-of-thumb can be expanded here.
+
+\href{https://sciwiki.fredhutch.org/scicomputing/compute_platforms/\#gizmo}{FH Gizmo} has class J nodes which each have 24 cores and 384GB of memory, and class K nodes which each have 36 cores and 768GB of memory. So, if you think you will need 100GB of memory for your job, by this rule of thumb you would request 25 cores. You would be assigned to a class K node, and you would occupy 25/36 cores on that node. On this node, other users can use the remaining 11 cores. You would share the 768GB of memory all together and hope that the other users don't take up more memory than you need: the more cores you occupy on a node, less users will compete for memory. It's an imprecise system and SciComp has interest to make memory allocation more precise in the future.
+
+You can learn more about other use cases of \texttt{sbatch} at the Biomedical Data Science Wiki's page on \href{https://sciwiki.fredhutch.org/scicomputing/compute_jobs/\#submitting-jobs}{computing jobs}.
+
+\hypertarget{saving-your-sbatch-options}{%
+\subsection{\texorpdfstring{Saving your \texttt{sbatch} options}{Saving your sbatch options}}\label{saving-your-sbatch-options}}
+
+The options you pick for the \texttt{sbatch} command, especially around CPU and RAM requests, can have enormous impact on your computing speed and quality. Therefore, it is often a good idea to save the options you have picked into the shell script itself. Suppose that you launched your job like this:
+
+\begin{verbatim}
+sbatch -c 4 01.sh
+\end{verbatim}
+
+To save the \texttt{-c\ 4} option in your script \texttt{01.sh}, you can add the following header \texttt{\#SBATCH\ -c\ 4} to your script:
+
+\begin{verbatim}
+#!/bin/bash
+
+#SBATCH -c 4
+
+echo "Hello, World!"
+\end{verbatim}
+
+Now, you will automatically request 4 CPUs when you run:
+
+\begin{verbatim}
+sbatch 01.sh
+\end{verbatim}
+
+\hypertarget{monitoring-and-ending-jobs}{%
+\section{Monitoring and Ending Jobs}\label{monitoring-and-ending-jobs}}
+
+Often, our jobs take time to run, and we want to see the status of our jobs. You can examine the status of your job via the \texttt{squeue} command. The default option will show \emph{all} jobs running on the cluster, including other users, so it's common to use the \texttt{-u} option to specify the user. The example user here is \texttt{clo2}:
+
+\begin{verbatim}
+squeue -u clo2
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)
+\end{verbatim}
+
+Alternatively, you can also use \texttt{-\/-me} to specify the user as yourself:
+
+\begin{verbatim}
+squeue --me
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)
+\end{verbatim}
+
+Here, the status (``ST'') shows \texttt{PD}, which means that the job hasn't started to run yet. When it is running the status will be \texttt{R}.
+
+Some common reasons for \texttt{PD} include: there are no available resources left for the requested resources for your job, or that your account has already maxed out its allocated resources. The decision of which user's jobs are running is based on the Slurm scheduler system. You can learn more about \texttt{squeue}'s outputs at the Biomedical Data Science wiki's \href{https://sciwiki.fredhutch.org/scicomputing/compute_jobs/\#why-isnt-my-job-running}{page here}.
+
+If you want to end a job that is either waiting (\texttt{PD} status) or running, you can enter:
+
+\begin{verbatim}
+scancel [job id]
+\end{verbatim}
+
+where \texttt{{[}job\ id{]}} is a numerical ID attached to your unique job. It can be found under \texttt{JOBID} when you run \texttt{squeue}.
+
+\texttt{sbatch\ -c\ 4\ filename.sh}
+
+This command submits a job to the cluster with instructions specified in a \texttt{.sh} file with request of 4 cores.
+
+\texttt{squeue\ -\/-me}
+
+This command prints the job submission status for your username.
+
+\texttt{scancel\ 1234}
+
+This command cancels job ID 1234. The job ID can be found in the \texttt{squeue} command.
+
 \hypertarget{file-upload-and-download}{%
 \chapter{File Upload and Download}\label{file-upload-and-download}}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_252} \end{center}
+\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_252} \end{center}
 
 Exchanging files with the cluster is very important. You can imagine scenarios where:
 
@@ -490,7 +659,7 @@ If you are working with sensitive data (such as data with \href{https://www.hhs.
 
 Download the latest version of Cyberduck \href{https://cyberduck.io/download/}{here}.
 
-\begin{center}\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g16e400fe3e8_0_0} \end{center}
+\begin{center}\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g16e400fe3e8_0_0} \end{center}
 
 Note that the version of Cyberduck in the Software Center or Self Service might not be current, causing compatibility issues with some operating systems.
 
@@ -511,15 +680,15 @@ Launch Cyberduck and click on ``Open Connection''.
 
 Click ``Connect''
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_28}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_28}
 
 Click ``Allow''. You can also check the box to indicate ``Always''.
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_33}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_33}
 
 You should see your script file ``\texttt{01.sh}'' and the log file.
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_37}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_37}
 
 \hypertarget{download-and-edit-the-script}{%
 \section{Download and Edit the Script}\label{download-and-edit-the-script}}
@@ -534,22 +703,22 @@ You should see your script file ``\texttt{01.sh}'' and the log file.
   Open the \texttt{01.sh} in your Downloads folder
 \end{itemize}
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_41}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_41}
 
 Edit the message to include your name and save the file. Rename the file \texttt{01-name.sh}.
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_45}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_45}
 
 \hypertarget{upload-the-new-script}{%
 \section{Upload the New Script}\label{upload-the-new-script}}
 
 From your Downloads folder, simply drag the file to Cyberduck.
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_49}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_49}
 
 You should now see the new script among your cluster files.
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15cf3fa00a4_0_6}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15cf3fa00a4_0_6}
 
 \hypertarget{run-the-new-script}{%
 \section{Run the New Script}\label{run-the-new-script}}
@@ -560,7 +729,7 @@ Return to your Terminal. Submit a job with your new script by running the follow
 sbatch 01-name.sh
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_0}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_0}
 
 The job numbers included in log file names generally increase in number. The greater the number, the more recently the job was run.
 
@@ -570,12 +739,12 @@ Use the \texttt{cat} command to inspect the log. Make sure you replace \texttt{{
 cat slurm-[your-number-here].out
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/06-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_6}
+\includegraphics[width=1\linewidth]{resources/images/08-upload-download_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_6}
 
 \hypertarget{interactive-session}{%
 \chapter{Interactive Session}\label{interactive-session}}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/07-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_275} \end{center}
+\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/09-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_275} \end{center}
 
 While using the cluster, you might need to build and test scripts interactively before running them. Luckily, you can work directly on the cluster by creating an interactive session. When you launch an interactive session, the cluster assigns you a portion of the networked computers called a ``node''. This node (or part of one) is dedicated to you for a period of time rather than using the Slurm job submission system.
 
@@ -608,17 +777,13 @@ You will be prompted with several questions about the type of resources on the n
   When prompted, enter your password
 \end{itemize}
 
-The CPU, or Central Processing Unit, is the brain of the computer that performs and orchestrates computational tasks. Modern computers often perform multiple tasks at once, ranging from 4 tasks on a typical laptop to 48 tasks or more on higher end servers.
+You requested 1 CPU, 20GB of RAM, and don't need a GPU. The \href{https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html}{GPU}, or Graphics Processing Unit, is similar to the CPU. The GPU was originally designed to quickly render graphics (such as for video games), but today can be used to run complex artificial intelligence applications or computationally intensive jobs.
 
-RAM, or Random Access Memory, is often simply referred to as memory. This short term memory holds the information that the CPU needs to perform calculations. One distinctive feature of memory is that it is short term. In other words, when the electricity is shut off, the data stored in memory disappears. To save the CPU's work, you usually save files to your computer. Running highly complicated analyses or algorithms can often require additional memory resources.
+\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/09-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26} \end{center}
 
-The \href{https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html}{GPU}, or Graphics Processing Unit, is similar to the CPU. The GPU was originally designed to quickly render graphics (such as for video games), but today can be used to run complex artificial intelligence applications or computationally intensive jobs.
+You will see that you are now logged on to the compute node ``gizmo'' instead of the login node ``rhino''. Remember that the part of the cluster where you log in is called \texttt{rhino}. The part of the cluster where jobs are run is called \texttt{gizmo}.
 
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/07-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26} \end{center}
-
-You will see that you are now logged on to ``gizmo'' instead of ``rhino''. Remember that the part of the cluster where you log in is called \texttt{rhino}. The part of the cluster where jobs are run is called \texttt{gizmo}.
-
-\includegraphics[width=1\linewidth]{resources/images/07-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_50}
+\includegraphics[width=1\linewidth]{resources/images/09-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_50}
 
 \hypertarget{running-interactive-commands}{%
 \section{Running Interactive Commands}\label{running-interactive-commands}}
@@ -629,7 +794,7 @@ You can start working on the node by running a similar command as we used in the
 echo "Hello, again!"
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/07-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_58}
+\includegraphics[width=1\linewidth]{resources/images/09-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_58}
 
 \hypertarget{using-pre-installed-software-modules}{%
 \section{Using Pre-installed Software Modules}\label{using-pre-installed-software-modules}}
@@ -646,7 +811,7 @@ Next, launch R:
 R
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/07-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_65}
+\includegraphics[width=1\linewidth]{resources/images/09-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_65}
 
 You can play around with R here. For example, you might run:
 
@@ -654,7 +819,7 @@ You can play around with R here. For example, you might run:
 head(mtcars)
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/07-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_72}
+\includegraphics[width=1\linewidth]{resources/images/09-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_72}
 
 Close the R session by typing:
 
@@ -670,23 +835,23 @@ Close the interactive node by typing:
 exit
 \end{verbatim}
 
-\includegraphics[width=1\linewidth]{resources/images/07-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_82}
+\includegraphics[width=1\linewidth]{resources/images/09-interactive_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_82}
+
+\hypertarget{loading-modules-in-non-interactive-mode}{%
+\subsection{Loading Modules in non-interactive mode}\label{loading-modules-in-non-interactive-mode}}
+
+You have just seen how to load in software modules in the interactive mode. When you launch a job via \texttt{sbatch} to start computing on the compute nodes, you may also need to load in software modules. You can add the \texttt{ml} command within your shell script, such as the following:
+
+\begin{verbatim}
+#!/bin/bash
+
+ml fhR/4.2.0-foss-2021b
+Rscript my_r_script.R
+\end{verbatim}
 
 \texttt{grabnode}
 
 This command starts an interactive session on the cluster.
-
-\textbf{Node}
-
-One of the networked computers in the cluster.
-
-\textbf{CPU}
-
-A computer component that performs and orchestrates computational tasks.
-
-\textbf{Memory}
-
-A computer component that stores calculations and information in the short term.
 
 \hypertarget{help}{%
 \chapter{Getting Help}\label{help}}
@@ -792,7 +957,9 @@ Usage
 \texttt{exit} & terminates an interactive session & \texttt{exit} \\
 \texttt{grabnode} & launches an interactive session & \texttt{grabnode} \\
 \texttt{ls} & lists files in the current folder & \texttt{ls} \\
-\texttt{sbatch} & submits a script containing job instructions & \texttt{sbatch\ {[}scriptname.sh{]}} \\
+\texttt{sbatch} & submits a script containing job instructions requesting custom cores & \texttt{sbatch\ -c\ {[}cores{]}\ {[}scriptname.sh{]}} \\
+\texttt{squeue} & lists job submission status for the current user & \texttt{squeue\ -\/-me} \\
+\texttt{scancel} & cancel job submission by job ID & \texttt{scancel\ {[}job\ ID{]}} \\
 \texttt{wget} & downloads a file from the internet & \texttt{wget\ {[}url{]}} \\
 \end{longtable}
 
@@ -952,7 +1119,7 @@ Package Developers (\href{https://github.com/jhudsl/ottrpal}{ottrpal}) \href{htt
 ##  collate  en_US.UTF-8
 ##  ctype    en_US.UTF-8
 ##  tz       Etc/UTC
-##  date     2024-11-08
+##  date     2024-11-18
 ##  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 ## 
 ## - Packages -------------------------------------------------------------------

@@ -1,0 +1,26 @@
+
+
+
+# Getting Help {#help}
+
+The Scientific Computing group in IT manages the cluster, provides support with software, advises on data storage, and holds office hours specifically to help users. Here are some ways you can get help for your work on the cluster. 
+
+## Check out the FAQ page {-}
+
+See our [FAQ and Troubleshooting Page](#faq-and-troubleshooting) to see common errors and what they mean. If you encounter a problem that isn't listed, [let us know](#feedback)!
+
+## Find Community Support on Slack {-}
+
+Peer-to-peer support can be very valuable in learning and troubleshooting your work. The [Fred Hutch Data Slack](https://fhdata.slack.com){target="_blank"} workspace is open to all with a fredhutch.org, uw.edu, seattlechildrens.org, or related institution email addresses (whi.org, scharp.org, etc). You can ask questions, find out about office hours, and discover other live support and training events that can help you learn more about how to leverage resources at Fred Hutch to advance your science.  
+
+## Visit the SciWiki {-}
+
+The SciWiki [Scientific Computing page](https://sciwiki.fredhutch.org/scicomputing/comp_index/){target="_blank"} is full of useful tips and guides. Remember when using the search that the login "nodes" to the Fred Hutch cluster are called rhino and the cluster "nodes" are called gizmo.  
+
+## Send an Email {-}
+
+The primary way you can request help for a problem is to [send SciComp an email](mailto:scicomp@fredhutch.org), so a ticket will be created in their tracking system. This allows the details of the problem you're having to be sent to them so they can better help you. Submitting a good email ticket helps the SciComp Team address your needs quickly and efficiently. We suggest you submit the following information:
+
+1. A brief overview of what the problem is.
+1. Some specifics about the problem, such as the full text (it's ok if it's long) of any error message or terminal command, or a screen shot of the interface you were using when you had the problem. 
+1. A description of what you wanted to have happen or what your overall goal is (in case perhaps there is another strategy that might work better).

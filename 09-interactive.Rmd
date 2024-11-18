@@ -31,17 +31,13 @@ You will be prompted with several questions about the type of resources on the n
 - _Do you need a GPU?_ **N**
 - When prompted, enter your password
 
-The CPU, or Central Processing Unit, is the brain of the computer that performs and orchestrates computational tasks. Modern computers often perform multiple tasks at once, ranging from 4 tasks on a typical laptop to 48 tasks or more on higher end servers. 
-
-RAM, or Random Access Memory, is often simply referred to as memory. This short term memory holds the information that the CPU needs to perform calculations. One distinctive feature of memory is that it is short term. In other words, when the electricity is shut off, the data stored in memory disappears. To save the CPU's work, you usually save files to your computer. Running highly complicated analyses or algorithms can often require additional memory resources.
-
-The [GPU](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html){target="_blank"}, or Graphics Processing Unit, is similar to the CPU. The GPU was originally designed to quickly render graphics (such as for video games), but today can be used to run complex artificial intelligence applications or computationally intensive jobs.
+You requested 1 CPU, 20GB of RAM, and don't need a GPU. The [GPU](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html){target="_blank"}, or Graphics Processing Unit, is similar to the CPU. The GPU was originally designed to quickly render graphics (such as for video games), but today can be used to run complex artificial intelligence applications or computationally intensive jobs.
 
 ```{r, echo=FALSE, fig.alt='CPU is the brain of the computer, whereas memory stores information in the short term.', out.width = '80%', fig.align = 'center'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_26")
 ```
 
-You will see that you are now logged on to "gizmo" instead of "rhino". Remember that the part of the cluster where you log in is called `rhino`. The part of the cluster where jobs are run is called `gizmo`. 
+You will see that you are now logged on to the compute node "gizmo" instead of the login node "rhino". Remember that the part of the cluster where you log in is called `rhino`. The part of the cluster where jobs are run is called `gizmo`. 
 
 ```{r, echo=FALSE, fig.alt='Configuration prompts for interactive node log the user in to gizmo.', out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_50")
@@ -106,20 +102,24 @@ exit
 ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_82")
 ```
 
+
+### Loading Modules in non-interactive mode
+
+You have just seen how to load in software modules in the interactive mode. When you launch a job via `sbatch` to start computing on the compute nodes, you may also need to load in software modules. You can add the `ml` command within your shell script, such as the following:
+
+```
+#!/bin/bash
+
+ml fhR/4.2.0-foss-2021b
+Rscript my_r_script.R
+```
+
+
 <div class = "dictionary">
-`grabnode` 
+
+`grabnode`
 
 This command starts an interactive session on the cluster.
 
-**Node** 
-
-One of the networked computers in the cluster. 
-
-**CPU** 
-
-A computer component that performs and orchestrates computational tasks.
-
-**Memory** 
-
-A computer component that stores calculations and information in the short term.
 </div>
+

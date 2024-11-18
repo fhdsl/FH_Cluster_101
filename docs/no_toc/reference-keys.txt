@@ -1,4 +1,5 @@
 what-is-a-cluster
+parts-of-the-cluster
 account-setup
 check-your-hutchnet-id
 pi-account
@@ -13,12 +14,19 @@ connect-securely
 windows-login
 mac-login
 linux-login
+look-around
+head-and-compute-nodes
+file-storage-systems
 submit-your-first-job
 download-the-script
 confirm-the-download
 inspect-the-script
 submit-the-script
 check-the-output
+custom-jobs
+requesting-specific-computing-resources
+saving-your-sbatch-options
+monitoring-and-ending-jobs
 file-upload-and-download
 download-cyberduck
 create-connection
@@ -29,6 +37,7 @@ interactive-session
 starting-the-session
 running-interactive-commands
 using-pre-installed-software-modules
+loading-modules-in-non-interactive-mode
 help
 summary
 overview

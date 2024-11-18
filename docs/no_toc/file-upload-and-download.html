@@ -4,32 +4,32 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 File Upload and Download | Fred Hutch Cluster 101</title>
+  <title>Chapter 8 File Upload and Download | Fred Hutch Cluster 101</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 File Upload and Download | Fred Hutch Cluster 101" />
+  <meta property="og:title" content="Chapter 8 File Upload and Download | Fred Hutch Cluster 101" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Description about Course/Book." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 File Upload and Download | Fred Hutch Cluster 101" />
+  <meta name="twitter:title" content="Chapter 8 File Upload and Download | Fred Hutch Cluster 101" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
 
 
 
-<meta name="date" content="2024-11-08" />
+<meta name="date" content="2024-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="submit-your-first-job.html"/>
+<link rel="prev" href="custom-jobs.html"/>
 <link rel="next" href="interactive-session.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -77,7 +77,10 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
 <li class="part"><span><b>Introduction</b></span></li>
-<li class="chapter" data-level="1" data-path="what-is-a-cluster.html"><a href="what-is-a-cluster.html"><i class="fa fa-check"></i><b>1</b> What is a Cluster</a></li>
+<li class="chapter" data-level="1" data-path="what-is-a-cluster.html"><a href="what-is-a-cluster.html"><i class="fa fa-check"></i><b>1</b> What is a Cluster</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="what-is-a-cluster.html"><a href="what-is-a-cluster.html#parts-of-the-cluster"><i class="fa fa-check"></i><b>1.1</b> Parts of the Cluster</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="account-setup.html"><a href="account-setup.html"><i class="fa fa-check"></i><b>2</b> Account Setup</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="account-setup.html"><a href="account-setup.html#check-your-hutchnet-id"><i class="fa fa-check"></i><b>2.1</b> Check your HutchNet ID</a></li>
@@ -100,50 +103,66 @@
 <li class="chapter" data-level="4.4" data-path="logging-in.html"><a href="logging-in.html#mac-login"><i class="fa fa-check"></i><b>4.4</b> Mac Login</a></li>
 <li class="chapter" data-level="4.5" data-path="logging-in.html"><a href="logging-in.html#linux-login"><i class="fa fa-check"></i><b>4.5</b> Linux Login</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html"><i class="fa fa-check"></i><b>5</b> Submit Your First Job</a>
+<li class="chapter" data-level="5" data-path="look-around.html"><a href="look-around.html"><i class="fa fa-check"></i><b>5</b> Look around</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#download-the-script"><i class="fa fa-check"></i><b>5.1</b> Download the Script</a></li>
-<li class="chapter" data-level="5.2" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#confirm-the-download"><i class="fa fa-check"></i><b>5.2</b> Confirm the Download</a></li>
-<li class="chapter" data-level="5.3" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#inspect-the-script"><i class="fa fa-check"></i><b>5.3</b> Inspect the Script</a></li>
-<li class="chapter" data-level="5.4" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#submit-the-script"><i class="fa fa-check"></i><b>5.4</b> Submit the Script</a></li>
-<li class="chapter" data-level="5.5" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#check-the-output"><i class="fa fa-check"></i><b>5.5</b> Check the Output</a></li>
+<li class="chapter" data-level="5.1" data-path="look-around.html"><a href="look-around.html#head-and-compute-nodes"><i class="fa fa-check"></i><b>5.1</b> Head and Compute Nodes</a></li>
+<li class="chapter" data-level="5.2" data-path="look-around.html"><a href="look-around.html#file-storage-systems"><i class="fa fa-check"></i><b>5.2</b> File Storage Systems</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html"><i class="fa fa-check"></i><b>6</b> File Upload and Download</a>
+<li class="chapter" data-level="6" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html"><i class="fa fa-check"></i><b>6</b> Submit Your First Job</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#download-cyberduck"><i class="fa fa-check"></i><b>6.1</b> Download Cyberduck</a></li>
-<li class="chapter" data-level="6.2" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#create-connection"><i class="fa fa-check"></i><b>6.2</b> Create Connection</a></li>
-<li class="chapter" data-level="6.3" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#download-and-edit-the-script"><i class="fa fa-check"></i><b>6.3</b> Download and Edit the Script</a></li>
-<li class="chapter" data-level="6.4" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#upload-the-new-script"><i class="fa fa-check"></i><b>6.4</b> Upload the New Script</a></li>
-<li class="chapter" data-level="6.5" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#run-the-new-script"><i class="fa fa-check"></i><b>6.5</b> Run the New Script</a></li>
+<li class="chapter" data-level="6.1" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#download-the-script"><i class="fa fa-check"></i><b>6.1</b> Download the Script</a></li>
+<li class="chapter" data-level="6.2" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#confirm-the-download"><i class="fa fa-check"></i><b>6.2</b> Confirm the Download</a></li>
+<li class="chapter" data-level="6.3" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#inspect-the-script"><i class="fa fa-check"></i><b>6.3</b> Inspect the Script</a></li>
+<li class="chapter" data-level="6.4" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#submit-the-script"><i class="fa fa-check"></i><b>6.4</b> Submit the Script</a></li>
+<li class="chapter" data-level="6.5" data-path="submit-your-first-job.html"><a href="submit-your-first-job.html#check-the-output"><i class="fa fa-check"></i><b>6.5</b> Check the Output</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="interactive-session.html"><a href="interactive-session.html"><i class="fa fa-check"></i><b>7</b> Interactive Session</a>
+<li class="chapter" data-level="7" data-path="custom-jobs.html"><a href="custom-jobs.html"><i class="fa fa-check"></i><b>7</b> Custom jobs</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="interactive-session.html"><a href="interactive-session.html#starting-the-session"><i class="fa fa-check"></i><b>7.1</b> Starting the session</a></li>
-<li class="chapter" data-level="7.2" data-path="interactive-session.html"><a href="interactive-session.html#running-interactive-commands"><i class="fa fa-check"></i><b>7.2</b> Running Interactive Commands</a></li>
-<li class="chapter" data-level="7.3" data-path="interactive-session.html"><a href="interactive-session.html#using-pre-installed-software-modules"><i class="fa fa-check"></i><b>7.3</b> Using Pre-installed Software Modules</a></li>
+<li class="chapter" data-level="7.1" data-path="custom-jobs.html"><a href="custom-jobs.html#requesting-specific-computing-resources"><i class="fa fa-check"></i><b>7.1</b> Requesting Specific Computing Resources</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="custom-jobs.html"><a href="custom-jobs.html#saving-your-sbatch-options"><i class="fa fa-check"></i><b>7.1.1</b> Saving your <code>sbatch</code> options</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>8</b> Getting Help</a>
+<li class="chapter" data-level="7.2" data-path="custom-jobs.html"><a href="custom-jobs.html#monitoring-and-ending-jobs"><i class="fa fa-check"></i><b>7.2</b> Monitoring and Ending Jobs</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html"><i class="fa fa-check"></i><b>8</b> File Upload and Download</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#download-cyberduck"><i class="fa fa-check"></i><b>8.1</b> Download Cyberduck</a></li>
+<li class="chapter" data-level="8.2" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#create-connection"><i class="fa fa-check"></i><b>8.2</b> Create Connection</a></li>
+<li class="chapter" data-level="8.3" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#download-and-edit-the-script"><i class="fa fa-check"></i><b>8.3</b> Download and Edit the Script</a></li>
+<li class="chapter" data-level="8.4" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#upload-the-new-script"><i class="fa fa-check"></i><b>8.4</b> Upload the New Script</a></li>
+<li class="chapter" data-level="8.5" data-path="file-upload-and-download.html"><a href="file-upload-and-download.html#run-the-new-script"><i class="fa fa-check"></i><b>8.5</b> Run the New Script</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="interactive-session.html"><a href="interactive-session.html"><i class="fa fa-check"></i><b>9</b> Interactive Session</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="interactive-session.html"><a href="interactive-session.html#starting-the-session"><i class="fa fa-check"></i><b>9.1</b> Starting the session</a></li>
+<li class="chapter" data-level="9.2" data-path="interactive-session.html"><a href="interactive-session.html#running-interactive-commands"><i class="fa fa-check"></i><b>9.2</b> Running Interactive Commands</a></li>
+<li class="chapter" data-level="9.3" data-path="interactive-session.html"><a href="interactive-session.html#using-pre-installed-software-modules"><i class="fa fa-check"></i><b>9.3</b> Using Pre-installed Software Modules</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="interactive-session.html"><a href="interactive-session.html#loading-modules-in-non-interactive-mode"><i class="fa fa-check"></i><b>9.3.1</b> Loading Modules in non-interactive mode</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>10</b> Getting Help</a>
 <ul>
 <li class="chapter" data-level="" data-path="help.html"><a href="help.html#check-out-the-faq-page"><i class="fa fa-check"></i>Check out the FAQ page</a></li>
 <li class="chapter" data-level="" data-path="help.html"><a href="help.html#find-community-support-on-slack"><i class="fa fa-check"></i>Find Community Support on Slack</a></li>
 <li class="chapter" data-level="" data-path="help.html"><a href="help.html#visit-the-sciwiki"><i class="fa fa-check"></i>Visit the SciWiki</a></li>
 <li class="chapter" data-level="" data-path="help.html"><a href="help.html#send-an-email"><i class="fa fa-check"></i>Send an Email</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>9</b> Summary</a>
+<li class="chapter" data-level="11" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>11</b> Summary</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="summary.html"><a href="summary.html#overview"><i class="fa fa-check"></i><b>9.1</b> Overview</a></li>
-<li class="chapter" data-level="9.2" data-path="summary.html"><a href="summary.html#glossary"><i class="fa fa-check"></i><b>9.2</b> Glossary</a></li>
-<li class="chapter" data-level="9.3" data-path="summary.html"><a href="summary.html#commands-command-line-interface"><i class="fa fa-check"></i><b>9.3</b> Commands (command line interface)</a></li>
+<li class="chapter" data-level="11.1" data-path="summary.html"><a href="summary.html#overview"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="summary.html"><a href="summary.html#glossary"><i class="fa fa-check"></i><b>11.2</b> Glossary</a></li>
+<li class="chapter" data-level="11.3" data-path="summary.html"><a href="summary.html#commands-command-line-interface"><i class="fa fa-check"></i><b>11.3</b> Commands (command line interface)</a></li>
 </ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="10" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i><b>10</b> Provide Feedback</a></li>
-<li class="chapter" data-level="11" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html"><i class="fa fa-check"></i><b>11</b> FAQ and Troubleshooting</a>
+<li class="chapter" data-level="12" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i><b>12</b> Provide Feedback</a></li>
+<li class="chapter" data-level="13" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html"><i class="fa fa-check"></i><b>13</b> FAQ and Troubleshooting</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#faq"><i class="fa fa-check"></i><b>11.1</b> FAQ</a>
+<li class="chapter" data-level="13.1" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#faq"><i class="fa fa-check"></i><b>13.1</b> FAQ</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#manual-putty"><i class="fa fa-check"></i><b>11.1.1</b> How can I manually install PuTTY?</a></li>
+<li class="chapter" data-level="13.1.1" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#manual-putty"><i class="fa fa-check"></i><b>13.1.1</b> How can I manually install PuTTY?</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#troubleshooting"><i class="fa fa-check"></i><b>11.2</b> Troubleshooting</a>
+<li class="chapter" data-level="13.2" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#troubleshooting"><i class="fa fa-check"></i><b>13.2</b> Troubleshooting</a>
 <ul>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-could-not-resolve-hostname-rhino-nodename-nor-servname-provided-or-not-known"><i class="fa fa-check"></i><code>ssh: Could not resolve hostname rhino: nodename nor servname provided, or not known</code></a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-connect-to-host-rhino-port-22-undefined-error-0"><i class="fa fa-check"></i><code>ssh: connect to host rhino port 22: Undefined error: 0</code></a></li>
@@ -197,9 +216,9 @@
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/dasl_thin_main_image.png">
 </div>
-<div id="file-upload-and-download" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> File Upload and Download<a href="file-upload-and-download.html#file-upload-and-download" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_252.png" alt="We are on the sixth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
+<div id="file-upload-and-download" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> File Upload and Download<a href="file-upload-and-download.html#file-upload-and-download" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_252.png" alt="We are on the sixth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
 <p>Exchanging files with the cluster is very important. You can imagine scenarios where:</p>
 <ul>
 <li>You want to download log files or output files</li>
@@ -210,16 +229,16 @@
 <div class="warning">
 <p>If you are working with sensitive data (such as data with <a href="https://www.hhs.gov/answers/hipaa/what-is-phi/index.html" target="_blank">PHI</a> that requires <a href="https://www.hhs.gov/hipaa/index.html" target="_blank">HIPAA compliance</a>, you need to be extra cautious about transferring your data to the cluster. Your home directory is not an appropriate storage option for such data. Make sure you consider any stipulations in your data use agreements.</p>
 </div>
-<div id="download-cyberduck" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Download Cyberduck<a href="file-upload-and-download.html#download-cyberduck" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="download-cyberduck" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Download Cyberduck<a href="file-upload-and-download.html#download-cyberduck" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Download the latest version of Cyberduck <a href="https://cyberduck.io/download/" target="_blank">here</a>.</p>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g16e400fe3e8_0_0.png" alt="Downloads page for Cyberduck." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g16e400fe3e8_0_0.png" alt="Downloads page for Cyberduck." width="100%" style="display: block; margin: auto;" /></p>
 <div class="warning">
 <p>Note that the version of Cyberduck in the Software Center or Self Service might not be current, causing compatibility issues with some operating systems.</p>
 </div>
 </div>
-<div id="create-connection" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Create Connection<a href="file-upload-and-download.html#create-connection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="create-connection" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Create Connection<a href="file-upload-and-download.html#create-connection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Launch Cyberduck and click on “Open Connection”.</p>
 <ul>
 <li>From the dropdown menu, select “SFTP (SSH File Transfer Protocol)”</li>
@@ -227,41 +246,41 @@
 <li>Fill in your HutchNetID for Username and fill in your password</li>
 </ul>
 <p>Click “Connect”</p>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_28.png" alt="Screenshot of Cyberduck “Open Connection” configuration." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_28.png" alt="Screenshot of Cyberduck “Open Connection” configuration." width="100%" /></p>
 <p>Click “Allow”. You can also check the box to indicate “Always”.</p>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_33.png" alt="You can select allow when Cyberduck asks about an Unknown Fingerprint." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_33.png" alt="You can select allow when Cyberduck asks about an Unknown Fingerprint." width="100%" /></p>
 <p>You should see your script file “<code>01.sh</code>” and the log file.</p>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_37.png" alt="Files, including the script we previously ran, can be accessed via Cyberduck." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_37.png" alt="Files, including the script we previously ran, can be accessed via Cyberduck." width="100%" /></p>
 </div>
-<div id="download-and-edit-the-script" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Download and Edit the Script<a href="file-upload-and-download.html#download-and-edit-the-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="download-and-edit-the-script" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Download and Edit the Script<a href="file-upload-and-download.html#download-and-edit-the-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Right click on “<code>01.sh</code>” and select “Download”</li>
 <li>You will see a “Transfers” prompt open, and the <code>01.sh</code> file should now appear in your Downloads folder</li>
 <li>Open the <code>01.sh</code> in your Downloads folder</li>
 </ul>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_41.png" alt="Screenshot of the script opened on the users local laptop." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_41.png" alt="Screenshot of the script opened on the users local laptop." width="100%" /></p>
 <p>Edit the message to include your name and save the file. Rename the file <code>01-name.sh</code>.</p>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_45.png" alt="Screenshot of the edited and renamed script file contents. The contents of the script now reads &quot;Hello, Ava!&quot;." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_45.png" alt="Screenshot of the edited and renamed script file contents. The contents of the script now reads &quot;Hello, Ava!&quot;." width="100%" /></p>
 </div>
-<div id="upload-the-new-script" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Upload the New Script<a href="file-upload-and-download.html#upload-the-new-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="upload-the-new-script" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Upload the New Script<a href="file-upload-and-download.html#upload-the-new-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>From your Downloads folder, simply drag the file to Cyberduck.</p>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_49.png" alt="Screenshot of local and Cyberduck files, depicting the dragging that transfers the file over." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_49.png" alt="Screenshot of local and Cyberduck files, depicting the dragging that transfers the file over." width="100%" /></p>
 <p>You should now see the new script among your cluster files.</p>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15cf3fa00a4_0_6.png" alt="The new file is now listed in Cyberduck and is therefore on the cluster." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15cf3fa00a4_0_6.png" alt="The new file is now listed in Cyberduck and is therefore on the cluster." width="100%" /></p>
 </div>
-<div id="run-the-new-script" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Run the New Script<a href="file-upload-and-download.html#run-the-new-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="run-the-new-script" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Run the New Script<a href="file-upload-and-download.html#run-the-new-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Return to your Terminal. Submit a job with your new script by running the following. When you type <code>ls</code> you should see a new log file!</p>
 <pre><code>sbatch 01-name.sh</code></pre>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_0.png" alt="After running the newly edited script, there is a new log file present on the cluster." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_0.png" alt="After running the newly edited script, there is a new log file present on the cluster." width="100%" /></p>
 <div class="notice">
 <p>The job numbers included in log file names generally increase in number. The greater the number, the more recently the job was run.</p>
 </div>
 <p>Use the <code>cat</code> command to inspect the log. Make sure you replace <code>[your-number-here]</code> to match your file. The message should show the new text that you added!</p>
 <pre><code>cat slurm-[your-number-here].out</code></pre>
-<p><img src="resources/images/06-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_6.png" alt="The message &quot;Hello, Ava!&quot; has been printed to the Terminal using the cat command." width="100%" /></p>
+<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_6.png" alt="The message &quot;Hello, Ava!&quot; has been printed to the Terminal using the cat command." width="100%" /></p>
 
 </div>
 </div>
@@ -279,7 +298,7 @@
           </div>
         </div>
       </div>
-<a href="submit-your-first-job.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="custom-jobs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="interactive-session.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -301,7 +320,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/06-upload-download.Rmd",
+"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/08-upload-download.Rmd",
 "text": "Edit"
 },
 "history": {

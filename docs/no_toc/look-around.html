@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 What is a Cluster | Fred Hutch Cluster 101</title>
+  <title>Chapter 5 Look around | Fred Hutch Cluster 101</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 What is a Cluster | Fred Hutch Cluster 101" />
+  <meta property="og:title" content="Chapter 5 Look around | Fred Hutch Cluster 101" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Description about Course/Book." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 What is a Cluster | Fred Hutch Cluster 101" />
+  <meta name="twitter:title" content="Chapter 5 Look around | Fred Hutch Cluster 101" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="account-setup.html"/>
+<link rel="prev" href="logging-in.html"/>
+<link rel="next" href="submit-your-first-job.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -216,29 +216,31 @@
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/dasl_thin_main_image.png">
 </div>
-<div id="what-is-a-cluster" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> What is a Cluster<a href="what-is-a-cluster.html#what-is-a-cluster" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="resources/images/01-cluster_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_114.png" alt="We are on the first step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
-<p>A computing cluster is a set of many computers networked together. Because there are many computers working together, the network is able to handle computationally expensive tasks, like genome assemblies or advanced algorithms. Imagine you’re building a house. It would take a long time by yourself! It’s much better to have many builders working together.</p>
-<p>Now that we have a team of workers, the next challenge is task management. A home construction team will need a manager to help delegate tasks. Similarly, the computing cluster uses management software to prioritize tasks, delegate workers (resources), and check on progress. The Fred Hutch cluster uses a common management and scheduling tool called <a href="https://slurm.schedmd.com/overview.html" target="_blank">Slurm</a>.</p>
-<p><img src="resources/images/01-cluster_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_18.png" alt="Your computer has 1 node, 8 CPUs, and 8 gigabytes of memory. The Hutch cluster has nearly 600 nodes, 4000 CPUs, and 40 terabytes of memory." width="80%" style="display: block; margin: auto;" /></p>
-<p>How is the cluster different from a laptop or desktop? First, on your laptop you most likely interact with it using an operating system like Windows or MacOS. The Fred Hutch cluster uses a Linux operating system. Second, because many people use the cluster for many tasks, there isn’t a central screen and keyboard. You access the cluster remotely from your computer! We will talk more about how to connect to the cluster in a <a href="terminal.html#terminal">following chapter</a>. Third, because the cluster is a set of many computers networked together, you will usually access only a few of the many computers for your work.</p>
-<div id="parts-of-the-cluster" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Parts of the Cluster<a href="what-is-a-cluster.html#parts-of-the-cluster" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Each of the networked computers within a cluster is called a <strong>Node</strong>. Each node has two main components:</p>
-<p>The <strong>CPU</strong>, or Central Processing Unit, is the brain of the computer that performs and orchestrates computational tasks. Modern computers often have multiple CPUs (or also known as “cores”) to perform multiple tasks at once, ranging from 4 tasks on a typical laptop to 48 tasks or more on higher end servers. Examples of tasks can be running a simulation many times, in which each CPU performs a simulation in parallel.</p>
-<p>The <strong>RAM</strong>, or Random Access Memory, is often simply referred to as memory. This short term memory holds the information that the CPU needs to perform calculations. One distinctive feature of memory is that it is short term. In other words, when the electricity is shut off, the data stored in memory disappears. To save the CPU’s work, you usually save files to your computer. Running highly complicated analyses or algorithms can often require additional memory resources.</p>
-<p><img src="resources/images/01-cluster_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26.png" alt="CPU is the brain of the computer, whereas memory stores information in the short term." width="80%" style="display: block; margin: auto;" /></p>
-<p>On your own personal computer, you may have 2-4 CPUs, and 8-16 Gigabytes of working memory. On the Fred Hutch cluster, there are around 600 nodes, and each node has a huge amount of CPUs and RAM compared to your personal computer: for instance, each “K Node” have 36 CPUs and 700GB of RAM, and each “J Node” have 24 CPUs and 350 of RAM! Therefore, when you access any of these K or J nodes, you will be sharing its computing power with other users also.</p>
+<div id="look-around" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Look around<a href="look-around.html#look-around" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/05-look-around_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
+<p>Now that you have successfully logged in to the Fred Hutch cluster, it’s time to look around to see what compute node you have connected to, and what file storage systems are available.</p>
+<div id="head-and-compute-nodes" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Head and Compute Nodes<a href="look-around.html#head-and-compute-nodes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>After logging in, you are connected to the <strong>Head Node</strong> (alternative names include the Login Node, or the Submit Node). At Fred Hutch, head node is also called <strong>Rhino</strong>. The purpose of the head node is to serve as a launching pad for the user: you are encouraged to look for files you want to use for your analysis, and once you know what data and software you want to use, you perform the computation on the <strong>Compute Nodes</strong> (alternative names include the Worker Node). At Fred Hutch, the compute nodes are called <strong>Gizmo</strong>. The compute notes have high CPU and RAM capacity for running demanding jobs, whereas the head node has very limited CPUs and RAM.</p>
+<p>The diagram below illustrates the relationship between the head node, compute nodes, and the shared file storage systems: you start at the login (head) node, and you can look at the files on the shared file storage system. When you know what data and software you want to use for compute, you let the compute nodes do the job. The compute nodes are also connected to the shared file storage system.</p>
+<p><img src="resources/images/05-look-around_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g3149434dbb4_1_3.png" alt="Compute node diagram." width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="file-storage-systems" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> File Storage Systems<a href="look-around.html#file-storage-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Your current working directory (which can be printed by the <code>pwd</code> command) is the Home filesystem. You are given ~100GB of personal space, and this is usually for personal configuration of the cluster as a user.</p>
+<p>The other storage resources available to researchers include:</p>
+<ul>
+<li><p><strong>Fast</strong> for shared data, including the majority of large scale research data. You can find it at <code>/fh/fast</code>.</p></li>
+<li><p><strong>Temp</strong> for temporary storage of files when using the cluster. You can find it at <code>/hpc/temp</code>.</p></li>
+<li><p><strong>Secure</strong> for data with higher-level security needs (PHI/encryption/auditing). You can find it at <code>/fh/secure</code>.</p></li>
+</ul>
+<p>The Fred Hutch Biomedical Data Science Wiki <a href="https://sciwiki.fredhutch.org/scicomputing/store_posix/">keeps up to date information</a> about the file storage system.</p>
 <div class="dictionary">
-<p><strong>Computing cluster</strong></p>
-<p>A set of computers networked together to perform large tasks.</p>
-<p><strong>Node</strong></p>
-<p>One of the networked computers in the cluster.</p>
-<p><strong>CPU</strong></p>
-<p>A computer component that performs and orchestrates computational tasks.</p>
-<p><strong>Memory</strong></p>
-<p>A computer component that stores calculations and information in the short term.</p>
+<p><strong>Head Node</strong></p>
+<p>A node that is the default computer you log into when you connect to the Cluster. It has limited CPU and memory, and is used to explore the needed data and software to be used on the Compute Node. Also known as <strong>Login Node</strong> or <strong>Rhino</strong> at Fred Hutch.</p>
+<p><strong>Compute Node</strong></p>
+<p>A node with extensive CPU and memory used for high performance computing. Also known as the <strong>Worker Node</strong> or <strong>Gizmo</strong> at Fred Hutch.</p>
 </div>
 
 </div>
@@ -257,8 +259,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="account-setup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="logging-in.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="submit-your-first-job.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -279,7 +281,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/01-cluster.Rmd",
+"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/05-look-around.Rmd",
 "text": "Edit"
 },
 "history": {

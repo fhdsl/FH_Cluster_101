@@ -18,7 +18,7 @@ format:
 
 . . .
 
--   What is DaSL?
+-   What is [DaSL](https://hutchdatascience.org/)?
 
 . . .
 
@@ -110,13 +110,15 @@ The storage resources available to researchers include:
 
 -   **Temp** for temporary storage of files when using the cluster. You can find it at `/hpc/temp`.
 
+-   **Working** for secondary (working) copies of data that is not backed up. You can find it at `/fh/working/`.
+
 -   **Secure** for data with higher-level security needs (PHI/encryption/auditing). You can find it at `/fh/secure`.
 
-https://sciwiki.fredhutch.org/scicomputing/store_posix/
+<https://sciwiki.fredhutch.org/scicomputing/store_posix/>
 
 ## Submit Your First Job
 
-Walk through: https://hutchdatascience.org/FH_Cluster_101/submit-your-first-job.html
+Walk through: <https://hutchdatascience.org/FH_Cluster_101/submit-your-first-job.html>
 
 ## Requesting Specific Computing Resources
 
@@ -132,7 +134,7 @@ Options for `sbatch`
 
 -   `--output` name output file
 
-https://sciwiki.fredhutch.org/scicomputing/compute_jobs/
+<https://sciwiki.fredhutch.org/scicomputing/compute_jobs/>
 
 . . .
 
@@ -142,7 +144,7 @@ Why isn't memory `--mem` specified?
 
 . . .
 
-Partitions: https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/
+Partitions: <https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/>
 
 ## Saving your `sbatch` options
 
@@ -208,7 +210,3 @@ Example of loading software on a launch script `wget https://raw.githubuserconte
 ## File upload and download
 
 Walk through: https://hutchdatascience.org/FH_Cluster_101/file-upload-and-download.html
-
-## How was the workshop for you today?
-
-https://forms.gle/vfgWL4gC9KvbPLQT7

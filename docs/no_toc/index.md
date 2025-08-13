@@ -1,6 +1,6 @@
 ---
 title: "Fred Hutch Cluster 101"
-date: "November 18, 2024"
+date: "August 13, 2025"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: book.bib
@@ -20,6 +20,6 @@ Our goal for this course is to get you running on the Fred Hutch cluster **quick
 
 The Fred Hutch cluster is supported by a group in IT called Scientific Computing, and this course was developed by the Fred Hutch Data Science Lab in collaboration with them. Please see the [author credits](#about-the-authors) for more information.
 
-This course is available in [Bookdown](https://hutchdatascience.org/FH_Cluster_Guide) and [Leanpub](https://leanpub.com/courses/fredhutch/fredhutchcluster101) formats. If you want a certificate, you need to take the Leanpub version of the course. **The Leanpub course can be taken for free, but you still have to put the course in your cart and check out**.
+This course is available in [Bookdown](https://hutchdatascience.org/FH_Cluster_101/) and [Leanpub](https://leanpub.com/courses/fredhutch/fredhutchcluster101) formats. If you want a certificate, you need to take the Leanpub version of the course. **The Leanpub course can be taken for free, but you still have to put the course in your cart and check out**. Make sure you create and are logged in to your account on Leanpub to access your course.
 
 <img src="index_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_88.png" alt="Pathway of chapters covered in this course." width="100%" />

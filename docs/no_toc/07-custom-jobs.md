@@ -2,7 +2,7 @@
 
 # Custom jobs
 
-<img src="resources/images/07-custom-jobs_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229.png" alt="We are on the fifth step of the pathway." width="80%" style="display: block; margin: auto;" />
+<img src="07-custom-jobs_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229.png" alt="We are on the fifth step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 Once you are comfortable submitting simple jobs, we point out ways customize your jobs to make best use of the computing infrastructure: perhaps you want to change the number of CPUs or RAM to request, or you want to monitor the status of a job running. This section highlights some common requests people use on the Fred Hutch Slurm system.
 

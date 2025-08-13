@@ -5,8 +5,7 @@
 
 # Terminal Setup {#terminal}
 
-
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/03-terminal_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_183} \end{center}
+<img src="03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_183.png" alt="We are on the third step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 The next step is getting familiar with your Terminal. This is your portal to the cluster.
 
@@ -26,11 +25,9 @@ You will need to install a Terminal application called PuTTY to connect to the F
 
 1. You should then see PuTTY available in the Software Center. Click "Install" and go through the Setup Wizard.
 
-    
-    \includegraphics[width=1\linewidth]{resources/images/03-terminal_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_15} 
+    <img src="03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_15.png" alt="The Software Center application lists available apps, including PuTTY." width="100%" />
 
-    
-    \includegraphics[width=1\linewidth]{resources/images/03-terminal_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_20} 
+    <img src="03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_20.png" alt="The PuTTY page inside Software Center. The Install button is highlighted." width="100%" />
 
     <div class = "notice">
     You can also [install PuTTY manually](faq.html#manual-putty){target="_blank"} if you don't see it in the Software Center.
@@ -38,13 +35,11 @@ You will need to install a Terminal application called PuTTY to connect to the F
 
 1. PuTTY should now be available in your applications. Click on PuTTY to open.
 
-    
-    \includegraphics[width=1\linewidth]{resources/images/03-terminal_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_28} 
+    <img src="03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_28.png" alt="The PuTTY application now appears in the Windows app menu." width="100%" />
 
 1. You should now see the PuTTY Configuration menu.
 
-    
-    \includegraphics[width=1\linewidth]{resources/images/03-terminal_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_35} 
+    <img src="03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_35.png" alt="The PuTTY configuration menu is open." width="100%" />
 
 </p></details>
 
@@ -56,13 +51,11 @@ Mac machines come with a Terminal installed.
 
 1. Go to Finder > Applications > Utilities > Terminal and double-click. 
 
-    
-    \includegraphics[width=1\linewidth]{resources/images/03-terminal_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_9} 
+    <img src="03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_9.png" alt="Screenshot of the Utilities directory. The Terminal app is highlighted." width="100%" />
 
 1. Your Terminal should look like this:
     
-    
-    \includegraphics[width=1\linewidth]{resources/images/03-terminal_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_2} 
+    <img src="03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_2.png" alt="Screenshot of the Mac Terminal." width="100%" />
 
 </p></details>
     

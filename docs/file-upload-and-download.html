@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 File Upload and Download | Fred Hutch Cluster 101</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 File Upload and Download | Fred Hutch Cluster 101" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2024-11-18" />
+<meta name="date" content="2025-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,6 +168,7 @@
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-connect-to-host-rhino-port-22-undefined-error-0"><i class="fa fa-check"></i><code>ssh: connect to host rhino port 22: Undefined error: 0</code></a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#connection-failed-message-in-cyberduck"><i class="fa fa-check"></i><code>Connection failed</code> message in Cyberduck</a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#invalid-account-or-accountpartition-when-logging-in"><i class="fa fa-check"></i><code>Invalid account or account/partition</code> when logging in</a></li>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#leanpub-course-gives-a-404-error"><i class="fa fa-check"></i>Leanpub course gives a 404 error</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="get-your-certificate.html"><a href="get-your-certificate.html"><i class="fa fa-check"></i>Get Your Certificate</a></li>
@@ -218,7 +219,7 @@
 </div>
 <div id="file-upload-and-download" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Chapter 8</span> File Upload and Download<a href="file-upload-and-download.html#file-upload-and-download" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_252.png" alt="We are on the sixth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_252.png" alt="We are on the sixth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
 <p>Exchanging files with the cluster is very important. You can imagine scenarios where:</p>
 <ul>
 <li>You want to download log files or output files</li>
@@ -232,7 +233,7 @@
 <div id="download-cyberduck" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Download Cyberduck<a href="file-upload-and-download.html#download-cyberduck" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Download the latest version of Cyberduck <a href="https://cyberduck.io/download/" target="_blank">here</a>.</p>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g16e400fe3e8_0_0.png" alt="Downloads page for Cyberduck." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g16e400fe3e8_0_0.png" alt="Downloads page for Cyberduck." width="100%" style="display: block; margin: auto;" /></p>
 <div class="warning">
 <p>Note that the version of Cyberduck in the Software Center or Self Service might not be current, causing compatibility issues with some operating systems.</p>
 </div>
@@ -246,11 +247,11 @@
 <li>Fill in your HutchNetID for Username and fill in your password</li>
 </ul>
 <p>Click “Connect”</p>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_28.png" alt="Screenshot of Cyberduck “Open Connection” configuration." width="100%" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_28.png" alt="Screenshot of Cyberduck “Open Connection” configuration." width="100%" /></p>
 <p>Click “Allow”. You can also check the box to indicate “Always”.</p>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_33.png" alt="You can select allow when Cyberduck asks about an Unknown Fingerprint." width="100%" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_33.png" alt="You can select allow when Cyberduck asks about an Unknown Fingerprint." width="100%" /></p>
 <p>You should see your script file “<code>01.sh</code>” and the log file.</p>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_37.png" alt="Files, including the script we previously ran, can be accessed via Cyberduck." width="100%" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_37.png" alt="Files, including the script we previously ran, can be accessed via Cyberduck." width="100%" /></p>
 </div>
 <div id="download-and-edit-the-script" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> Download and Edit the Script<a href="file-upload-and-download.html#download-and-edit-the-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -259,28 +260,28 @@
 <li>You will see a “Transfers” prompt open, and the <code>01.sh</code> file should now appear in your Downloads folder</li>
 <li>Open the <code>01.sh</code> in your Downloads folder</li>
 </ul>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_41.png" alt="Screenshot of the script opened on the users local laptop." width="100%" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_41.png" alt="Screenshot of the script opened on the users local laptop." width="100%" /></p>
 <p>Edit the message to include your name and save the file. Rename the file <code>01-name.sh</code>.</p>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_45.png" alt="Screenshot of the edited and renamed script file contents. The contents of the script now reads &quot;Hello, Ava!&quot;." width="100%" /></p>
+<p>&lt;img src=“08-upload-download_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_45.png” alt=“Screenshot of the edited and renamed script file contents. The contents of the script now reads”Hello, Ava!“.” width=“100%” /&gt;</p>
 </div>
 <div id="upload-the-new-script" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> Upload the New Script<a href="file-upload-and-download.html#upload-the-new-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>From your Downloads folder, simply drag the file to Cyberduck.</p>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_49.png" alt="Screenshot of local and Cyberduck files, depicting the dragging that transfers the file over." width="100%" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_49.png" alt="Screenshot of local and Cyberduck files, depicting the dragging that transfers the file over." width="100%" /></p>
 <p>You should now see the new script among your cluster files.</p>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15cf3fa00a4_0_6.png" alt="The new file is now listed in Cyberduck and is therefore on the cluster." width="100%" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15cf3fa00a4_0_6.png" alt="The new file is now listed in Cyberduck and is therefore on the cluster." width="100%" /></p>
 </div>
 <div id="run-the-new-script" class="section level2 hasAnchor" number="8.5">
 <h2><span class="header-section-number">8.5</span> Run the New Script<a href="file-upload-and-download.html#run-the-new-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Return to your Terminal. Submit a job with your new script by running the following. When you type <code>ls</code> you should see a new log file!</p>
 <pre><code>sbatch 01-name.sh</code></pre>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_0.png" alt="After running the newly edited script, there is a new log file present on the cluster." width="100%" /></p>
+<p><img src="08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_0.png" alt="After running the newly edited script, there is a new log file present on the cluster." width="100%" /></p>
 <div class="notice">
 <p>The job numbers included in log file names generally increase in number. The greater the number, the more recently the job was run.</p>
 </div>
 <p>Use the <code>cat</code> command to inspect the log. Make sure you replace <code>[your-number-here]</code> to match your file. The message should show the new text that you added!</p>
 <pre><code>cat slurm-[your-number-here].out</code></pre>
-<p><img src="resources/images/08-upload-download_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_6.png" alt="The message &quot;Hello, Ava!&quot; has been printed to the Terminal using the cat command." width="100%" /></p>
+<p>&lt;img src=“08-upload-download_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_6.png” alt=“The message”Hello, Ava!” has been printed to the Terminal using the cat command.” width=“100%” /&gt;</p>
 
 </div>
 </div>
@@ -313,32 +314,32 @@
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": false,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/08-upload-download.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Cluster_Guide.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/08-upload-download.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

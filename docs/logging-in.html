@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Logging In | Fred Hutch Cluster 101</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Logging In | Fred Hutch Cluster 101" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2024-11-18" />
+<meta name="date" content="2025-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,6 +168,7 @@
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-connect-to-host-rhino-port-22-undefined-error-0"><i class="fa fa-check"></i><code>ssh: connect to host rhino port 22: Undefined error: 0</code></a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#connection-failed-message-in-cyberduck"><i class="fa fa-check"></i><code>Connection failed</code> message in Cyberduck</a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#invalid-account-or-accountpartition-when-logging-in"><i class="fa fa-check"></i><code>Invalid account or account/partition</code> when logging in</a></li>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#leanpub-course-gives-a-404-error"><i class="fa fa-check"></i>Leanpub course gives a 404 error</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="get-your-certificate.html"><a href="get-your-certificate.html"><i class="fa fa-check"></i>Get Your Certificate</a></li>
@@ -218,7 +219,7 @@
 </div>
 <div id="logging-in" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Logging In<a href="logging-in.html#logging-in" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="resources/images/04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
 <p>Now that you have your Terminal application ready, you want to connect to the cluster. You will do this using a method called <a href="https://www.ssh.com/academy/ssh/protocol" target="_blank">SSH</a>, which stands for “Secure SHell”.</p>
 <div id="what-is-ssh" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> What is <code>SSH</code>?<a href="logging-in.html#what-is-ssh" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -242,12 +243,12 @@ Click to view steps
 <p>
 <ol style="list-style-type: decimal">
 <li><p>Go to the PuTTY Configuration menu. Under “Host Name” type <strong>rhino</strong> and click “Open”.</p>
-<p><img src="resources/images/04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_41.png" alt="The PuTTY Host Name &quot;rhino&quot; has been typed in." width="100%" /></p></li>
+<p>&lt;img src=“04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_41.png” alt=“The PuTTY Host Name”rhino” has been typed in.” width=“100%” /&gt;</p></li>
 <li><p>You will be prompted to login. Type in your HutchNetID (e.g., <code>jsmith3</code>).</p>
-<p><img src="resources/images/04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_48.png" alt="The login prompt for rhino." width="100%" /></p></li>
+<p><img src="04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_48.png" alt="The login prompt for rhino." width="100%" /></p></li>
 <li><p>Enter your password. No<code>*</code> or symbols will show up, so type it in carefully!</p></li>
 <li><p>You are now logged in! There should be a login message, with your name at the bottom.</p>
-<p><img src="resources/images/04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_60.png" alt="Screenshot of the PuTTY Terminal." width="100%" /></p></li>
+<p><img src="04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_60.png" alt="Screenshot of the PuTTY Terminal." width="100%" /></p></li>
 </ol>
 <p>Congratulations! You are now logged in to the Fred Hutch cluster!</p>
 </p>
@@ -266,7 +267,7 @@ Click to view steps
 <li><p>You will see a message that looks like <code>The authenticity of host 'rhino (XXX.XXX.XX.XX)' can't be established.</code> Type in <code>yes</code> and hit enter.</p></li>
 <li><p>Enter your password. No<code>*</code> or symbols will show up, so type it in carefully!</p></li>
 <li><p>You are now logged in! There should be a login message, with your name at the bottom.</p>
-<p><img src="resources/images/04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_43.png" alt="Screenshot of the Mac Terminal." width="100%" /></p></li>
+<p><img src="04-logging-in_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_43.png" alt="Screenshot of the Mac Terminal." width="100%" /></p></li>
 </ol>
 <p>Congratulations! You are now logged in to the Fred Hutch cluster!</p>
 </p>
@@ -321,32 +322,32 @@ Click to view steps
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": false,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/04-logging-in.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Cluster_Guide.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/04-logging-in.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

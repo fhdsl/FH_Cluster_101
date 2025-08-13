@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Look around | Fred Hutch Cluster 101</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Look around | Fred Hutch Cluster 101" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2024-11-18" />
+<meta name="date" content="2025-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,6 +168,7 @@
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-connect-to-host-rhino-port-22-undefined-error-0"><i class="fa fa-check"></i><code>ssh: connect to host rhino port 22: Undefined error: 0</code></a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#connection-failed-message-in-cyberduck"><i class="fa fa-check"></i><code>Connection failed</code> message in Cyberduck</a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#invalid-account-or-accountpartition-when-logging-in"><i class="fa fa-check"></i><code>Invalid account or account/partition</code> when logging in</a></li>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#leanpub-course-gives-a-404-error"><i class="fa fa-check"></i>Leanpub course gives a 404 error</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="get-your-certificate.html"><a href="get-your-certificate.html"><i class="fa fa-check"></i>Get Your Certificate</a></li>
@@ -218,13 +219,13 @@
 </div>
 <div id="look-around" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Look around<a href="look-around.html#look-around" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="resources/images/05-look-around_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="05-look-around_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
 <p>Now that you have successfully logged in to the Fred Hutch cluster, it’s time to look around to see what compute node you have connected to, and what file storage systems are available.</p>
 <div id="head-and-compute-nodes" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Head and Compute Nodes<a href="look-around.html#head-and-compute-nodes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>After logging in, you are connected to the <strong>Head Node</strong> (alternative names include the Login Node, or the Submit Node). At Fred Hutch, head node is also called <strong>Rhino</strong>. The purpose of the head node is to serve as a launching pad for the user: you are encouraged to look for files you want to use for your analysis, and once you know what data and software you want to use, you perform the computation on the <strong>Compute Nodes</strong> (alternative names include the Worker Node). At Fred Hutch, the compute nodes are called <strong>Gizmo</strong>. The compute notes have high CPU and RAM capacity for running demanding jobs, whereas the head node has very limited CPUs and RAM.</p>
 <p>The diagram below illustrates the relationship between the head node, compute nodes, and the shared file storage systems: you start at the login (head) node, and you can look at the files on the shared file storage system. When you know what data and software you want to use for compute, you let the compute nodes do the job. The compute nodes are also connected to the shared file storage system.</p>
-<p><img src="resources/images/05-look-around_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g3149434dbb4_1_3.png" alt="Compute node diagram." width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="05-look-around_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g3149434dbb4_1_3.png" alt="Compute node diagram." width="80%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="file-storage-systems" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> File Storage Systems<a href="look-around.html#file-storage-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -274,32 +275,32 @@
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": false,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/05-look-around.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Cluster_Guide.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/05-look-around.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

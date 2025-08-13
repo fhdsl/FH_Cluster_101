@@ -3,8 +3,7 @@
 
 # Account Setup {#account-setup}
 
-
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/02-accounts_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_160} \end{center}
+<img src="02-accounts_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_160.png" alt="We are on the second step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 You will need an account to log in to the cluster. This ensures that data stays protected and that computing resources are shared fairly.
 
@@ -29,18 +28,15 @@ Your HutchNet ID must be associated with a PI cluster "account". The Scientific 
 1. Click on "Check Access"
 1. Log in by entering your HutchNet ID (don't use `@fredhutch.org`, just the ID) and password
 
-
-\includegraphics[width=1\linewidth]{resources/images/02-accounts_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g166d4f31b2e_0_0} 
+<img src="02-accounts_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g166d4f31b2e_0_0.png" alt="SciComp self-service landing page with links." width="100%" />
 
 If everything is green as shown below, you are ready to proceed. You can [proceed with the course](#terminal) or [skip to certification](#skip-to-certification). 
 
-
-\includegraphics[width=1\linewidth]{resources/images/02-accounts_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g166d4f31b2e_0_5} 
+<img src="02-accounts_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g166d4f31b2e_0_5.png" alt="The user has been set up correctly, indicated by cluster access: True." width="100%" />
 
 If you see anything in red as shown below, click the link to e-mail SciComp to finish setting up your account. Be sure to include your HutchNetID and PI name in the email.
 
-
-\includegraphics[width=1\linewidth]{resources/images/02-accounts_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g166d4f31b2e_0_10} 
+<img src="02-accounts_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g166d4f31b2e_0_10.png" alt="The user has not been set up correctly, indicated by cluster access: False." width="100%" />
 
 Note that it may take just a bit of time for SciComp to see your email request, but it is usually fairly quick! Once approved, you will receive an email back from the SciComp team that you now have cluster access. The Self-Service Portal will also show that you have cluster access if you refresh the page.
 

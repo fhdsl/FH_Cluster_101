@@ -1,11 +1,5 @@
 # (PART\*) Appendix {-}
 
-# Provide Feedback {#feedback}
-
-We'd love to hear from you! Please fill out the anonymous <a href="https://forms.gle/qRLJpE15HKNCMEE48" target="_blank">Google Form</a> with your feedback.
-
-You can submit an issue about this course at our [GitHub repository](https://github.com/fhdsl/FH_Cluster_Guide/issues/new). You can also click the edit button on the top of the page in question.
-
 # FAQ and Troubleshooting
 
 ## FAQ 

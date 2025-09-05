@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Interactive Session | Fred Hutch Cluster 101</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Interactive Session | Fred Hutch Cluster 101" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2024-11-18" />
+<meta name="date" content="2025-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,6 +51,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<base target="_blank">
 
 
 
@@ -168,6 +169,7 @@
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-connect-to-host-rhino-port-22-undefined-error-0"><i class="fa fa-check"></i><code>ssh: connect to host rhino port 22: Undefined error: 0</code></a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#connection-failed-message-in-cyberduck"><i class="fa fa-check"></i><code>Connection failed</code> message in Cyberduck</a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#invalid-account-or-accountpartition-when-logging-in"><i class="fa fa-check"></i><code>Invalid account or account/partition</code> when logging in</a></li>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#leanpub-course-gives-a-404-error"><i class="fa fa-check"></i>Leanpub course gives a 404 error</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="get-your-certificate.html"><a href="get-your-certificate.html"><i class="fa fa-check"></i>Get Your Certificate</a></li>
@@ -218,7 +220,7 @@
 </div>
 <div id="interactive-session" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">Chapter 9</span> Interactive Session<a href="interactive-session.html#interactive-session" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="resources/images/09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_275.png" alt="We are on the seventh and final step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_275.png" alt="We are on the seventh and final step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
 <p>While using the cluster, you might need to build and test scripts interactively before running them. Luckily, you can work directly on the cluster by creating an interactive session. When you launch an interactive session, the cluster assigns you a portion of the networked computers called a “node”. This node (or part of one) is dedicated to you for a period of time rather than using the Slurm job submission system.</p>
 <p>Because an interactive session takes up resources directly on the cluster whether you’re actively using it or not, it’s best to use interactive sessions only when a task cannot be done by submitting a script.</p>
 <div id="starting-the-session" class="section level2 hasAnchor" number="9.1">
@@ -235,15 +237,15 @@
 <li>When prompted, enter your password</li>
 </ul>
 <p>You requested 1 CPU, 20GB of RAM, and don’t need a GPU. The <a href="https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html" target="_blank">GPU</a>, or Graphics Processing Unit, is similar to the CPU. The GPU was originally designed to quickly render graphics (such as for video games), but today can be used to run complex artificial intelligence applications or computationally intensive jobs.</p>
-<p><img src="resources/images/09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26.png" alt="CPU is the brain of the computer, whereas memory stores information in the short term." width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26.png" alt="CPU is the brain of the computer, whereas memory stores information in the short term." width="80%" style="display: block; margin: auto;" /></p>
 <p>You will see that you are now logged on to the compute node “gizmo” instead of the login node “rhino”. Remember that the part of the cluster where you log in is called <code>rhino</code>. The part of the cluster where jobs are run is called <code>gizmo</code>.</p>
-<p><img src="resources/images/09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_50.png" alt="Configuration prompts for interactive node log the user in to gizmo." width="100%" /></p>
+<p><img src="09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_50.png" alt="Configuration prompts for interactive node log the user in to gizmo." width="100%" /></p>
 </div>
 <div id="running-interactive-commands" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> Running Interactive Commands<a href="interactive-session.html#running-interactive-commands" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You can start working on the node by running a similar command as we used in the job we submitted via script. Echo a message by running:</p>
 <pre><code>echo &quot;Hello, again!&quot;</code></pre>
-<p><img src="resources/images/09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_58.png" alt="An echo message is printed on an interactive node." width="100%" /></p>
+<p><img src="09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_58.png" alt="An echo message is printed on an interactive node." width="100%" /></p>
 </div>
 <div id="using-pre-installed-software-modules" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">9.3</span> Using Pre-installed Software Modules<a href="interactive-session.html#using-pre-installed-software-modules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -251,16 +253,16 @@
 <pre><code>ml fhR/4.2.0-foss-2021b</code></pre>
 <p>Next, launch R:</p>
 <pre><code>R</code></pre>
-<p><img src="resources/images/09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_65.png" alt="The R module and R session have been launched on the interactive node." width="100%" /></p>
+<p><img src="09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_65.png" alt="The R module and R session have been launched on the interactive node." width="100%" /></p>
 <p>You can play around with R here. For example, you might run:</p>
 <pre><code>head(mtcars)</code></pre>
-<p><img src="resources/images/09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_72.png" alt="R commands on an interactive node." width="100%" /></p>
+<p><img src="09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_72.png" alt="R commands on an interactive node." width="100%" /></p>
 <p>Close the R session by typing:</p>
 <pre><code>q()</code></pre>
 <p>R will ask if you want to save your workspace. Type <code>n</code> for no and hit return.</p>
 <p>Close the interactive node by typing:</p>
 <pre><code>exit</code></pre>
-<p><img src="resources/images/09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_82.png" alt="The R session and interactive node have been exited." width="100%" /></p>
+<p><img src="09-interactive_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_82.png" alt="The R session and interactive node have been exited." width="100%" /></p>
 <div id="loading-modules-in-non-interactive-mode" class="section level3 hasAnchor" number="9.3.1">
 <h3><span class="header-section-number">9.3.1</span> Loading Modules in non-interactive mode<a href="interactive-session.html#loading-modules-in-non-interactive-mode" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You have just seen how to load in software modules in the interactive mode. When you launch a job via <code>sbatch</code> to start computing on the compute nodes, you may also need to load in software modules. You can add the <code>ml</code> command within your shell script, such as the following:</p>
@@ -305,32 +307,32 @@ Rscript my_r_script.R</code></pre>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": false,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/09-interactive.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Cluster_Guide.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/09-interactive.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

@@ -3,7 +3,7 @@
 
 # Logging In
 
-<img src="resources/images/04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" />
+<img src="04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 Now that you have your Terminal application ready, you want to connect to the cluster. You will do this using a method called [SSH](https://www.ssh.com/academy/ssh/protocol){target="_blank"}, which stands for "Secure SHell".
 
@@ -29,16 +29,16 @@ The next set of steps are specific to your operating system.
 
 1. Go to the PuTTY Configuration menu. Under "Host Name" type **rhino** and click "Open".
 
-    <img src="resources/images/04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_41.png" alt="The PuTTY Host Name &quot;rhino&quot; has been typed in." width="100%" />
+    <img src="04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_41.png" alt="The PuTTY Host Name "rhino" has been typed in." width="100%" />
 
 1. You will be prompted to login. Type in your HutchNetID (e.g., `jsmith3`).
 
-    <img src="resources/images/04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_48.png" alt="The login prompt for rhino." width="100%" />
+    <img src="04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_48.png" alt="The login prompt for rhino." width="100%" />
    
 1. Enter your password. No`*` or symbols will show up, so type it in carefully!
 1. You are now logged in! There should be a login message, with your name at the bottom.
 
-    <img src="resources/images/04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_60.png" alt="Screenshot of the PuTTY Terminal." width="100%" />
+    <img src="04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_60.png" alt="Screenshot of the PuTTY Terminal." width="100%" />
 
 Congratulations! You are now logged in to the Fred Hutch cluster!
 
@@ -57,7 +57,7 @@ Congratulations! You are now logged in to the Fred Hutch cluster!
 1. Enter your password. No`*` or symbols will show up, so type it in carefully!
 1. You are now logged in! There should be a login message, with your name at the bottom.
 
-    <img src="resources/images/04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_43.png" alt="Screenshot of the Mac Terminal." width="100%" />
+    <img src="04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_43.png" alt="Screenshot of the Mac Terminal." width="100%" />
     
 Congratulations! You are now logged in to the Fred Hutch cluster!
 

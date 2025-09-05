@@ -4,7 +4,6 @@ repo: https://github.com/jhudsl/OTTR_Template/
 rmd_files: ["index.Rmd",
             "01-cluster.Rmd",
             "02-accounts.Rmd",
-            "skip-to-certification.Rmd",
             "03-terminal.Rmd",
             "04-logging-in.Rmd",
             "05-look-around.Rmd",

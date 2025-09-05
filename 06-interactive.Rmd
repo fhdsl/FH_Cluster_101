@@ -4,11 +4,9 @@ ottrpal::set_knitr_image_path()
 
 # Interactive Session
 
-```{r, echo=FALSE, fig.alt='We are on the seventh and final step of the pathway.', out.width = '80%', fig.align = 'center'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_275")
-```
+Let's start getting access to the Compute Node from the Head Node. On the SLURM system, there are two ways to access the Compute Node: an Interactive Session, or a computing script. The former allows you to enter command and get feedback from the Compute Node immediately, whereas the latter requires you to write out exactly what you want the Compute Node to do.
 
-Let's start getting access to the Compute Node from the Head Node. On the SLURM system, there are two ways to access the Compute Node: an Interactive Session, or a computing script. The former allows you to enter command and get feedback from the Compute Node immediately, whereas the latter requires you to write out exactly what you want the Compute Node to do. Let's start with the Interactive Session first.
+The best practice of using the Compute Node is to use a computing script, but for learning and testing purposes it is easier to start with the Interactive Session first before advancing to a computing script. SciComp, who manages the cluster, discourages using the Interactive Session when running mature computing jobs.
 
 When you launch an Interactive Session, the cluster assigns you a portion of the networked computers called a "node". This node (or part of one) is dedicated to you for a period of time rather than using the Slurm job submission system.
 

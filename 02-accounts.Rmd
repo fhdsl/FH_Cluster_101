@@ -5,9 +5,6 @@ ottrpal::set_knitr_image_path()
 
 # Account Setup {#account-setup}
 
-```{r, echo=FALSE, fig.alt='We are on the second step of the pathway.', out.width = '80%', fig.align = 'center'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_160")
-```
 
 You will need an account to log in to the cluster. This ensures that data stays protected and that computing resources are shared fairly.
 

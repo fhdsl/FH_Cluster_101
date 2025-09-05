@@ -4,11 +4,7 @@ ottrpal::set_knitr_image_path()
 
 # Submit a Computing Script
 
-```{r, echo=FALSE, fig.alt='We are on the fifth step of the pathway.', out.width = '80%', fig.align = 'center'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_229")
-```
-
-Recall that on the SLURM system, there are two ways to access the Compute Node: an Interactive Session, or a computing script. The previous chapter focused on the former, and the current chapter will focus on the latter. Within a computing script, you will give short snippets of instructions for the Compute Node to run on its own. Unlike the Interactive Session, once you tell the Compute Node to run your computing script, you can't interact with it - you wait until it is complete or you cancel it.
+Recall that on the SLURM system, there are two ways to access the Compute Node: an Interactive Session, or a computing script. The previous chapter focused on the former, and the current chapter will focus on the latter. Within a computing script, you will give short snippets of instructions for the Compute Node to run on its own. Unlike the Interactive Session, once you tell the Compute Node to run your computing script, you can't interact with it - you wait until it is complete or you cancel it. This is the recommended practice from SciComp for running jobs on the Cluster.
 
 Once you submit your script, the Fred Hutch cluster uses [Slurm](https://slurm.schedmd.com/overview.html){target="_blank"} to organize and prioritize jobs. Based on the computing resources requested in your script, Slurm will find computing resources within the cluster to run your job along with all the other requests from other users.
 

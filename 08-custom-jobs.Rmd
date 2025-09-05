@@ -4,10 +4,6 @@ ottrpal::set_knitr_image_path()
 
 # Custom computing scripts
 
-```{r, echo=FALSE, fig.alt='We are on the fifth step of the pathway.', out.width = '80%', fig.align = 'center'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_229")
-```
-
 Once you are comfortable submitting simple jobs, we point out ways customize your jobs to make best use of the computing infrastructure: perhaps you want to change the number of CPUs or RAM to request, or you want to monitor the status of a job running. This section highlights some common requests people use on the Fred Hutch Slurm system.
 
 ## Requesting Specific Computing Resources
@@ -36,7 +32,7 @@ How about changing the amount of RAM (memory) requested? Currently, the Fred Hut
 
 </details>
 
-You can learn more about other use cases of `sbatch` at the Biomedical Data Science Wiki's page on [computing jobs](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#submitting-jobs).
+You can learn more about other use cases of `sbatch` at the Biomedical Data Science Wiki's page on [computing jobs](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/).
 
 ### Saving your `sbatch` options
 
@@ -100,7 +96,16 @@ Similar to Interactive Computing mode, when you want to use pre-existing install
 #!/bin/bash
 
 module load fhR
-Rscript my_r_script.R
+Rscript myscript.R
+```
+
+Similarly, if you want to run a Python script `myscript.py`:
+
+```         
+#!/bin/bash
+
+module load fhPython
+Python myscript.py
 ```
 
 ::: dictionary

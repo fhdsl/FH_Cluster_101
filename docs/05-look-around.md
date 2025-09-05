@@ -2,8 +2,7 @@
 
 # Look around
 
-
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/05-look-around_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206} \end{center}
+<img src="05-look-around_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 Now that you have successfully logged in to the Fred Hutch cluster, it's time to look around to see what compute node you have connected to, and what file storage systems are available.
 
@@ -13,8 +12,7 @@ After logging in, you are connected to the **Head Node** (alternative names incl
 
 The diagram below illustrates the relationship between the head node, compute nodes, and the shared file storage systems: you start at the login (head) node, and you can look at the files on the shared file storage system. When you know what data and software you want to use for compute, you let the compute nodes do the job. The compute nodes are also connected to the shared file storage system.
 
-
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/05-look-around_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g3149434dbb4_1_3} \end{center}
+<img src="05-look-around_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g3149434dbb4_1_3.png" alt="Compute node diagram." width="80%" style="display: block; margin: auto;" />
 
 ## File Storage Systems
 

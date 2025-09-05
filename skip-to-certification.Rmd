@@ -5,7 +5,7 @@ ottrpal::set_knitr_image_path()
 
 # Skip to Certification {-}
 
-Are you an experienced user? Do you need certification? You can jump straight to the 10-question quiz by clicking the link below. **This Leanpub quiz can be taken for free, but you still have to put the course in your cart and check out**.
+Are you an experienced user? Do you need certification? You can jump straight to the 10-question quiz by clicking the link below. **This Leanpub quiz can be taken for free, but you still have to log in, put the course in your cart, and check out**.
 
 [Self-Test: Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101/quizzes/self_test_101){target="_blank"}
 

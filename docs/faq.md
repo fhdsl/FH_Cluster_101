@@ -18,8 +18,7 @@ Here are some questions you might have.
 
 1. Click [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to install the latest version of PuTTY. You will choose the 64-bit x86 installation with few exceptions.
 
-    
-    \includegraphics[width=1\linewidth]{faq_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_6} 
+    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_6.png" alt="The PuTTY latest version installation website." width="100%" />
 
 1. Click through to install via the Setup Wizard.
 
@@ -55,14 +54,21 @@ This likely indicates a disruption to your internet connection and/or VPN. Ensur
 
 This likely indicates a disruption to your internet connection and/or VPN. Ensure you are connected to the internet and connected to the Fred Hutch network on campus or the VPN.
 
-
-\includegraphics[width=1\linewidth]{faq_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_16} 
+<img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_16.png" alt="Screenshot of the Cyberduck Connection failed popup windpw." width="100%" />
 
 ### `Invalid account or account/partition` when logging in {-}
 
 Errors similar to this typically indicate that the account hasn’t been set up by SciComp. This is a quick fix if you [use the form mentioned in the course](account-setup.html#pi-account).
 
 </p></details>
+
+### Leanpub course gives a 404 error {-}
+
+Past users have gotten errors when clicking the course link in their email. This can be resolved by following these steps in order:
+
+- Ensure you are logged in to your [Leanpub account](https://leanpub.com/user_dashboard/admin)
+- Add [the course](https://leanpub.com/courses/fredhutch/fredhutchcluster101) to your cart and check out
+- Go to your [Course Library](https://leanpub.com/user_dashboard/courses) on Leanpub
 
 # Get Your Certificate {-}
 
@@ -72,13 +78,11 @@ You must complete the quiz - [Self-Test: Cluster 101](https://leanpub.com/course
  1. Go to the course [homepage](https://leanpub.com/courses/fredhutch/fredhutchcluster101/home)  
  1. Click on "Complete Course"  
  
-    
-    \includegraphics[width=1\linewidth]{faq_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_28} 
+    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_28.png" alt="The Complete Course button on the course homepage is highlighted." width="100%" />
     
  1. Click on "Generate Certificate"  
  
-    
-    \includegraphics[width=1\linewidth]{faq_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_32} 
+    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_32.png" alt="The Generate Certificate button on the course summary page is highlighted." width="100%" />
     
 [Contact the DaSL Team](mailto:data@fredhutch.org) to submit your Cluster 101 certificate for an awesome Hex Sticker!
 

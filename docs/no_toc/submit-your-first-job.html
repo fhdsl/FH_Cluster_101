@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Submit Your First Job | Fred Hutch Cluster 101</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Submit Your First Job | Fred Hutch Cluster 101" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2024-11-18" />
+<meta name="date" content="2025-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,6 +51,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<base target="_blank">
 
 
 
@@ -168,6 +169,7 @@
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#ssh-connect-to-host-rhino-port-22-undefined-error-0"><i class="fa fa-check"></i><code>ssh: connect to host rhino port 22: Undefined error: 0</code></a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#connection-failed-message-in-cyberduck"><i class="fa fa-check"></i><code>Connection failed</code> message in Cyberduck</a></li>
 <li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#invalid-account-or-accountpartition-when-logging-in"><i class="fa fa-check"></i><code>Invalid account or account/partition</code> when logging in</a></li>
+<li class="chapter" data-level="" data-path="faq-and-troubleshooting.html"><a href="faq-and-troubleshooting.html#leanpub-course-gives-a-404-error"><i class="fa fa-check"></i>Leanpub course gives a 404 error</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="get-your-certificate.html"><a href="get-your-certificate.html"><i class="fa fa-check"></i>Get Your Certificate</a></li>
@@ -218,7 +220,7 @@
 </div>
 <div id="submit-your-first-job" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Submit Your First Job<a href="submit-your-first-job.html#submit-your-first-job" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="resources/images/06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229.png" alt="We are on the fifth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229.png" alt="We are on the fifth step of the pathway." width="80%" style="display: block; margin: auto;" /></p>
 <p>The strength of a computing cluster is the ability to do many jobs in parallel or on computers with more computing power than you have on your local computer. The best way to use the cluster is to create short snippets of instructions (a script) that a computer can perform without human input. Your script tells the computers to execute the instructions as individual jobs.</p>
 <p>Now that you’ve logged into rhino you will be able to send scripts to the networked computers in the cluster. The Fred Hutch cluster uses <a href="https://slurm.schedmd.com/overview.html" target="_blank">Slurm</a> to organize and prioritize jobs. Based on the instructions in your script, Slurm will find computing resources within the cluster to run your job along with all the other requests from other users.</p>
 <p>In the next steps, we will go through a simple example where we download a single file. More complicated examples will use multiple files. We will discuss how to transfer files from your computer to the cluster in the <a href="file-upload-and-download.html#file-upload-and-download">following chapter</a>.</p>
@@ -230,19 +232,19 @@ The part of the cluster where <strong>jobs are run</strong> is called <code>gizm
 <h2><span class="header-section-number">6.1</span> Download the Script<a href="submit-your-first-job.html#download-the-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can use the <code>wget</code> command to download a script from GitHub. This means we don’t have to write the script from scratch. Copy and paste the following into the terminal, and hit return:</p>
 <pre><code>wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/01.sh</code></pre>
-<p><img src="resources/images/06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_0.png" alt="Screenshot of wget command output, showing successful file download." width="100%" /></p>
+<p><img src="06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_0.png" alt="Screenshot of wget command output, showing successful file download." width="100%" /></p>
 </div>
 <div id="confirm-the-download" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Confirm the Download<a href="submit-your-first-job.html#confirm-the-download" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s confirm that we can see the file we just downloaded. We can use the <code>ls</code> (list files) command for this. Type <code>ls</code> and hit return. You should see the file <code>01.sh</code> in your home directory. The <code>.sh</code> ending means this is a script meant to run from the command line.</p>
 <pre><code>ls</code></pre>
-<p><img src="resources/images/06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_6.png" alt="Screenshot of ls command showing that the file is in the working directory." width="100%" /></p>
+<p><img src="06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_6.png" alt="Screenshot of ls command showing that the file is in the working directory." width="100%" /></p>
 </div>
 <div id="inspect-the-script" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Inspect the Script<a href="submit-your-first-job.html#inspect-the-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s next inspect the script. The <code>cat</code> command, followed by a file name, lists the entire contents of a specific file.</p>
 <pre><code>cat 01.sh</code></pre>
-<p><img src="resources/images/06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_2.png" alt="Screenshot of cat command showing the two lines contained in the script described below." width="100%" /></p>
+<p><img src="06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_2.png" alt="Screenshot of cat command showing the two lines contained in the script described below." width="100%" /></p>
 <ul>
 <li>The first line of the script, <code>#!/bin/bash</code>, indicates that this is a command line or “bash” script.</li>
 <li>The second line is empty, and the third line, <code>echo "Hello, World"</code> means that the computer will “echo”, or print out, “Hello, World”.</li>
@@ -257,7 +259,7 @@ The part of the cluster where <strong>jobs are run</strong> is called <code>gizm
 <h2><span class="header-section-number">6.5</span> Check the Output<a href="submit-your-first-job.html#check-the-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Type <code>ls</code> again. You should now see a log file like <code>slurm-12345678.out</code> listed alongside your script <code>01.sh</code>. Let’s use <code>cat</code> to inspect the output in the log file (the new file starting with <code>slurm</code> and ending with <code>.out</code>). Make sure you replace <code>[your-number-here]</code> with the number in your actual file. We should see our message has been printed!</p>
 <pre><code>cat slurm-[your-number-here].out</code></pre>
-<p><img src="resources/images/06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_22.png" alt="Screenshot of ls and cat command shows that the Hello World message has successfully printed." width="100%" /></p>
+<p><img src="06-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_22.png" alt="Screenshot of ls and cat command shows that the Hello World message has successfully printed." width="100%" /></p>
 <div class="dictionary">
 <p><code>ls</code></p>
 <p>This command lists the files in the current directory.</p>
@@ -298,32 +300,32 @@ The part of the cluster where <strong>jobs are run</strong> is called <code>gizm
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": false,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/06-first-job.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Cluster_Guide.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/06-first-job.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

@@ -3,8 +3,7 @@
 
 # Submit Your First Job
 
-
-\begin{center}\includegraphics[width=0.8\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229} \end{center}
+<img src="06-first-job_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_229.png" alt="We are on the fifth step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 The strength of a computing cluster is the ability to do many jobs in parallel or on computers with more computing power than you have on your local computer. The best way to use the cluster is to create short snippets of instructions (a script) that a computer can perform without human input. Your script tells the computers to execute the instructions as individual jobs. 
 
@@ -25,8 +24,7 @@ We can use the `wget` command to download a script from GitHub. This means we do
 wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/01.sh
 ```
 
-
-\includegraphics[width=1\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_0} 
+<img src="06-first-job_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_0.png" alt="Screenshot of wget command output, showing successful file download." width="100%" />
 
 ## Confirm the Download
 
@@ -36,8 +34,7 @@ Let's confirm that we can see the file we just downloaded. We can use the `ls` (
 ls
 ```
 
-
-\includegraphics[width=1\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_6} 
+<img src="06-first-job_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_6.png" alt="Screenshot of ls command showing that the file is in the working directory." width="100%" />
 
 ## Inspect the Script
 
@@ -47,8 +44,7 @@ Let's next inspect the script. The `cat` command, followed by a file name, lists
 cat 01.sh
 ```
 
-
-\includegraphics[width=1\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_2} 
+<img src="06-first-job_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_2.png" alt="Screenshot of cat command showing the two lines contained in the script described below." width="100%" />
 
 - The first line of the script, `#!/bin/bash`, indicates that this is a command line or "bash" script. 
 - The second line is empty, and the third line, `echo "Hello, World"` means that the computer will "echo", or print out, "Hello, World".
@@ -69,8 +65,7 @@ Type `ls` again. You should now see a log file like `slurm-12345678.out` listed 
 cat slurm-[your-number-here].out
 ```
 
-
-\includegraphics[width=1\linewidth]{resources/images/06-first-job_files/figure-latex//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_22} 
+<img src="06-first-job_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_22.png" alt="Screenshot of ls and cat command shows that the Hello World message has successfully printed." width="100%" />
 
 <div class = "dictionary">
 

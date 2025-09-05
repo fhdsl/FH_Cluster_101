@@ -62,6 +62,14 @@ Errors similar to this typically indicate that the account hasn’t been set up 
 
 </p></details>
 
+### Leanpub course gives a 404 error {-}
+
+Past users have gotten errors when clicking the course link in their email. This can be resolved by following these steps in order:
+
+- Ensure you are logged in to your [Leanpub account](https://leanpub.com/user_dashboard/admin)
+- Add [the course](https://leanpub.com/courses/fredhutch/fredhutchcluster101) to your cart and check out
+- Go to your [Course Library](https://leanpub.com/user_dashboard/courses) on Leanpub
+
 # Get Your Certificate {-}
 
 You must complete the quiz - [Self-Test: Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101/quizzes/self_test_101) - 

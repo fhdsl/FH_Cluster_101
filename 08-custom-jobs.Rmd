@@ -2,11 +2,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Custom jobs
-
-```{r, echo=FALSE, fig.alt='We are on the fifth step of the pathway.', out.width = '80%', fig.align = 'center'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_229")
-```
+# Custom computing scripts
 
 Once you are comfortable submitting simple jobs, we point out ways customize your jobs to make best use of the computing infrastructure: perhaps you want to change the number of CPUs or RAM to request, or you want to monitor the status of a job running. This section highlights some common requests people use on the Fred Hutch Slurm system.
 
@@ -36,7 +32,7 @@ How about changing the amount of RAM (memory) requested? Currently, the Fred Hut
 
 </details>
 
-You can learn more about other use cases of `sbatch` at the Biomedical Data Science Wiki's page on [computing jobs](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#submitting-jobs).
+You can learn more about other use cases of `sbatch` at the Biomedical Data Science Wiki's page on [computing jobs](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/).
 
 ### Saving your `sbatch` options
 
@@ -74,12 +70,11 @@ squeue -u clo2
 
 Alternatively, you can also use `--me` to specify the user as yourself:
 
-```
+```         
 squeue --me
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)
 ```
-
 
 Here, the status ("ST") shows `PD`, which means that the job hasn't started to run yet. When it is running the status will be `R`.
 
@@ -93,20 +88,36 @@ scancel [job id]
 
 where `[job id]` is a numerical ID attached to your unique job. It can be found under `JOBID` when you run `squeue`.
 
+## Loading Modules in non-interactive mode
 
-<div class = "dictionary">
+Similar to Interactive Computing mode, when you want to use pre-existing installed software in your computing script, you will need to add a line of code to load in the software you want to use. Suppose that in your computing script you want to run a R script `myscript.R`. You will first load in the R software module before running the R script:
 
+```         
+#!/bin/bash
+
+module load fhR
+Rscript myscript.R
+```
+
+Similarly, if you want to run a Python script `myscript.py`:
+
+```         
+#!/bin/bash
+
+module load fhPython
+Python myscript.py
+```
+
+::: dictionary
 `sbatch -c 4 filename.sh`
 
 This command submits a job to the cluster with instructions specified in a `.sh` file with request of 4 cores.
 
-`squeue --me` 
+`squeue --me`
 
 This command prints the job submission status for your username.
 
 `scancel 1234`
 
 This command cancels job ID 1234. The job ID can be found in the `squeue` command.
-
-</div>
-
+:::

@@ -5,9 +5,6 @@ ottrpal::set_knitr_image_path()
 
 # Logging In
 
-```{r, echo=FALSE, fig.alt='We are on the fourth step of the pathway.', out.width = '80%', fig.align = 'center'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_206")
-```
 
 Now that you have your Terminal application ready, you want to connect to the cluster. You will do this using a method called [SSH](https://www.ssh.com/academy/ssh/protocol){target="_blank"}, which stands for "Secure SHell".
 

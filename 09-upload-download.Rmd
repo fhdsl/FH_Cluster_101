@@ -5,9 +5,6 @@ ottrpal::set_knitr_image_path()
 
 # File Upload and Download
 
-```{r, echo=FALSE, fig.alt='We are on the sixth step of the pathway.', out.width = '80%', fig.align = 'center'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.gff2211b72f_1_252")
-```
 
 Exchanging files with the cluster is very important. You can imagine scenarios where:
 

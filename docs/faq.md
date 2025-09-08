@@ -1,11 +1,5 @@
 # (PART\*) Appendix {-}
 
-# Provide Feedback {#feedback}
-
-We'd love to hear from you! Please fill out the anonymous <a href="https://forms.gle/qRLJpE15HKNCMEE48" target="_blank">Google Form</a> with your feedback.
-
-You can submit an issue about this course at our [GitHub repository](https://github.com/fhdsl/FH_Cluster_Guide/issues/new). You can also click the edit button on the top of the page in question.
-
 # FAQ and Troubleshooting
 
 ## FAQ 
@@ -61,28 +55,4 @@ This likely indicates a disruption to your internet connection and/or VPN. Ensur
 Errors similar to this typically indicate that the account hasn’t been set up by SciComp. This is a quick fix if you [use the form mentioned in the course](account-setup.html#pi-account).
 
 </p></details>
-
-### Leanpub course gives a 404 error {-}
-
-Past users have gotten errors when clicking the course link in their email. This can be resolved by following these steps in order:
-
-- Ensure you are logged in to your [Leanpub account](https://leanpub.com/user_dashboard/admin)
-- Add [the course](https://leanpub.com/courses/fredhutch/fredhutchcluster101) to your cart and check out
-- Go to your [Course Library](https://leanpub.com/user_dashboard/courses) on Leanpub
-
-# Get Your Certificate {-}
-
-You must complete the quiz - [Self-Test: Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101/quizzes/self_test_101) - 
- with all questions correctly answered to earn your certificate for this course. Once complete:
- 
- 1. Go to the course [homepage](https://leanpub.com/courses/fredhutch/fredhutchcluster101/home)  
- 1. Click on "Complete Course"  
- 
-    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_28.png" alt="The Complete Course button on the course homepage is highlighted." width="100%" />
-    
- 1. Click on "Generate Certificate"  
- 
-    <img src="faq_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g162fb43cc93_0_32.png" alt="The Generate Certificate button on the course summary page is highlighted." width="100%" />
-    
-[Contact the DaSL Team](mailto:data@fredhutch.org) to submit your Cluster 101 certificate for an awesome Hex Sticker!
 

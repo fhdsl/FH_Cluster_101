@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Terminal Setup | Intro to Fred Hutch Cluster Computing</title>
+  <title>Chapter 8 Custom computing scripts | Intro to Fred Hutch Cluster Computing</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Terminal Setup | Intro to Fred Hutch Cluster Computing" />
+  <meta property="og:title" content="Chapter 8 Custom computing scripts | Intro to Fred Hutch Cluster Computing" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Description about Course/Book." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Terminal Setup | Intro to Fred Hutch Cluster Computing" />
+  <meta name="twitter:title" content="Chapter 8 Custom computing scripts | Intro to Fred Hutch Cluster Computing" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="account-setup.html"/>
-<link rel="next" href="logging-in.html"/>
+<link rel="prev" href="submit-a-computing-script.html"/>
+<link rel="next" href="file-upload-and-download.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -211,72 +211,78 @@
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/dasl_thin_main_image.png">
 </div>
-<div id="terminal" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Terminal Setup<a href="terminal.html#terminal" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The next step is getting familiar with your Terminal. This is your portal to the cluster.</p>
-<div id="what-is-a-terminal" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> What is a terminal?<a href="terminal.html#what-is-a-terminal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Terminal is a <a href="https://www.codecademy.com/article/command-line-interface" target="_blank">command line interface</a>. In other words, the Terminal is a software application that allows you to issue commands directly to your laptop or desktop computer. The Terminal is very useful because it allows you to run commands that don’t have a point-and-click equivalent. It can also connect you to computer networks, such as the Fred Hutch cluster! The Terminal setup is different depending on your operating system. Jump to the <a href="terminal.html#windows">Windows</a>, <a href="terminal.html#mac">MacOS</a>, or <a href="terminal.html#linux">Linux</a> sections below.</p>
-<div class="terminal">
-<p>“Terminal” used to be synonymous with “computer”. With the creation of operating systems like Windows and MacOS, computers became much easier to use and exploded in popularity! Your colleagues are almost always referring to the command line application when they say “Terminal”.</p>
-</div>
-</div>
-<div id="windows" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Windows Setup<a href="terminal.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="custom-computing-scripts" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Custom computing scripts<a href="custom-computing-scripts.html#custom-computing-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Once you are comfortable submitting simple jobs, we point out ways customize your jobs to make best use of the computing infrastructure: perhaps you want to change the number of CPUs or RAM to request, or you want to monitor the status of a job running. This section highlights some common requests people use on the Fred Hutch Slurm system.</p>
+<div id="requesting-specific-computing-resources" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Requesting Specific Computing Resources<a href="custom-computing-scripts.html#requesting-specific-computing-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By default, when you ran <code>sbatch 01.sh</code> in the previous chapter, <code>sbatch</code> requested for one CPU on a computing node for your task. Let’s change the number of CPUs requested. You can change the number of requested CPUs based on the <code>-c</code> or <code>--cpus-per-task</code> option: if you want to request 4 CPUs for your job, you would enter the following:</p>
+<pre><code>sbatch -c 4 01.sh</code></pre>
+<p>or</p>
+<pre><code>sbatch --cpus-per-task 4 01.sh</code></pre>
+<p>How about changing the amount of RAM (memory) requested? Currently, the Fred Hutch Slurm does not have a memory option built in to guarantee the amount of memory that will be allocated to your job. Instead, the current recommendation is to request CPUs as a proxy for RAM allocation, based on this rule-of-thumb:</p>
+<blockquote>
+<p>“If you think your job will need more than 4GB of memory, request one CPU for every 4GB required.”</p>
+</blockquote>
 <details>
 <summary>
-Click to view steps
+The technical reasoning behind the rule-of-thumb can be expanded here.
 </summary>
 <p>
-<p>You will need to install a Terminal application called PuTTY to connect to the Fred Hutch Cluster.</p>
-<ol style="list-style-type: decimal">
-<li><p>You should then see PuTTY available in the Software Center. Click “Install” and go through the Setup Wizard.</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_15.png" alt="The Software Center application lists available apps, including PuTTY." width="100%" /></p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_20.png" alt="The PuTTY page inside Software Center. The Install button is highlighted." width="100%" /></p>
-<div class="notice">
-You can also <a href="faq.html#manual-putty" target="_blank">install PuTTY manually</a> if you don’t see it in the Software Center.
-</div></li>
-<li><p>PuTTY should now be available in your applications. Click on PuTTY to open.</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_28.png" alt="The PuTTY application now appears in the Windows app menu." width="100%" /></p></li>
-<li><p>You should now see the PuTTY Configuration menu.</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_35.png" alt="The PuTTY configuration menu is open." width="100%" /></p></li>
-</ol>
+<a href="https://sciwiki.fredhutch.org/scicomputing/compute_platforms/#gizmo">FH Gizmo</a> has class J nodes which each have 24 cores and 384GB of memory, and class K nodes which each have 36 cores and 768GB of memory. So, if you think you will need 100GB of memory for your job, by this rule of thumb you would request 25 cores. You would be assigned to a class K node, and you would occupy 25/36 cores on that node. On this node, other users can use the remaining 11 cores. You would share the 768GB of memory all together and hope that the other users don’t take up more memory than you need: the more cores you occupy on a node, less users will compete for memory. It’s an imprecise system and SciComp has interest to make memory allocation more precise in the future.
 </p>
 </details>
+<p>You can learn more about other use cases of <code>sbatch</code> at the Biomedical Data Science Wiki’s page on <a href="https://sciwiki.fredhutch.org/scicomputing/compute_jobs/">computing jobs</a>.</p>
+<div id="saving-your-sbatch-options" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Saving your <code>sbatch</code> options<a href="custom-computing-scripts.html#saving-your-sbatch-options" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The options you pick for the <code>sbatch</code> command, especially around CPU and RAM requests, can have enormous impact on your computing speed and quality. Therefore, it is often a good idea to save the options you have picked into the shell script itself. Suppose that you launched your job like this:</p>
+<pre><code>sbatch -c 4 01.sh</code></pre>
+<p>To save the <code>-c 4</code> option in your script <code>01.sh</code>, you can add the following header <code>#SBATCH -c 4</code> to your script:</p>
+<pre><code>#!/bin/bash
+
+#SBATCH -c 4
+
+echo &quot;Hello, World!&quot;</code></pre>
+<p>Now, you will automatically request 4 CPUs when you run:</p>
+<pre><code>sbatch 01.sh</code></pre>
 </div>
-<div id="mac" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Mac Setup<a href="terminal.html#mac" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<details>
-<summary>
-Click to view steps
-</summary>
-<p>
-<p>Mac machines come with a Terminal installed.</p>
-<ol style="list-style-type: decimal">
-<li><p>Go to Finder &gt; Applications &gt; Utilities &gt; Terminal and double-click.</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_9.png" alt="Screenshot of the Utilities directory. The Terminal app is highlighted." width="100%" /></p></li>
-<li><p>Your Terminal should look like this:</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_2.png" alt="Screenshot of the Mac Terminal." width="100%" /></p></li>
-</ol>
-</p>
-</details>
 </div>
-<div id="linux" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Linux Setup<a href="terminal.html#linux" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<details>
-<summary>
-Click to view steps
-</summary>
-<p>
-<p>The commonly used Linux distribution, Ubuntu, already comes with a Terminal installed.</p>
-<ol style="list-style-type: decimal">
-<li><p>Press ctrl + alt + T. This should open a Terminal window.</p></li>
-<li><p>Update the Terminal and prepare it for connecting to the cluster by running:</p></li>
-</ol>
-<pre><code>sudo apt install openssh-client</code></pre>
-<p>Enter your password and enter <code>Y</code> when prompted.</p>
-</p>
-</details>
+<div id="monitoring-and-ending-jobs" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Monitoring and Ending Jobs<a href="custom-computing-scripts.html#monitoring-and-ending-jobs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Often, our jobs take time to run, and we want to see the status of our jobs. You can examine the status of your job via the <code>squeue</code> command. The default option will show <em>all</em> jobs running on the cluster, including other users, so it’s common to use the <code>-u</code> option to specify the user. The example user here is <code>clo2</code>:</p>
+<pre><code>squeue -u clo2
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)</code></pre>
+<p>Alternatively, you can also use <code>--me</code> to specify the user as yourself:</p>
+<pre><code>squeue --me
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)</code></pre>
+<p>Here, the status (“ST”) shows <code>PD</code>, which means that the job hasn’t started to run yet. When it is running the status will be <code>R</code>.</p>
+<p>Some common reasons for <code>PD</code> include: there are no available resources left for the requested resources for your job, or that your account has already maxed out its allocated resources. The decision of which user’s jobs are running is based on the Slurm scheduler system. You can learn more about <code>squeue</code>’s outputs at the Biomedical Data Science wiki’s <a href="https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running">page here</a>.</p>
+<p>If you want to end a job that is either waiting (<code>PD</code> status) or running, you can enter:</p>
+<pre><code>scancel [job id]</code></pre>
+<p>where <code>[job id]</code> is a numerical ID attached to your unique job. It can be found under <code>JOBID</code> when you run <code>squeue</code>.</p>
+</div>
+<div id="loading-modules-in-non-interactive-mode" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Loading Modules in non-interactive mode<a href="custom-computing-scripts.html#loading-modules-in-non-interactive-mode" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Similar to Interactive Computing mode, when you want to use pre-existing installed software in your computing script, you will need to add a line of code to load in the software you want to use. Suppose that in your computing script you want to run a R script <code>myscript.R</code>. You will first load in the R software module before running the R script:</p>
+<pre><code>#!/bin/bash
+
+module load fhR
+Rscript myscript.R</code></pre>
+<p>Similarly, if you want to run a Python script <code>myscript.py</code>:</p>
+<pre><code>#!/bin/bash
+
+module load fhPython
+Python myscript.py</code></pre>
+<div class="dictionary">
+<p><code>sbatch -c 4 filename.sh</code></p>
+<p>This command submits a job to the cluster with instructions specified in a <code>.sh</code> file with request of 4 cores.</p>
+<p><code>squeue --me</code></p>
+<p>This command prints the job submission status for your username.</p>
+<p><code>scancel 1234</code></p>
+<p>This command cancels job ID 1234. The job ID can be found in the <code>squeue</code> command.</p>
+</div>
 
 </div>
 </div>
@@ -294,8 +300,8 @@ Click to view steps
           </div>
         </div>
       </div>
-<a href="account-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logging-in.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="submit-a-computing-script.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="file-upload-and-download.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +322,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/03-terminal.Rmd",
+    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/08-custom-jobs.Rmd",
     "text": "Edit"
   },
   "history": {

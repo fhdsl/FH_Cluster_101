@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Terminal Setup | Intro to Fred Hutch Cluster Computing</title>
+  <title>Chapter 7 Submit a Computing Script | Intro to Fred Hutch Cluster Computing</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Terminal Setup | Intro to Fred Hutch Cluster Computing" />
+  <meta property="og:title" content="Chapter 7 Submit a Computing Script | Intro to Fred Hutch Cluster Computing" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Description about Course/Book." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Terminal Setup | Intro to Fred Hutch Cluster Computing" />
+  <meta name="twitter:title" content="Chapter 7 Submit a Computing Script | Intro to Fred Hutch Cluster Computing" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="account-setup.html"/>
-<link rel="next" href="logging-in.html"/>
+<link rel="prev" href="interactive-session.html"/>
+<link rel="next" href="custom-computing-scripts.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -211,72 +211,54 @@
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/dasl_thin_main_image.png">
 </div>
-<div id="terminal" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Terminal Setup<a href="terminal.html#terminal" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The next step is getting familiar with your Terminal. This is your portal to the cluster.</p>
-<div id="what-is-a-terminal" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> What is a terminal?<a href="terminal.html#what-is-a-terminal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Terminal is a <a href="https://www.codecademy.com/article/command-line-interface" target="_blank">command line interface</a>. In other words, the Terminal is a software application that allows you to issue commands directly to your laptop or desktop computer. The Terminal is very useful because it allows you to run commands that don’t have a point-and-click equivalent. It can also connect you to computer networks, such as the Fred Hutch cluster! The Terminal setup is different depending on your operating system. Jump to the <a href="terminal.html#windows">Windows</a>, <a href="terminal.html#mac">MacOS</a>, or <a href="terminal.html#linux">Linux</a> sections below.</p>
-<div class="terminal">
-<p>“Terminal” used to be synonymous with “computer”. With the creation of operating systems like Windows and MacOS, computers became much easier to use and exploded in popularity! Your colleagues are almost always referring to the command line application when they say “Terminal”.</p>
-</div>
-</div>
-<div id="windows" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Windows Setup<a href="terminal.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<details>
-<summary>
-Click to view steps
-</summary>
-<p>
-<p>You will need to install a Terminal application called PuTTY to connect to the Fred Hutch Cluster.</p>
-<ol style="list-style-type: decimal">
-<li><p>You should then see PuTTY available in the Software Center. Click “Install” and go through the Setup Wizard.</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_15.png" alt="The Software Center application lists available apps, including PuTTY." width="100%" /></p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_20.png" alt="The PuTTY page inside Software Center. The Install button is highlighted." width="100%" /></p>
+<div id="submit-a-computing-script" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Submit a Computing Script<a href="submit-a-computing-script.html#submit-a-computing-script" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Recall that on the SLURM system, there are two ways to access the Compute Node: an Interactive Session, or a computing script. The previous chapter focused on the former, and the current chapter will focus on the latter. Within a computing script, you will give short snippets of instructions for the Compute Node to run on its own. Unlike the Interactive Session, once you tell the Compute Node to run your computing script, you can’t interact with it - you wait until it is complete or you cancel it. This is the recommended practice from SciComp for running jobs on the Cluster.</p>
+<p>Once you submit your script, the Fred Hutch cluster uses <a href="https://slurm.schedmd.com/overview.html" target="_blank">Slurm</a> to organize and prioritize jobs. Based on the computing resources requested in your script, Slurm will find computing resources within the cluster to run your job along with all the other requests from other users.</p>
+<p>In the next steps, we will go through a simple example where we download a single computing script and run it on the Compute Node.</p>
 <div class="notice">
-You can also <a href="faq.html#manual-putty" target="_blank">install PuTTY manually</a> if you don’t see it in the Software Center.
-</div></li>
-<li><p>PuTTY should now be available in your applications. Click on PuTTY to open.</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_28.png" alt="The PuTTY application now appears in the Windows app menu." width="100%" /></p></li>
-<li><p>You should now see the PuTTY Configuration menu.</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g15643d101eb_4_35.png" alt="The PuTTY configuration menu is open." width="100%" /></p></li>
-</ol>
-</p>
-</details>
+<p>The part of the cluster where you <strong>log in</strong> is called <code>rhino</code>. The part of the cluster where <strong>jobs are run</strong> is called <code>gizmo</code>.</p>
 </div>
-<div id="mac" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Mac Setup<a href="terminal.html#mac" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<details>
-<summary>
-Click to view steps
-</summary>
-<p>
-<p>Mac machines come with a Terminal installed.</p>
-<ol style="list-style-type: decimal">
-<li><p>Go to Finder &gt; Applications &gt; Utilities &gt; Terminal and double-click.</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_9.png" alt="Screenshot of the Utilities directory. The Terminal app is highlighted." width="100%" /></p></li>
-<li><p>Your Terminal should look like this:</p>
-<p><img src="03-terminal_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g149d37dd4a1_0_2.png" alt="Screenshot of the Mac Terminal." width="100%" /></p></li>
-</ol>
-</p>
-</details>
+<div id="download-the-script" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Download the Script<a href="submit-a-computing-script.html#download-the-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can use the <code>wget</code> command to download a script from GitHub. This means we don’t have to write the script from scratch. Copy and paste the following into the terminal, and hit return:</p>
+<pre><code>wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/01.sh</code></pre>
+<p><img src="07-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_0.png" alt="Screenshot of wget command output, showing successful file download." width="100%" /></p>
 </div>
-<div id="linux" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Linux Setup<a href="terminal.html#linux" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<details>
-<summary>
-Click to view steps
-</summary>
-<p>
-<p>The commonly used Linux distribution, Ubuntu, already comes with a Terminal installed.</p>
-<ol style="list-style-type: decimal">
-<li><p>Press ctrl + alt + T. This should open a Terminal window.</p></li>
-<li><p>Update the Terminal and prepare it for connecting to the cluster by running:</p></li>
-</ol>
-<pre><code>sudo apt install openssh-client</code></pre>
-<p>Enter your password and enter <code>Y</code> when prompted.</p>
-</p>
-</details>
+<div id="confirm-the-download" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Confirm the Download<a href="submit-a-computing-script.html#confirm-the-download" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s confirm that we can see the file we just downloaded. We can use the <code>ls</code> (list files) command for this. Type <code>ls</code> and hit return. You should see the file <code>01.sh</code> in your home directory. The <code>.sh</code> ending means this is a script meant to run from the command line.</p>
+<pre><code>ls</code></pre>
+<p><img src="07-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_0_6.png" alt="Screenshot of ls command showing that the file is in the working directory." width="100%" /></p>
+</div>
+<div id="inspect-the-script" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Inspect the Script<a href="submit-a-computing-script.html#inspect-the-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s next inspect the script. The <code>cat</code> command, followed by a file name, lists the entire contents of a specific file.</p>
+<pre><code>cat 01.sh</code></pre>
+<p><img src="07-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_2.png" alt="Screenshot of cat command showing the two lines contained in the script described below." width="100%" /></p>
+<ul>
+<li>The first line of the script, <code>#!/bin/bash</code>, indicates that this is a command line or “bash” script.</li>
+<li>The second line is empty, and the third line, <code>echo "Hello, World"</code> means that the computer will “echo”, or print out, “Hello, World”.</li>
+</ul>
+</div>
+<div id="submit-the-script" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Submit the Script<a href="submit-a-computing-script.html#submit-the-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We use the <code>sbatch</code> command to submit a script and start running a job on the cluster. Copy the following and hit return. You should see a message like “<code>Submitted batch job 12345678</code>”. Your number will vary because this is a unique job identifier.</p>
+<pre><code>sbatch 01.sh</code></pre>
+</div>
+<div id="check-the-output" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Check the Output<a href="submit-a-computing-script.html#check-the-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Type <code>ls</code> again. You should now see a log file like <code>slurm-12345678.out</code> listed alongside your script <code>01.sh</code>. Let’s use <code>cat</code> to inspect the output in the log file (the new file starting with <code>slurm</code> and ending with <code>.out</code>). Make sure you replace <code>[your-number-here]</code> with the number in your actual file. We should see our message has been printed!</p>
+<pre><code>cat slurm-[your-number-here].out</code></pre>
+<p><img src="07-first-job_files/figure-html/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_g1579ffd7b01_12_22.png" alt="Screenshot of ls and cat command shows that the Hello World message has successfully printed." width="100%" /></p>
+<div class="dictionary">
+<p><code>ls</code></p>
+<p>This command lists the files in the current directory.</p>
+<p><code>cat filename</code></p>
+<p>This command prints the contents of a specific file (<em>filename</em>).</p>
+<p><code>sbatch filename.sh</code></p>
+<p>This command submits a job to the cluster with instructions specified in a <code>.sh</code> file.</p>
+</div>
 
 </div>
 </div>
@@ -294,8 +276,8 @@ Click to view steps
           </div>
         </div>
       </div>
-<a href="account-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logging-in.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="interactive-session.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="custom-computing-scripts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +298,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/03-terminal.Rmd",
+    "link": "https://github.com/fhdsl/FH_Cluster_Guide/blob/main/07-first-job.Rmd",
     "text": "Edit"
   },
   "history": {

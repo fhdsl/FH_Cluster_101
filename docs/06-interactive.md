@@ -1,0 +1,113 @@
+
+
+# Interactive Session
+
+Let's start getting access to the Compute Node from the Head Node. On the SLURM system, there are two ways to access the Compute Node: an Interactive Session, or a computing script. The former allows you to enter command and get feedback from the Compute Node immediately, whereas the latter requires you to write out exactly what you want the Compute Node to do.
+
+The best practice of using the Compute Node is to use a computing script, but for learning and testing purposes it is easier to start with the Interactive Session first before advancing to a computing script. SciComp, who manages the cluster, discourages using the Interactive Session when running mature computing jobs.
+
+When you launch an Interactive Session, the cluster assigns you a portion of the networked computers called a "node". This node (or part of one) is dedicated to you for a period of time rather than using the Slurm job submission system.
+
+## Starting the session
+
+When starting an interactive session, you're going to need to know what resources you might need on the node you are requesting to use. You can always start an interactive session using the default values if you aren't sure what you need yet.
+
+Start an interactive session on a node by running the command:
+
+```         
+grabnode
+```
+
+You will be prompted with several questions about the type of resources on the node you want. We don't need anything fancy, so we will set up the session to use minimal resources. You can enter the following:
+
+-   *How many CPUs/cores would you like to grab on the node?* **1**
+-   *How much memory (GB) would you like to grab?* **20**
+-   *Please enter the max number of days you would like to grab this node:* **1**
+-   *Do you need a GPU?* **N**
+-   When prompted, enter your password
+
+You requested 1 CPU, 20GB of RAM, and don't need a GPU. The [GPU](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html){target="_blank"}, or Graphics Processing Unit, is similar to the CPU. The GPU was originally designed to quickly render graphics (such as for video games), but today can be used to run complex artificial intelligence applications or computationally intensive jobs.
+
+<img src="06-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_26.png" alt="CPU is the brain of the computer, whereas memory stores information in the short term." width="80%" style="display: block; margin: auto;" />
+
+You will see that you are now logged on to the compute node "gizmo" instead of the login node "rhino". Remember that the part of the cluster where you log in is called `rhino`. The part of the cluster where jobs are run on the compute nodes is called `gizmo`.
+
+<img src="06-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_50.png" alt="Configuration prompts for interactive node log the user in to gizmo." width="100%" />
+
+## Running Interactive Commands
+
+Once on the Compute Node via the Interactive Session, we can enter any command line commands for it to run, such as:
+
+```         
+echo "Hello!"
+```
+
+<img src="06-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_58.png" alt="An echo message is printed on an interactive node." width="100%" />
+
+Most of the time, we will want to use specific software on Compute Node. Luckily, many software we want to use has been pre-installed by Scientific Computing. What we need to do is to load in the software we want to use.
+
+## Using Pre-installed Software Modules
+
+We can load a preconfigured software bundle called a module. This is very convenient because it means we don't need to install anything manually!
+
+Let's take a look at the list of installed software on the cluster:
+
+```         
+module avail
+```
+
+This will print out a huge list of software that have been pre-installed. You can also get a filtered list of software by using `module avail <pattern>` where `<pattern>` is the search term.
+
+You will see that for many software, it will be listed as `<packagename>/<version>` format, such as `fhR/4.2.0-foss-2021b`. The `<packagename>` specifies the software, and the `<version>` specifies the version. If you only specify the package name, you will load the newest version. To learn more about the various ways you can explore the modules on the Fred Hutch cluster, see [here](https://sciwiki.fredhutch.org/scicomputing/compute_environments/).
+
+In this example, we will load a module containing the latest version of [R](https://www.r-project.org/){target="_blank"} .
+
+```         
+module load fhR
+```
+
+Next, launch R:
+
+```         
+R
+```
+
+<img src="06-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_65.png" alt="The R module and R session have been launched on the interactive node." width="100%" />
+
+You can play around with R here. For example, you might run:
+
+```         
+head(mtcars)
+```
+
+<img src="06-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_72.png" alt="R commands on an interactive node." width="100%" />
+
+Close the R session by typing:
+
+```         
+q()
+```
+
+R will ask if you want to save your workspace. Type `n` for no and hit return.
+
+If you want to run an existing script in R, you can run the following:
+
+```         
+Rscript myscript.R
+```
+
+where `myscript.R` is a pre-written script in R.
+
+You can close the interactive node by typing:
+
+```         
+exit
+```
+
+<img src="06-interactive_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_82.png" alt="The R session and interactive node have been exited." width="100%" />
+
+::: dictionary
+`grabnode`
+
+This command starts an interactive session on the cluster.
+:::

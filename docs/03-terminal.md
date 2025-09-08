@@ -5,8 +5,6 @@
 
 # Terminal Setup {#terminal}
 
-<img src="03-terminal_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_183.png" alt="We are on the third step of the pathway." width="80%" style="display: block; margin: auto;" />
-
 The next step is getting familiar with your Terminal. This is your portal to the cluster.
 
 ## What is a terminal?

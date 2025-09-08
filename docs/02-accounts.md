@@ -3,7 +3,6 @@
 
 # Account Setup {#account-setup}
 
-<img src="02-accounts_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_160.png" alt="We are on the second step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 You will need an account to log in to the cluster. This ensures that data stays protected and that computing resources are shared fairly.
 

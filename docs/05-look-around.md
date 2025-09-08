@@ -2,8 +2,6 @@
 
 # Look around
 
-<img src="05-look-around_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" />
-
 Now that you have successfully logged in to the Fred Hutch cluster, it's time to look around to see what compute node you have connected to, and what file storage systems are available.
 
 ## Head and Compute Nodes
@@ -28,15 +26,12 @@ The other storage resources available to researchers include:
 
 The Fred Hutch Biomedical Data Science Wiki [keeps up to date information](https://sciwiki.fredhutch.org/scicomputing/store_posix/) about the file storage system.
 
+::: dictionary
+**Head Node**
 
-<div class = "dictionary">
-**Head Node**  
-  
 A node that is the default computer you log into when you connect to the Cluster. It has limited CPU and memory, and is used to explore the needed data and software to be used on the Compute Node. Also known as **Login Node** or **Rhino** at Fred Hutch.
 
-**Compute Node** 
+**Compute Node**
 
-A node with extensive CPU and memory used for high performance computing. Also known as the **Worker Node** or **Gizmo** at Fred Hutch. 
-
-</div>
-
+A node with extensive CPU and memory used for high performance computing. Also known as the **Worker Node** or **Gizmo** at Fred Hutch.
+:::

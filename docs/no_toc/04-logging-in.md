@@ -3,7 +3,6 @@
 
 # Logging In
 
-<img src="04-logging-in_files/figure-html//1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs_gff2211b72f_1_206.png" alt="We are on the fourth step of the pathway." width="80%" style="display: block; margin: auto;" />
 
 Now that you have your Terminal application ready, you want to connect to the cluster. You will do this using a method called [SSH](https://www.ssh.com/academy/ssh/protocol){target="_blank"}, which stands for "Secure SHell".
 

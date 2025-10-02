@@ -9,7 +9,7 @@ The Scientific Computing group in IT manages the cluster, provides support with 
 
 ## Check out the FAQ page {-}
 
-See our [FAQ and Troubleshooting Page](#faq-and-troubleshooting) to see common errors and what they mean. If you encounter a problem that isn't listed, [let us know](#feedback)!
+See our [FAQ and Troubleshooting Page](#faq-and-troubleshooting) to see common errors and what they mean.
 
 ## Find Community Support on Slack {-}
 

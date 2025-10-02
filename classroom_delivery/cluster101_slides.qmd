@@ -1,14 +1,10 @@
 ---
-title: "Cluster 101"
+title: "Intro to Fred Hutch Cluster Computing"
 format: 
   revealjs:
     smaller: true
     scrollable: true
 ---
-
-## Welcome!
-
-![](Cluster_101_V2.jpg){width="300"}
 
 ## Introductions
 
@@ -18,7 +14,7 @@ format:
 
 . . .
 
--   What is DaSL?
+-   What is [DaSL](https://hutchdatascience.org/) / [OCDO](https://ocdo.fredhutch.org/) ?
 
 . . .
 
@@ -40,6 +36,10 @@ format:
 
 . . .
 
+-   How to access pre-installed software on the cluster
+
+. . .
+
 -   Submit a simple job to the cluster
 
 . . .
@@ -51,8 +51,6 @@ format:
 -   Monitor and quit job on the cluster
 
 . . .
-
--   How to access software from modules
 
 ## What is a cluster?
 
@@ -78,9 +76,9 @@ J nodes - 24 CPUs (cores), 350GB memory
 
 ## Setup and Log in
 
-Walk through https://hutchdatascience.org/FH_Cluster_101/terminal.html
+Walk through <https://hutchdatascience.org/FH_Cluster_101/terminal.html>
 
-Walk through https://hutchdatascience.org/FH_Cluster_101/logging-in.html
+Walk through <https://hutchdatascience.org/FH_Cluster_101/logging-in.html>
 
 ## Types of Nodes
 
@@ -110,13 +108,21 @@ The storage resources available to researchers include:
 
 -   **Temp** for temporary storage of files when using the cluster. You can find it at `/hpc/temp`.
 
+-   **Working** for secondary working copies of the data for analysis. You can find it at `/fh/working`.
+
 -   **Secure** for data with higher-level security needs (PHI/encryption/auditing). You can find it at `/fh/secure`.
 
-https://sciwiki.fredhutch.org/scicomputing/store_posix/
+Walk through: <https://sciwiki.fredhutch.org/scicomputing/store_posix/>
+
+## Interactive sessions on compute note and loading in software
+
+Walk through: <https://hutchdatascience.org/FH_Cluster_101/interactive-session.html>
+
+Walk through: [https://sciwiki.fredhutch.org/scicomputing/compute_environments/](https://sciwiki.fredhutch.org/scicomputing/compute_environments/https://sciwiki.fredhutch.org/scicomputing/compute_environments/)
 
 ## Submit Your First Job
 
-Walk through: https://hutchdatascience.org/FH_Cluster_101/submit-your-first-job.html
+Walk through: <https://hutchdatascience.org/FH_Cluster_101/submit-a-computing-script.html>
 
 ## Requesting Specific Computing Resources
 
@@ -130,9 +136,7 @@ Options for `sbatch`
 
 -   `-J` name a job
 
--   `--output` name output file
-
-https://sciwiki.fredhutch.org/scicomputing/compute_jobs/
+<https://sciwiki.fredhutch.org/scicomputing/compute_jobs/>
 
 . . .
 
@@ -142,7 +146,7 @@ Why isn't memory `--mem` specified?
 
 . . .
 
-Partitions: https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/
+Partitions: <https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/>
 
 ## Saving your `sbatch` options
 
@@ -162,11 +166,15 @@ Another example:
 
 `wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/03.sh`
 
-## Other tricks
+## Advice and tricks
+
+Remember to load the necessary software via `module load`!
+
+. . .
 
 You can access your `sbatch` command in the script via environmental variables, ie `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`
 
-Common SLURM environmental variables: https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#environment-variables
+Common SLURM environmental variables: <https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#environment-variables>
 
 . . .
 
@@ -191,24 +199,22 @@ clo2@rhino01:~$ squeue -u clo2
           36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)
 ```
 
-https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running
+<https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running>
 
 . . .
 
 `scancel [job id]`
 
-## Interactive sessions and loading in software
-
-Walk through: https://hutchdatascience.org/FH_Cluster_101/interactive-session.html
-
-Walk through: https://sciwiki.fredhutch.org/scicomputing/compute_environments/
-
-Example of loading software on a launch script `wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/2-environment-modules/01.sh`
-
-## File upload and download
-
-Walk through: https://hutchdatascience.org/FH_Cluster_101/file-upload-and-download.html
-
 ## How was the workshop for you today?
 
-https://forms.gle/vfgWL4gC9KvbPLQT7
+<https://forms.gle/MbWq5DmiZJHDm6yR9>
+
+## Additional Resources
+
+-   [Bash for Bioinformatics course](https://docs.google.com/forms/d/e/1FAIpQLSdAoM4Mi3XSLFZMnieB3HK6j-gIWPR0fyHEXZEw34YODKLdhg/viewform) starts next week!
+
+-   [SciWiki](https://sciwiki.fredhutch.org/)
+
+-   Scientific Computing Office Hours on Wednesday 10am-Noon: on Q&A channel on [Fred Hutch Data Slack](https://join.slack.com/t/fhdata/signup).
+
+-   [Data House Calls with DaSL](https://ocdo.fredhutch.org/programs/dhc.html)

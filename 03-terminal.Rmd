@@ -1,9 +1,8 @@
-
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
 
-# (PART\*) Cluster 101 {-}
+# (PART\*) Cluster 101 {.unnumbered}
 
 # Terminal Setup {#terminal}
 
@@ -13,78 +12,98 @@ The next step is getting familiar with your Terminal. This is your portal to the
 
 The Terminal is a [command line interface](https://www.codecademy.com/article/command-line-interface){target="_blank"}. In other words, the Terminal is a software application that allows you to issue commands directly to your laptop or desktop computer. The Terminal is very useful because it allows you to run commands that don't have a point-and-click equivalent. It can also connect you to computer networks, such as the Fred Hutch cluster! The Terminal setup is different depending on your operating system. Jump to the [Windows](#windows), [MacOS](#mac), or [Linux](#linux) sections below.
 
-<div class = "terminal">
+::: terminal
 "Terminal" used to be synonymous with "computer". With the creation of operating systems like Windows and MacOS, computers became much easier to use and exploded in popularity! Your colleagues are almost always referring to the command line application when they say "Terminal".
-</div>
+:::
 
 ## Windows Setup {#windows}
 
-<details><summary>Click to view steps</summary><p>
+<details>
+
+<summary>Click to view steps</summary>
+
+<p>
 
 You will need to install a Terminal application called PuTTY to connect to the Fred Hutch Cluster.
 
-1. You should then see PuTTY available in the Software Center. Click "Install" and go through the Setup Wizard.
+1.  You should then see PuTTY available in the Software Center. Click "Install" and go through the Setup Wizard.
 
     ```{r, echo=FALSE, fig.alt='The Software Center application lists available apps, including PuTTY.', out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g15643d101eb_4_15")
+    ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g15643d101eb_4_15")
     ```
 
     ```{r, echo=FALSE, fig.alt='The PuTTY page inside Software Center. The Install button is highlighted.', out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g15643d101eb_4_20")
+    ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g15643d101eb_4_20")
     ```
 
-    <div class = "notice">
+    ::: notice
     You can also [install PuTTY manually](faq.html#manual-putty){target="_blank"} if you don't see it in the Software Center.
-    </div>
+    :::
 
-1. PuTTY should now be available in your applications. Click on PuTTY to open.
+2.  PuTTY should now be available in your applications. Click on PuTTY to open.
 
     ```{r, echo=FALSE, fig.alt='The PuTTY application now appears in the Windows app menu.', out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g15643d101eb_4_28")
+    ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g15643d101eb_4_28")
     ```
 
-1. You should now see the PuTTY Configuration menu.
+3.  You should now see the PuTTY Configuration menu.
 
     ```{r, echo=FALSE, fig.alt='The PuTTY configuration menu is open.', out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g15643d101eb_4_35")
+    ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g15643d101eb_4_35")
     ```
+  
+  In the next chapter (Logging In), you will enter the Host Name to log into the Cluster.
 
-</p></details>
+</p>
+
+</details>
 
 ## Mac Setup {#mac}
 
-<details><summary>Click to view steps</summary><p>
+<details>
 
-Mac machines come with a Terminal installed. 
+<summary>Click to view steps</summary>
 
-1. Go to Finder > Applications > Utilities > Terminal and double-click. 
+<p>
+
+Mac machines come with a Terminal installed.
+
+1.  Go to Finder \> Applications \> Utilities \> Terminal and double-click.
 
     ```{r, echo=FALSE, fig.alt='Screenshot of the Utilities directory. The Terminal app is highlighted.', out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g149d37dd4a1_0_9")
+    ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g149d37dd4a1_0_9")
     ```
 
-1. Your Terminal should look like this:
-    
+2.  Your Terminal should look like this:
+
     ```{r, echo=FALSE, fig.alt='Screenshot of the Mac Terminal.', out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g149d37dd4a1_0_2")
+    ottrpal::include_slide("https://docs.google.com/presentation/d/1BQxrVYdKZTbpCaF-i_q9w7s9x034lEXpQZDU-Sl09cs/edit#slide=id.g149d37dd4a1_0_2")
     ```
 
-</p></details>
-    
+</p>
+
+</details>
+
 ## Linux Setup {#linux}
 
-<details><summary>Click to view steps</summary><p>
+<details>
 
-The commonly used Linux distribution, Ubuntu, already comes with a Terminal installed. 
+<summary>Click to view steps</summary>
 
-1. Press ctrl + alt + T. This should open a Terminal window.
+<p>
 
-1. Update the Terminal and prepare it for connecting to the cluster by running:
+The commonly used Linux distribution, Ubuntu, already comes with a Terminal installed.
 
-```
+1.  Press ctrl + alt + T. This should open a Terminal window.
+
+2.  Update the Terminal and prepare it for connecting to the cluster by running:
+
+```         
 sudo apt install openssh-client
 ```
 
 Enter your password and enter `Y` when prompted.
 
-</p></details>
+</p>
+
+</details>

@@ -10,7 +10,7 @@
 <link href="cluster101_slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <title>Cluster 101</title>
+  <title>Intro to Fred Hutch Cluster Computing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,16 +326,12 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Cluster 101</h1>
+  <h1 class="title">Intro to Fred Hutch Cluster Computing</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome!</h2>
-
-<img data-src="Cluster_101_V2.jpg" width="300" class="r-stretch"></section>
 <section id="introductions" class="slide level2">
 <h2>Introductions</h2>
 <div class="fragment">
@@ -345,7 +341,7 @@
 </div>
 <div class="fragment">
 <ul>
-<li>What is DaSL?</li>
+<li>What is <a href="https://hutchdatascience.org/">DaSL</a> / <a href="https://ocdo.fredhutch.org/">OCDO</a> ?</li>
 </ul>
 </div>
 <div class="fragment">
@@ -372,6 +368,11 @@
 </div>
 <div class="fragment">
 <ul>
+<li>How to access pre-installed software on the cluster</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
 <li>Submit a simple job to the cluster</li>
 </ul>
 </div>
@@ -383,11 +384,6 @@
 <div class="fragment">
 <ul>
 <li>Monitor and quit job on the cluster</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>How to access software from modules</li>
 </ul>
 </div>
 </section>
@@ -410,8 +406,8 @@
 </section>
 <section id="setup-and-log-in" class="slide level2">
 <h2>Setup and Log in</h2>
-<p>Walk through https://hutchdatascience.org/FH_Cluster_101/terminal.html</p>
-<p>Walk through https://hutchdatascience.org/FH_Cluster_101/logging-in.html</p>
+<p>Walk through <a href="https://hutchdatascience.org/FH_Cluster_101/terminal.html" class="uri">https://hutchdatascience.org/FH_Cluster_101/terminal.html</a></p>
+<p>Walk through <a href="https://hutchdatascience.org/FH_Cluster_101/logging-in.html" class="uri">https://hutchdatascience.org/FH_Cluster_101/logging-in.html</a></p>
 </section>
 <section id="types-of-nodes" class="slide level2">
 <h2>Types of Nodes</h2>
@@ -435,13 +431,19 @@
 <ul>
 <li><p><strong>Fast</strong> for shared data, including the majority of large scale research data. You can find it at <code>/fh/fast</code>.</p></li>
 <li><p><strong>Temp</strong> for temporary storage of files when using the cluster. You can find it at <code>/hpc/temp</code>.</p></li>
+<li><p><strong>Working</strong> for secondary working copies of the data for analysis. You can find it at <code>/fh/working</code>.</p></li>
 <li><p><strong>Secure</strong> for data with higher-level security needs (PHI/encryption/auditing). You can find it at <code>/fh/secure</code>.</p></li>
 </ul>
-<p>https://sciwiki.fredhutch.org/scicomputing/store_posix/</p>
+<p>Walk through: <a href="https://sciwiki.fredhutch.org/scicomputing/store_posix/" class="uri">https://sciwiki.fredhutch.org/scicomputing/store_posix/</a></p>
+</section>
+<section id="interactive-sessions-on-compute-note-and-loading-in-software" class="slide level2">
+<h2>Interactive sessions on compute note and loading in software</h2>
+<p>Walk through: <a href="https://hutchdatascience.org/FH_Cluster_101/interactive-session.html" class="uri">https://hutchdatascience.org/FH_Cluster_101/interactive-session.html</a></p>
+<p>Walk through: <a href="https://sciwiki.fredhutch.org/scicomputing/compute_environments/https://sciwiki.fredhutch.org/scicomputing/compute_environments/">https://sciwiki.fredhutch.org/scicomputing/compute_environments/</a></p>
 </section>
 <section id="submit-your-first-job" class="slide level2">
 <h2>Submit Your First Job</h2>
-<p>Walk through: https://hutchdatascience.org/FH_Cluster_101/submit-your-first-job.html</p>
+<p>Walk through: <a href="https://hutchdatascience.org/FH_Cluster_101/submit-a-computing-script.html" class="uri">https://hutchdatascience.org/FH_Cluster_101/submit-a-computing-script.html</a></p>
 </section>
 <section id="requesting-specific-computing-resources" class="slide level2">
 <h2>Requesting Specific Computing Resources</h2>
@@ -451,9 +453,8 @@
 <li><p><code>-p</code> change the partition</p></li>
 <li><p><code>-t</code> request a certain amount of time for the job.</p></li>
 <li><p><code>-J</code> name a job</p></li>
-<li><p><code>--output</code> name output file</p></li>
 </ul>
-<p>https://sciwiki.fredhutch.org/scicomputing/compute_jobs/</p>
+<p><a href="https://sciwiki.fredhutch.org/scicomputing/compute_jobs/" class="uri">https://sciwiki.fredhutch.org/scicomputing/compute_jobs/</a></p>
 <div class="fragment">
 <p>Why isn’t memory <code>--mem</code> specified?</p>
 <blockquote>
@@ -461,7 +462,7 @@
 </blockquote>
 </div>
 <div class="fragment">
-<p>Partitions: https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/</p>
+<p>Partitions: <a href="https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/" class="uri">https://sciwiki.fredhutch.org/compdemos/gizmo_partition_index/</a></p>
 </div>
 </section>
 <section id="saving-your-sbatch-options" class="slide level2">
@@ -477,10 +478,13 @@ echo "Hello, World!"</code></pre>
 <p><code>wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/1-hello-world/03.sh</code></p>
 </div>
 </section>
-<section id="other-tricks" class="slide level2">
-<h2>Other tricks</h2>
+<section id="advice-and-tricks" class="slide level2">
+<h2>Advice and tricks</h2>
+<p>Remember to load the necessary software via <code>module load</code>!</p>
+<div class="fragment">
 <p>You can access your <code>sbatch</code> command in the script via environmental variables, ie <code>bowtie -p ${SLURM_JOB_CPUS_PER_NODE}</code></p>
-<p>Common SLURM environmental variables: https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#environment-variables</p>
+<p>Common SLURM environmental variables: <a href="https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#environment-variables" class="uri">https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#environment-variables</a></p>
+</div>
 <div class="fragment">
 <p>Send yourself an email when the task is done:</p>
 <pre><code>#SBATCH --mail-user=fred@fredhutch.org
@@ -495,25 +499,24 @@ echo "Hello, World!"</code></pre>
 <pre><code>clo2@rhino01:~$ squeue -u clo2
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           36277207 campus-ne HelloWor     clo2 PD       0:00      1 (Priority)</code></pre>
-<p>https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running</p>
+<p><a href="https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running" class="uri">https://sciwiki.fredhutch.org/scicomputing/compute_jobs/#why-isnt-my-job-running</a></p>
 </div>
 <div class="fragment">
 <p><code>scancel [job id]</code></p>
 </div>
 </section>
-<section id="interactive-sessions-and-loading-in-software" class="slide level2">
-<h2>Interactive sessions and loading in software</h2>
-<p>Walk through: https://hutchdatascience.org/FH_Cluster_101/interactive-session.html</p>
-<p>Walk through: https://sciwiki.fredhutch.org/scicomputing/compute_environments/</p>
-<p>Example of loading software on a launch script <code>wget https://raw.githubusercontent.com/FredHutch/slurm-examples/main/01-introduction/2-environment-modules/01.sh</code></p>
-</section>
-<section id="file-upload-and-download" class="slide level2">
-<h2>File upload and download</h2>
-<p>Walk through: https://hutchdatascience.org/FH_Cluster_101/file-upload-and-download.html</p>
-</section>
 <section id="how-was-the-workshop-for-you-today" class="slide level2">
 <h2>How was the workshop for you today?</h2>
-<p>https://forms.gle/vfgWL4gC9KvbPLQT7</p>
+<p><a href="https://forms.gle/MbWq5DmiZJHDm6yR9" class="uri">https://forms.gle/MbWq5DmiZJHDm6yR9</a></p>
+</section>
+<section id="additional-resources" class="slide level2">
+<h2>Additional Resources</h2>
+<ul>
+<li><p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdAoM4Mi3XSLFZMnieB3HK6j-gIWPR0fyHEXZEw34YODKLdhg/viewform">Bash for Bioinformatics course</a> starts next week!</p></li>
+<li><p><a href="https://sciwiki.fredhutch.org/">SciWiki</a></p></li>
+<li><p>Scientific Computing Office Hours on Wednesday 10am-Noon: on Q&amp;A channel on <a href="https://join.slack.com/t/fhdata/signup">Fred Hutch Data Slack</a>.</p></li>
+<li><p><a href="https://ocdo.fredhutch.org/programs/dhc.html">Data House Calls with DaSL</a></p></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
